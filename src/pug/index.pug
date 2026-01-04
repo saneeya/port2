@@ -28,7 +28,7 @@ html(lang='en')
     body#page-top
 
         // Navigation
-        nav#mainNav.navbar.navbar-expand-lg.bg-white.text-uppercase.fixed-top.shadow-sm
+        nav#mainNav.navbar.navbar-expand-lg.text-uppercase.fixed-top.shadow-sm(style='background-color: #FEF6E0;')
             .container
                 a.navbar-brand.text-dark(href='#page-top') Saneeya Khan | Product Design
                 button.navbar-toggler.text-uppercase.font-weight-bold.bg-dark.text-white.rounded(type='button', data-bs-toggle='collapse', data-bs-target='#navbarResponsive', aria-controls='navbarResponsive', aria-expanded='false', aria-label='Toggle navigation')
@@ -38,18 +38,16 @@ html(lang='en')
                     ul.navbar-nav.ms-auto
                         li.nav-item.mx-0.mx-lg-1
                             a.nav-link.py-3.px-0.px-lg-3.rounded.text-dark(href='#case-studies') Case Studies
-                        li.nav-item.mx-0.mx-lg-1
-                            a.nav-link.py-3.px-0.px-lg-3.rounded.text-dark(href='#about') About
 
         // Welcome Section
-        header.masthead.bg-white.text-dark
+        header.masthead.text-dark(style='background-color: #B6D5C7;')
             .container
                 h1.masthead-heading.mb-4.text-dark Welcome
                 p.lead.mb-4.text-dark
                     | I have over 8 years of experience designing digital products end-to-end, from discovery and prototyping to launch and iteration, across enterprise and B2B applications in education software and ad tech.
 
         // Specialties & What I'm Looking For Section
-        section#specialties.page-section.bg-light.text-dark
+        section#specialties.page-section.text-dark(style='background-color: #FFFDF3;')
             .container
                 .row.justify-content-center
                     .col-lg-10
@@ -70,19 +68,20 @@ html(lang='en')
                                     li Continuous product improvement from user feedback and data-driven metrics
 
         // Case Studies Section
-        section#case-studies.page-section.portfolio
-            .container
+        section#case-studies.page-section.portfolio(style='background-color: #B6D5C7;')
+            .container-fluid(style='padding-left: 4rem; padding-right: 4rem;')
+                h2.text-center.mb-5 Case Studies
                 // Case Studies Stacked Items
                 .row.justify-content-center
-                    .col-lg-10
+                    .col-lg-12(style='max-width: 98%;')
                         // Case Study 1
-                        .card.mb-4.shadow-sm
+                        .card.mb-5
                             .row.g-0
-                                .col-md-4
-                                    .card-body.d-flex.align-items-center.justify-content-center.bg-light(style='min-height: 200px;')
+                                .col-md-6
+                                    .card-body.d-flex.align-items-center.justify-content-center(style='min-height: 200px; background-color: #FFFDF3;')
                                         .text-center
                                             i.fas.fa-bullhorn.fa-3x.text-dark.mb-3
-                                .col-md-8
+                                .col-md-6
                                     .card-body
                                         h3.card-title Reimagining How Agencies Create Campaigns
                                         p.card-text Agency users wanted a faster, more flexible way to create ad campaigns—with features our tool didn't yet support.
@@ -93,11 +92,11 @@ html(lang='en')
                                         p.mt-3
                                             button.btn.btn-dark(data-bs-toggle='modal', data-bs-target='#caseStudy1') View Case Study
                         // Case Study 2
-                        .card.mb-4.shadow-sm
+                        .card.mb-5
                             .row.g-0
-                                .col-md-4
+                                .col-md-6
                                     img.img-fluid.h-100(src='assets/img/portfolio/Scoresheet_thumb.png', alt='Class Scoresheet interface showing grade entry grid', style='object-fit: cover;')
-                                .col-md-8
+                                .col-md-6
                                     .card-body
                                         h3.card-title A Smarter Way for Teachers to Record Scores
                                         p.card-text Teachers needed a faster way to enter test scores for their whole class instead of updating each student individually.
@@ -108,13 +107,13 @@ html(lang='en')
                                         p.mt-3
                                             a.btn.btn-dark(href='teachers-scores.html') View Case Study
                         // Case Study 3
-                        .card.mb-4.shadow-sm
+                        .card.mb-5
                             .row.g-0
-                                .col-md-4
-                                    .card-body.d-flex.align-items-center.justify-content-center.bg-light(style='min-height: 200px;')
+                                .col-md-6
+                                    .card-body.d-flex.align-items-center.justify-content-center(style='min-height: 200px; background-color: #FFFDF3;')
                                         .text-center
                                             i.fas.fa-dollar-sign.fa-3x.text-dark.mb-3
-                                .col-md-8
+                                .col-md-6
                                     .card-body
                                         h3.card-title Smart Pricing for Ad Inventory
                                         p.card-text Prior to this project, ad pricing was entirely manual—employees managed rates in spreadsheets, and the development team had to push every price change.
@@ -125,43 +124,6 @@ html(lang='en')
                                         p.mt-3
                                             button.btn.btn-dark(data-bs-toggle='modal', data-bs-target='#caseStudy3') View Case Study
 
-        // About Section
-        section#about.page-section.bg-light.text-dark.mb-0
-            .container
-                // About Section Heading
-                h2.page-section-heading.text-center.text-uppercase.text-dark About
-                // Icon Divider
-                .divider-custom
-                    .divider-custom-line
-                    .divider-custom-icon
-                        i.fas.fa-star
-                    .divider-custom-line
-                // About Section Content
-                .row.justify-content-center
-                    .col-lg-8
-                        p.lead.text-center.text-dark
-                            | Product Designer with over 8 years of experience designing digital products end-to-end, from discovery and prototyping to launch and iteration, across enterprise and B2B applications in education software and ad tech.
-
-
-        // Footer
-        footer.footer.text-center.bg-dark
-            .container
-                h4.text-uppercase.mb-4.text-white Saneeya Khan
-                .row.justify-content-center
-                    .col-lg-6
-                        h5.mb-3.text-white Case Studies
-                        ul.list-unstyled
-                            li.mb-2
-                                a.text-white(href='#case-studies') Reimagining How Agencies Create Campaigns
-                            li.mb-2
-                                a.text-white(href='#case-studies') A Smarter Way for Teachers to Record Scores
-                            li.mb-2
-                                a.text-white(href='#case-studies') Smart Pricing for Ad Inventory
-
-        // Copyright Section
-        div.copyright.py-4.text-center.text-white.bg-dark
-            .container
-                small Copyright &copy; Saneeya Khan 2024
 
         // Case Study Modals
         // Case Study 1 Modal
@@ -235,6 +197,14 @@ html(lang='en')
                                     button.btn.btn-dark(data-bs-dismiss='modal')
                                         i.fas.fa-xmark.fa-fw
                                         | Close Window
+
+        // Footer
+        footer.footer.text-center.text-dark(style='background-color: #FFFDF3;')
+            .container
+                // Copyright Section
+                div.copyright.py-4.text-center.text-dark(style='background-color: #FFFDF3;')
+                    .container
+                        small Copyright &copy; Saneeya Khan 2024
 
         // Bootstrap core JS
         script(src='https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js')

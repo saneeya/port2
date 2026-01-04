@@ -33,9 +33,22 @@
         width: 100%;
         height: auto;
         object-fit: cover;
-        border-top-left-radius: $border-radius;
-        border-top-right-radius: $border-radius;
+        border-top-left-radius: 16px;
+        border-top-right-radius: 16px;
         display: block;
+    }
+
+    .card-body {
+        padding: 3rem 2rem;
+    }
+
+    .card {
+        border: none;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        min-height: 300px;
+        border-radius: 16px;
+        overflow: hidden;
+        background-color: #FFFDF3;
     }
 }
 

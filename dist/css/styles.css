@@ -116,7 +116,7 @@ h6, .h6, h5, .h5, h4, .h4, h3, .h3, h2, .h2, h1, .h1 {
   margin-top: 0;
   margin-bottom: 0.5rem;
   font-family: "Arvo", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-  font-weight: 700;
+  font-weight: 400;
   line-height: 1.2;
 }
 
@@ -10830,8 +10830,12 @@ html {
   scroll-padding-top: calc(4.5rem - 1px);
 }
 
+body {
+  background-color: #FFFDF3;
+}
+
 .page-section {
-  padding: 6rem 0;
+  padding: 3rem 0;
 }
 .page-section .page-section-heading {
   font-size: 2.25rem;
@@ -10911,8 +10915,8 @@ blockquote.blockquote .blockquote-footer::before {
   padding-top: 1rem;
   padding-bottom: 1rem;
   font-family: "Arvo", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-  font-weight: 700;
-  background-color: #fff !important;
+  font-weight: 400;
+  background-color: #FEF6E0 !important;
 }
 #mainNav .navbar-brand {
   color: #212529;
@@ -10995,11 +10999,11 @@ blockquote.blockquote .blockquote-footer::before {
 
 .masthead {
   padding-top: calc(6rem + 74px);
-  padding-bottom: 6rem;
+  padding-bottom: 3rem;
 }
 .masthead .masthead-heading {
-  font-size: 2.75rem;
-  line-height: 2.75rem;
+  font-size: 2rem;
+  line-height: 2.25rem;
 }
 .masthead .masthead-subheading {
   font-size: 1.25rem;
@@ -11022,11 +11026,11 @@ blockquote.blockquote .blockquote-footer::before {
 @media (min-width: 992px) {
   .masthead {
     padding-top: calc(6rem + 104px);
-    padding-bottom: 6rem;
+    padding-bottom: 3rem;
   }
   .masthead .masthead-heading {
-    font-size: 3.5rem;
-    line-height: 3.5rem;
+    font-size: 2.5rem;
+    line-height: 2.75rem;
   }
   .masthead .masthead-subheading {
     font-size: 1.5rem;
@@ -11062,9 +11066,20 @@ blockquote.blockquote .blockquote-footer::before {
   height: auto;
   -o-object-fit: cover;
      object-fit: cover;
-  border-top-left-radius: 0.5rem;
-  border-top-right-radius: 0.5rem;
+  border-top-left-radius: 16px;
+  border-top-right-radius: 16px;
   display: block;
+}
+.portfolio .card-body {
+  padding: 3rem 2rem;
+}
+.portfolio .card {
+  border: none;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  min-height: 300px;
+  border-radius: 16px;
+  overflow: hidden;
+  background-color: #FFFDF3;
 }
 
 .portfolio-modal .btn-close {

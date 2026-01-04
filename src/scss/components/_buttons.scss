@@ -18,3 +18,25 @@
     justify-content: center;
     align-items: center;
 }
+
+// Override btn-dark styles
+.btn-dark {
+    background-color: #61A48A;
+    border-color: #61A48A;
+    color: #FFFDF3;
+    font-family: $font-family-sans-serif;
+    padding: 0.75rem 1.5rem;
+    
+    &:hover {
+        background-color: darken(#61A48A, 10%);
+        border-color: darken(#61A48A, 10%);
+        color: #FFFDF3;
+    }
+    
+    &:active,
+    &:focus {
+        background-color: darken(#61A48A, 15%);
+        border-color: darken(#61A48A, 15%);
+        color: #FFFDF3;
+    }
+}

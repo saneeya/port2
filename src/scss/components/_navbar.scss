@@ -11,7 +11,7 @@
 
     .navbar-brand {
         color: $dark;
-        font-weight: 600;
+        font-weight: 400;
 
         &:hover {
             color: $dark;
@@ -37,7 +37,7 @@
 
                 &.active {
                     color: $dark;
-                    font-weight: 600;
+                    font-weight: 400;
                 }
             }
         }
@@ -68,7 +68,7 @@
         .navbar-nav>li.nav-item>a.nav-link.active {
             color: $dark;
             background: transparent;
-            font-weight: 600;
+            font-weight: 400;
 
             &:active,
             &:focus,

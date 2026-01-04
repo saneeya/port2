@@ -9,6 +9,7 @@
     .masthead-heading {
         font-size: 2rem;
         line-height: 2.25rem;
+        font-weight: 400;
     }
 
     .masthead-subheading {
@@ -21,7 +22,7 @@
 
     h3 {
         font-size: 1.5rem;
-        font-weight: 600;
+        font-weight: 400;
     }
 
     ul {
@@ -31,6 +32,10 @@
 
     li {
         margin-bottom: 0.5rem;
+    }
+    
+    .lead {
+        font-size: 1em;
     }
 }
 
@@ -42,6 +47,7 @@
         .masthead-heading {
             font-size: 2.5rem;
             line-height: 2.75rem;
+            font-weight: 400;
         }
 
         .masthead-subheading {
@@ -50,6 +56,7 @@
 
         h3 {
             font-size: 1.75rem;
+            font-weight: 400;
         }
     }
 }

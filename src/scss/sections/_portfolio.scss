@@ -38,8 +38,31 @@
         display: block;
     }
 
+    .card {
+        .row {
+            min-height: 100%;
+        }
+    }
+
     .card-body {
         padding: 3rem 2rem;
+        
+        &:not(.d-flex) {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            min-height: 100%;
+            
+            p.mt-3:not(:last-child) {
+                margin-top: 0.5rem !important;
+            }
+            
+            p:last-child {
+                margin-top: 2rem;
+                margin-bottom: 0;
+                align-self: flex-start;
+            }
+        }
     }
 
     .card {

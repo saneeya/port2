@@ -7,9 +7,15 @@
     padding-bottom: 1rem;
     font-family: $headings-font-family;
     font-weight: $headings-font-weight;
+    background-color: $white !important;
 
     .navbar-brand {
-        color: $white;
+        color: $dark;
+        font-weight: 600;
+
+        &:hover {
+            color: $dark;
+        }
     }
 
     .navbar-nav {
@@ -17,19 +23,21 @@
 
         li.nav-item {
             a.nav-link {
-                color: $white;
+                color: $dark;
 
                 &:hover {
-                    color: $primary;
+                    color: $dark;
+                    opacity: 0.7;
                 }
 
                 &:active,
                 &:focus {
-                    color: $white;
+                    color: $dark;
                 }
 
                 &.active {
-                    color: $primary;
+                    color: $dark;
+                    font-weight: 600;
                 }
             }
         }
@@ -38,6 +46,7 @@
     .navbar-toggler {
         font-size: 80%;
         padding: 0.8rem;
+        border-color: $dark;
     }
 }
 
@@ -57,14 +66,16 @@
         }
 
         .navbar-nav>li.nav-item>a.nav-link.active {
-            color: $white;
-            background: $primary;
+            color: $dark;
+            background: transparent;
+            font-weight: 600;
 
             &:active,
             &:focus,
             &:hover {
-                color: $white;
-                background: $primary;
+                color: $dark;
+                background: transparent;
+                opacity: 0.7;
             }
         }
     }

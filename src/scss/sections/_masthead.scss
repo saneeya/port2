@@ -18,6 +18,20 @@
     .masthead-avatar {
         width: 15rem;
     }
+
+    h3 {
+        font-size: 1.5rem;
+        font-weight: 600;
+    }
+
+    ul {
+        list-style-type: disc;
+        padding-left: 1.5rem;
+    }
+
+    li {
+        margin-bottom: 0.5rem;
+    }
 }
 
 @include media-breakpoint-up(lg) {
@@ -26,7 +40,7 @@
         padding-bottom: 6rem;
 
         .masthead-heading {
-            font-size: 4rem;
+            font-size: 3.5rem;
             line-height: 3.5rem;
         }
 
@@ -34,5 +48,8 @@
             font-size: 1.5rem;
         }
 
+        h3 {
+            font-size: 1.75rem;
+        }
     }
 }

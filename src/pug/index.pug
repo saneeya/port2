@@ -8,7 +8,9 @@ html(lang='en')
         meta(name='description', content='')
         meta(name='author', content='')
 
-        title Freelancer - Start Bootstrap Theme
+        title Saneeya Khan | Product Design
+
+        meta(name='description', content='Product Designer with over 8 years of experience designing digital products end-to-end')
 
         // Favicon
         link(rel='icon', type='image/x-icon', href='assets/favicon.ico')
@@ -26,256 +28,192 @@ html(lang='en')
     body#page-top
 
         // Navigation
-        nav#mainNav.navbar.navbar-expand-lg.bg-secondary.text-uppercase.fixed-top
+        nav#mainNav.navbar.navbar-expand-lg.bg-white.text-uppercase.fixed-top.shadow-sm
             .container
-                a.navbar-brand(href='#page-top') Start Bootstrap
-                button.navbar-toggler.text-uppercase.font-weight-bold.bg-primary.text-white.rounded(type='button', data-bs-toggle='collapse', data-bs-target='#navbarResponsive', aria-controls='navbarResponsive', aria-expanded='false', aria-label='Toggle navigation')
+                a.navbar-brand.text-dark(href='#page-top') Saneeya Khan | Product Design
+                button.navbar-toggler.text-uppercase.font-weight-bold.bg-dark.text-white.rounded(type='button', data-bs-toggle='collapse', data-bs-target='#navbarResponsive', aria-controls='navbarResponsive', aria-expanded='false', aria-label='Toggle navigation')
                     | Menu 
                     i.fas.fa-bars
                 #navbarResponsive.collapse.navbar-collapse
                     ul.navbar-nav.ms-auto
                         li.nav-item.mx-0.mx-lg-1
-                            a.nav-link.py-3.px-0.px-lg-3.rounded(href='#portfolio') Portfolio
+                            a.nav-link.py-3.px-0.px-lg-3.rounded.text-dark(href='#case-studies') Case Studies
                         li.nav-item.mx-0.mx-lg-1
-                            a.nav-link.py-3.px-0.px-lg-3.rounded(href='#about') About
-                        li.nav-item.mx-0.mx-lg-1
-                            a.nav-link.py-3.px-0.px-lg-3.rounded(href='#contact') Contact
+                            a.nav-link.py-3.px-0.px-lg-3.rounded.text-dark(href='#about') About
 
-        // Masthead
-        header.masthead.bg-primary.text-white.text-center
-            .container.d-flex.align-items-center.flex-column
-                // Masthead Avatar Image
-                img.masthead-avatar.mb-5(src='assets/img/avataaars.svg', alt='...')
-                // Masthead Heading
-                h1.masthead-heading.text-uppercase.mb-0 Start Bootstrap
-                // Icon Divider
-                .divider-custom.divider-light
-                    .divider-custom-line
-                    .divider-custom-icon
-                        i.fas.fa-star
-                    .divider-custom-line
-                // Masthead Subheading
-                p.masthead-subheading.font-weight-light.mb-0 Graphic Artist - Web Designer - Illustrator
-
-        // Portfolio Section
-        section#portfolio.page-section.portfolio
+        // Welcome Section
+        header.masthead.bg-white.text-dark
             .container
-                // Portfolio Section Heading
-                h2.page-section-heading.text-center.text-uppercase.text-secondary.mb-0 Portfolio
-                // Icon Divider
-                .divider-custom
-                    .divider-custom-line
-                    .divider-custom-icon
-                        i.fas.fa-star
-                    .divider-custom-line
-                // Portfolio Grid Items
+                h1.masthead-heading.mb-4.text-dark Welcome
+                p.lead.mb-4.text-dark
+                    | I have over 8 years of experience designing digital products end-to-end, from discovery and prototyping to launch and iteration, across enterprise and B2B applications in education software and ad tech.
+                
+                h3.mt-5.mb-3.text-dark Specialties:
+                ul.lead.mb-4.text-dark
+                    li Enterprise applications & internal tools
+                    li Product design experience in Ad Tech and Ed Tech
+                    li Mentoring junior designers by creating onboarding/training guide and providing regular 1:1s to give advice and design feedback
+                    li Structuring and streamlining design workflows by helping manage expectations with cross-product stakeholders
+                
+                h3.mt-5.mb-3.text-dark What I'm looking for:
+                ul.lead.mb-4.text-dark
+                    li Opportunities to solve complex problems while learning something new along the way
+                    li A focus on building strong team processes and design culture
+                    li Collaboration on product strategy and roadmap development
+                    li Continuous product improvement from user feedback and data-driven metrics
+
+        // Case Studies Section
+        section#case-studies.page-section.portfolio
+            .container
+                // Case Studies Grid Items
                 .row.justify-content-center
-                    // Portfolio Item 1
+                    // Case Study 1
                     .col-md-6.col-lg-4.mb-5
-                        .portfolio-item.mx-auto(data-bs-toggle='modal', data-bs-target='#portfolioModal1')
-                            .portfolio-item-caption.d-flex.align-items-center.justify-content-center.h-100.w-100
-                                .portfolio-item-caption-content.text-center.text-white
-                                    i.fas.fa-plus.fa-3x
-                            img.img-fluid(src='assets/img/portfolio/cabin.png', alt='...')
-                    // Portfolio Item 2
+                        .card.h-100.shadow-sm
+                            .card-body
+                                h3.card-title Reimagining How Agencies Create Campaigns
+                                p.card-text Agency users wanted a faster, more flexible way to create ad campaigns—with features our tool didn't yet support.
+                                p.card-text Over two years as the only designer on the project, I reimagined the campaign creation flow with new functionality, and cleaner layouts that streamlined the entire process and boosted revenue.
+                                p.mt-3
+                                    span.badge.bg-dark.me-2 Ad Tech
+                                    span.badge.bg-dark B2B
+                                p.mt-3
+                                    button.btn.btn-dark(data-bs-toggle='modal', data-bs-target='#caseStudy1') View Case Study
+                    // Case Study 2
                     .col-md-6.col-lg-4.mb-5
-                        .portfolio-item.mx-auto(data-bs-toggle='modal', data-bs-target='#portfolioModal2')
-                            .portfolio-item-caption.d-flex.align-items-center.justify-content-center.h-100.w-100
-                                .portfolio-item-caption-content.text-center.text-white
-                                    i.fas.fa-plus.fa-3x
-                            img.img-fluid(src='assets/img/portfolio/cake.png', alt='...')
-                    // Portfolio Item 3
+                        .card.h-100.shadow-sm
+                            .card-body
+                                h3.card-title A Smarter Way for Teachers to Record Scores
+                                p.card-text Teachers needed a faster way to enter test scores for their whole class instead of updating each student individually.
+                                p.card-text I designed the Class Scoresheet, a feature that allows scores to be entered in bulk, saving time and reducing errors, and giving teachers more time to focus on their students.
+                                p.mt-3
+                                    span.badge.bg-dark.me-2 Enterprise
+                                    span.badge.bg-dark Ed Tech
+                                p.mt-3
+                                    a.btn.btn-dark(href='teachers-scores.html') View Case Study
+                    // Case Study 3
                     .col-md-6.col-lg-4.mb-5
-                        .portfolio-item.mx-auto(data-bs-toggle='modal', data-bs-target='#portfolioModal3')
-                            .portfolio-item-caption.d-flex.align-items-center.justify-content-center.h-100.w-100
-                                .portfolio-item-caption-content.text-center.text-white
-                                    i.fas.fa-plus.fa-3x
-                            img.img-fluid(src='assets/img/portfolio/circus.png', alt='...')
-                    // Portfolio Item 4
-                    .col-md-6.col-lg-4.mb-5.mb-lg-0
-                        .portfolio-item.mx-auto(data-bs-toggle='modal', data-bs-target='#portfolioModal4')
-                            .portfolio-item-caption.d-flex.align-items-center.justify-content-center.h-100.w-100
-                                .portfolio-item-caption-content.text-center.text-white
-                                    i.fas.fa-plus.fa-3x
-                            img.img-fluid(src='assets/img/portfolio/game.png', alt='...')
-                    // Portfolio Item 5
-                    .col-md-6.col-lg-4.mb-5.mb-md-0
-                        .portfolio-item.mx-auto(data-bs-toggle='modal', data-bs-target='#portfolioModal5')
-                            .portfolio-item-caption.d-flex.align-items-center.justify-content-center.h-100.w-100
-                                .portfolio-item-caption-content.text-center.text-white
-                                    i.fas.fa-plus.fa-3x
-                            img.img-fluid(src='assets/img/portfolio/safe.png', alt='...')
-                    // Portfolio Item 6
-                    .col-md-6.col-lg-4
-                        .portfolio-item.mx-auto(data-bs-toggle='modal', data-bs-target='#portfolioModal6')
-                            .portfolio-item-caption.d-flex.align-items-center.justify-content-center.h-100.w-100
-                                .portfolio-item-caption-content.text-center.text-white
-                                    i.fas.fa-plus.fa-3x
-                            img.img-fluid(src='assets/img/portfolio/submarine.png', alt='...')
+                        .card.h-100.shadow-sm
+                            .card-body
+                                h3.card-title Smart Pricing for Ad Inventory
+                                p.card-text Prior to this project, ad pricing was entirely manual—employees managed rates in spreadsheets, and the development team had to push every price change.
+                                p.card-text I led the creation of the Pricing Tool from scratch, enabling the pricing team to manage and update rates themselves. This introduced more pricing variety and allowed for customized or loyalty-based discounts.
+                                p.mt-3
+                                    span.badge.bg-dark.me-2 Ad Tech
+                                    span.badge.bg-dark Internal Tool
+                                p.mt-3
+                                    button.btn.btn-primary(data-bs-toggle='modal', data-bs-target='#caseStudy3') View Case Study
 
         // About Section
-        section#about.page-section.bg-primary.text-white.mb-0
+        section#about.page-section.bg-light.text-dark.mb-0
             .container
                 // About Section Heading
-                h2.page-section-heading.text-center.text-uppercase.text-white About
+                h2.page-section-heading.text-center.text-uppercase.text-dark About
                 // Icon Divider
-                .divider-custom.divider-light
+                .divider-custom
                     .divider-custom-line
                     .divider-custom-icon
                         i.fas.fa-star
                     .divider-custom-line
                 // About Section Content
-                .row
-                    .col-lg-4.ms-auto
-                        p.lead
-                            | Freelancer is a free bootstrap theme created by Start Bootstrap. The download includes the complete source files including HTML, CSS, and JavaScript as well as optional SASS stylesheets for easy customization.
-                    .col-lg-4.me-auto
-                        p.lead
-                            | You can create your own custom avatar for the masthead, change the icon in the dividers, and add your email address to the contact form to make it fully functional!
-                // About Section Button
-                .text-center.mt-4
-                    a.btn.btn-xl.btn-outline-light(href='https://startbootstrap.com/theme/freelancer/')
-                        i.fas.fa-download.me-2
-                        | Free Download!
-
-        // Contact Section
-        section#contact.page-section
-            .container
-                // Contact Section Heading
-                h2.page-section-heading.text-center.text-uppercase.text-secondary.mb-0 Contact Me
-                // Icon Divider
-                .divider-custom
-                    .divider-custom-line
-                    .divider-custom-icon
-                        i.fas.fa-star
-                    .divider-custom-line
-                // Contact Section Form
                 .row.justify-content-center
-                    .col-lg-8.col-xl-7
+                    .col-lg-8
+                        p.lead.text-center.text-dark
+                            | Product Designer with over 8 years of experience designing digital products end-to-end, from discovery and prototyping to launch and iteration, across enterprise and B2B applications in education software and ad tech.
 
-                        // * * * * * * * * * * * * * * *
-                        // * * SB Forms Contact Form * *
-                        // * * * * * * * * * * * * * * *
-
-                        // This form is pre-integrated with SB Forms.
-                        // To make this form functional, sign up at
-                        // https://startbootstrap.com/solution/contact-forms
-                        // to get an API token!
-
-                        form#contactForm(data-sb-form-api-token='API_TOKEN')
-
-                            // Name input
-                            .form-floating.mb-3
-                                input#name.form-control(
-                                    type='text',
-                                    placeholder='Enter your name...',
-                                    data-sb-validations='required'
-                                )
-                                label(for='name') Full name
-                                .invalid-feedback(data-sb-feedback='name:required')
-                                    | A name is required.
-
-                            // Email address input
-                            .form-floating.mb-3
-                                input#email.form-control(
-                                    type='email',
-                                    placeholder='name@example.com',
-                                    data-sb-validations='required,email'
-                                )
-                                label(for='email') Email address
-                                .invalid-feedback(data-sb-feedback='email:required')
-                                    | An email is required.
-                                .invalid-feedback(data-sb-feedback='email:email')
-                                    | Email is not valid.
-
-                            // Phone number input
-                            .form-floating.mb-3
-                                input#phone.form-control(
-                                    type='tel',
-                                    placeholder='(123) 456-7890',
-                                    data-sb-validations='required'
-                                )
-                                label(for='phone') Phone number
-                                .invalid-feedback(data-sb-feedback='phone:required')
-                                    | A phone number is required.
-
-                            // Message input
-                            .form-floating.mb-3
-                                textarea#message.form-control(
-                                    type='text',
-                                    placeholder='Enter your message here...',
-                                    style='height: 10rem;',
-                                    data-sb-validations='required'
-                                )
-                                label(for='message') Message
-                                .invalid-feedback(data-sb-feedback='message:required')
-                                    | A message is required.
-
-                            // Submit success message
-                            //
-                            // This is what your users will see when the form
-                            // has successfully submitted
-
-                            #submitSuccessMessage.d-none
-                                .text-center.mb-3
-                                    .fw-bolder Form submission successful!
-                                    | To activate this form, sign up at
-                                    br
-                                    a(href='https://startbootstrap.com/solution/contact-forms') https://startbootstrap.com/solution/contact-forms
-
-                            // Submit error message
-                            //
-                            // This is what your users will see when there is
-                            // an error submitting the form
-
-                            #submitErrorMessage.d-none
-                                .text-center.text-danger.mb-3 Error sending message!
-
-                            // Submit Button
-                            button#submitButton.btn.btn-primary.btn-xl.disabled(type='submit') Send
 
         // Footer
-        footer.footer.text-center
+        footer.footer.text-center.bg-dark
             .container
-                .row
-                    // Footer Location
-                    .col-lg-4.mb-5.mb-lg-0
-                        h4.text-uppercase.mb-4 Location
-                        p.lead.mb-0
-                            | 2215 John Daniel Drive
-                            br
-                            | Clark, MO 65243
-                    // Footer Social Icons
-                    .col-lg-4.mb-5.mb-lg-0
-                        h4.text-uppercase.mb-4 Around the Web
-                        a.btn.btn-outline-light.btn-social.mx-1(href='#!')
-                            i.fab.fa-fw.fa-facebook-f
-                        a.btn.btn-outline-light.btn-social.mx-1(href='#!')
-                            i.fab.fa-fw.fa-twitter
-                        a.btn.btn-outline-light.btn-social.mx-1(href='#!')
-                            i.fab.fa-fw.fa-linkedin-in
-                        a.btn.btn-outline-light.btn-social.mx-1(href='#!')
-                            i.fab.fa-fw.fa-dribbble
-                    // Footer About Text
-                    .col-lg-4
-                        h4.text-uppercase.mb-4 About Freelancer
-                        p.lead.mb-0
-                            | Freelance is a free to use, MIT licensed Bootstrap theme created by 
-                            a(href='http://startbootstrap.com') Start Bootstrap
-                            | .
+                h4.text-uppercase.mb-4.text-white Saneeya Khan
+                .row.justify-content-center
+                    .col-lg-6
+                        h5.mb-3.text-white Case Studies
+                        ul.list-unstyled
+                            li.mb-2
+                                a.text-white(href='#case-studies') Reimagining How Agencies Create Campaigns
+                            li.mb-2
+                                a.text-white(href='#case-studies') A Smarter Way for Teachers to Record Scores
+                            li.mb-2
+                                a.text-white(href='#case-studies') Smart Pricing for Ad Inventory
 
         // Copyright Section
-        div.copyright.py-4.text-center.text-white
+        div.copyright.py-4.text-center.text-white.bg-dark
             .container
-                small Copyright &copy; Your Website 2023
+                small Copyright &copy; Saneeya Khan 2024
 
-        // Portfolio Modals
-        include includes/portfolio-modal-1.pug
-        include includes/portfolio-modal-2.pug
-        include includes/portfolio-modal-3.pug
-        include includes/portfolio-modal-4.pug
-        include includes/portfolio-modal-5.pug
-        include includes/portfolio-modal-6.pug
+        // Case Study Modals
+        // Case Study 1 Modal
+        .portfolio-modal.modal.fade#caseStudy1(tabindex='-1', aria-labelledby='caseStudy1', aria-hidden='true')
+            .modal-dialog.modal-xl
+                .modal-content
+                    .modal-header.border-0
+                        button.btn-close(type='button', data-bs-dismiss='modal', aria-label='Close')
+                    .modal-body.text-center.pb-5
+                        .container
+                            .row.justify-content-center
+                                .col-lg-8
+                                    h2.portfolio-modal-title.text-secondary.text-uppercase.mb-0 Reimagining How Agencies Create Campaigns
+                                    .divider-custom
+                                        .divider-custom-line
+                                        .divider-custom-icon
+                                            i.fas.fa-star
+                                        .divider-custom-line
+                                    p.mb-4 Agency users wanted a faster, more flexible way to create ad campaigns—with features our tool didn't yet support. Over two years as the only designer on the project, I reimagined the campaign creation flow with new functionality, and cleaner layouts that streamlined the entire process and boosted revenue.
+                                    p.mb-4
+                                        span.badge.bg-dark.me-2 Ad Tech
+                                        span.badge.bg-dark B2B
+                                    button.btn.btn-dark(data-bs-dismiss='modal')
+                                        i.fas.fa-xmark.fa-fw
+                                        | Close Window
+        
+        // Case Study 2 Modal
+        .portfolio-modal.modal.fade#caseStudy2(tabindex='-1', aria-labelledby='caseStudy2', aria-hidden='true')
+            .modal-dialog.modal-xl
+                .modal-content
+                    .modal-header.border-0
+                        button.btn-close(type='button', data-bs-dismiss='modal', aria-label='Close')
+                    .modal-body.text-center.pb-5
+                        .container
+                            .row.justify-content-center
+                                .col-lg-8
+                                    h2.portfolio-modal-title.text-secondary.text-uppercase.mb-0 A Smarter Way for Teachers to Record Scores
+                                    .divider-custom
+                                        .divider-custom-line
+                                        .divider-custom-icon
+                                            i.fas.fa-star
+                                        .divider-custom-line
+                                    p.mb-4 Teachers needed a faster way to enter test scores for their whole class instead of updating each student individually. I designed the Class Scoresheet, a feature that allows scores to be entered in bulk, saving time and reducing errors, and giving teachers more time to focus on their students.
+                                    p.mb-4
+                                        span.badge.bg-dark.me-2 Enterprise
+                                        span.badge.bg-dark Ed Tech
+                                    button.btn.btn-dark(data-bs-dismiss='modal')
+                                        i.fas.fa-xmark.fa-fw
+                                        | Close Window
+        
+        // Case Study 3 Modal
+        .portfolio-modal.modal.fade#caseStudy3(tabindex='-1', aria-labelledby='caseStudy3', aria-hidden='true')
+            .modal-dialog.modal-xl
+                .modal-content
+                    .modal-header.border-0
+                        button.btn-close(type='button', data-bs-dismiss='modal', aria-label='Close')
+                    .modal-body.text-center.pb-5
+                        .container
+                            .row.justify-content-center
+                                .col-lg-8
+                                    h2.portfolio-modal-title.text-secondary.text-uppercase.mb-0 Smart Pricing for Ad Inventory
+                                    .divider-custom
+                                        .divider-custom-line
+                                        .divider-custom-icon
+                                            i.fas.fa-star
+                                        .divider-custom-line
+                                    p.mb-4 Prior to this project, ad pricing was entirely manual—employees managed rates in spreadsheets, and the development team had to push every price change. I led the creation of the Pricing Tool from scratch, enabling the pricing team to manage and update rates themselves. This introduced more pricing variety and allowed for customized or loyalty-based discounts.
+                                    p.mb-4
+                                        span.badge.bg-dark.me-2 Ad Tech
+                                        span.badge.bg-dark Internal Tool
+                                    button.btn.btn-dark(data-bs-dismiss='modal')
+                                        i.fas.fa-xmark.fa-fw
+                                        | Close Window
 
         // Bootstrap core JS
         script(src='https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js')

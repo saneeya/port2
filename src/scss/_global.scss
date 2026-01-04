@@ -28,3 +28,22 @@ html {
         }
     }
 }
+
+// Blockquote styling
+blockquote.blockquote {
+    border-left: 4px solid $dark;
+    padding-left: 1.5rem;
+    margin: 2rem 0;
+    font-style: italic;
+
+    .blockquote-footer {
+        margin-top: 0.5rem;
+        font-size: 0.875rem;
+        color: #6c757d;
+        font-style: normal;
+
+        &::before {
+            content: "— ";
+        }
+    }
+}

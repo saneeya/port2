@@ -18,46 +18,58 @@
     </head>
     <body id="page-top">
         <!-- Navigation-->
-        <nav class="navbar navbar-expand-lg text-uppercase fixed-top shadow-sm" id="mainNav" style="background-color: #fef6e0">
-            <div class="container">
-                <a class="navbar-brand text-dark" href="index.html">Saneeya Khan | Product Design</a>
-                <button class="navbar-toggler text-uppercase font-weight-bold bg-dark text-white rounded" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        <nav class="navbar navbar-expand-lg fixed-top shadow-sm" id="mainNav" style="background-color: #fef6e0; overflow: visible;">
+            <div class="container" style="overflow: visible;">
+                <a class="navbar-brand text-dark" href="index.html" style="text-transform: none; font-weight: 400">Saneeya Khan | Product Design</a>
+                <button class="navbar-toggler text-uppercase bg-dark text-white rounded" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation" style="text-transform: uppercase; font-weight: 400">
                     Menu
                     <i class="fas fa-bars"></i>
                 </button>
-                <div class="collapse navbar-collapse" id="navbarResponsive">
-                    <ul class="navbar-nav ms-auto">
-                        <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded text-dark" href="index.html#case-studies">Case Studies</a></li>
+                <div class="collapse navbar-collapse" id="navbarResponsive" style="overflow: visible;">
+                    <ul class="navbar-nav ms-auto" style="overflow: visible;">
+                        <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded text-dark" href="index.html#about">About</a></li>
+                        <li class="nav-item dropdown mx-0 mx-lg-1">
+                            <a class="nav-link dropdown-toggle py-3 px-0 px-lg-3 rounded text-dark" href="#" id="caseStudiesDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Case Studies</a>
+                            <ul class="dropdown-menu dropdown-menu-lg-end" aria-labelledby="caseStudiesDropdown">
+                                <li><a class="dropdown-item text-dark" href="scoresheet.html">A Smarter Way for Teachers to Record Scores</a></li>
+                                <li><a class="dropdown-item text-dark" href="campaigncreation.html">Reimagining How Agencies Create Campaigns</a></li>
+                                <li><a class="dropdown-item text-dark" href="pricingtool.html">Smart Pricing for Ad Inventory</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item mx-0 mx-lg-1">
+                            <a class="nav-link px-0 px-lg-3 rounded text-dark" href="https://www.linkedin.com/in/saneeyakhan" target="_blank" rel="noopener noreferrer" style="font-size: 1.5rem; padding-top: 0.5rem; padding-bottom: 0.5rem;">
+                                <i class="fab fa-linkedin"></i>
+                            </a>
+                        </li>
                     </ul>
                 </div>
             </div>
         </nav>
         <!-- Case Study Header Section-->
-        <section class="page-section text-dark" style="background-color: #ffffff; padding-top: calc(6rem + 74px)">
+        <section class="page-section text-dark" style="background-color: #FEF6E0; padding-top: calc(6rem + 74px)">
             <div class="container">
                 <div class="row justify-content-center">
-                    <div class="col-lg-10">
+                    <div class="col-lg-10" style="position: relative;">
                         <h1 class="masthead-heading mb-4 text-dark">A Smarter Way for Teachers to Record Scores</h1>
-                        <p class="lead mb-4 text-dark">Teachers needed a faster way to enter test scores for their whole class instead of updating each student individually.</p>
-                        <p class="lead mb-4 text-dark">
-                            I designed the
-                            <strong>Class Scoresheet</strong>
-                            , a feature that allows scores to be entered in bulk, saving time and reducing errors, and giving teachers more time to focus on their students.
-                        </p>
-                        <p class="mb-2">
-                            <strong>Timeline:</strong>
-                            4 Months
-                        </p>
-                        <p class="mb-4">
-                            <strong>Outcomes:</strong>
-                            K5 teachers using ConnectEd had to enter offline test scores manually, a slow and frustrating process. I designed and prototyped a table-style gradebook for bulk score entry and tested it with teachers. The
-                            <strong>final solution saved significant time and simplified grading workflows,</strong>
-                            giving teachers more time to focus on instruction.
-                        </p>
-                        <p class="mb-4">
+                        <p class="lead mb-4 text-dark">Teachers needed a faster way to enter test scores for their whole class instead of updating each student individually. I designed the <strong>Class Scoresheet</strong>, a feature that allows scores to be entered in bulk, saving time and reducing errors, and giving teachers more time to focus on their students.</p>
+                        <div class="row mb-4">
+                            <div class="col-md-4">
+                                <h4 style="font-size: 1.1rem; font-weight: 600;">Timeline</h4>
+                                <p class="mb-0">4 Months</p>
+                            </div>
+                            <div class="col-md-8">
+                                <h4 style="font-size: 1.1rem; font-weight: 600;">Impact</h4>
+                                <p class="mb-0">
+                                    K5 teachers using ConnectEd had to enter offline test scores manually, a slow and frustrating process. I designed and prototyped a table-style gradebook for bulk score entry and tested it with teachers. The
+                                    <strong>final solution saved significant time and simplified grading workflows,</strong>
+                                    giving teachers more time to focus on instruction.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="text-end mb-4">
                             <span class="badge bg-dark me-2">Enterprise</span>
                             <span class="badge bg-dark">Ed Tech</span>
-                        </p>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -73,7 +85,7 @@
                             <a class="custom-lightbox-trigger" href="#" data-image="assets/img/portfolio/class_scoresheet.png" data-title="Class scoresheet interface"><img class="img-fluid" src="assets/img/portfolio/class_scoresheet.png" alt="Class scoresheet interface" style="cursor: pointer" /></a>
                             <figcaption class="text-muted text-center mt-2" style="font-size: 0.875rem">Online scoresheet showing graded test.</figcaption>
                         </figure>
-                        <p class="lead mb-4">While this worked well for older students, it posed a challenge for K5 teachers. Many of them used the platform to create tests/quizzes and printed them out for children to take by hand. They auto-grading feature wasn't something they could do.</p>
+                        <p class="lead mb-4">While this worked well for older students, it posed a challenge for K5 teachers. Many of them used the platform to create tests/quizzes and print them out for children to take by hand. They auto-grading feature wasn't something they could do.</p>
                         <figure class="mt-3 mb-5">
                             <a class="custom-lightbox-trigger" href="#" data-image="assets/img/portfolio/class_taking_test.png" data-title="Class taking test"><img class="img-fluid" src="assets/img/portfolio/class_taking_test.png" alt="Class taking test" style="cursor: pointer; max-width: 60%; margin: 0 auto; display: block" /></a>
                             <figcaption class="text-muted text-center mt-2" style="font-size: 0.875rem">In K5, many students take tests & quizzes on paper by hand.</figcaption>
@@ -81,24 +93,61 @@
                         <p class="lead mb-4">After collecting the completed assignments, teachers had to manually input scores into the scoresheet to access platform-generated reports. Without doing this, they couldn't view performance data or identify areas for remediation.</p>
                         <p class="lead mb-5">The process was lengthy—teachers had to enter scores for each question, for every student—which made it time-consuming and cumbersome.</p>
                         <figure class="mt-3 mb-5">
-                            <a class="custom-lightbox-trigger" href="#" data-image="assets/img/portfolio/tests_on_desk.png" data-title="Tests on desk"><img class="img-fluid" src="assets/img/portfolio/tests_on_desk.png" alt="Tests on desk" style="cursor: pointer; max-width: 40%; margin: 0 auto; display: block" /></a>
-                            <figcaption class="text-muted text-center mt-2" style="font-size: 0.875rem">Teachers grade paper tests offline and then manually input scores into the platform.</figcaption>
+                            <a class="custom-lightbox-trigger" href="#" data-image="assets/img/portfolio/scoresheetgif.gif" data-title="Scoresheet GIF"><img class="img-fluid" src="assets/img/portfolio/scoresheetgif.gif" alt="Scoresheet GIF" style="cursor: pointer; margin: 0 auto; display: block" /></a>
+                            <figcaption class="text-muted text-center mt-2" style="font-size: 0.875rem">Inputting offline scores into the platform was time-consuming and cumbersome.</figcaption>
+                        </figure>
+                        <p class="lead mb-4">So how could we make inputting tests scores less of a headache?</p>
+                        <figure class="mt-3 mb-5">
+                            <a class="custom-lightbox-trigger" href="#" data-image="assets/img/portfolio/papertests.png" data-title="Paper tests"><img class="img-fluid" src="assets/img/portfolio/papertests.png" alt="Paper tests" style="cursor: pointer; max-width: 50%; margin: 0 auto; display: block" /></a>
+                            <figcaption class="text-muted text-center mt-2" style="font-size: 0.875rem">How could we make it easier to input scores from paper tests?</figcaption>
                         </figure>
                         <h2 class="mt-5 mb-4">Simplifying Bulk Scoring</h2>
-                        <p class="lead mb-4">I knew a new design was needed—one that retained the core features of the individual scoresheet but scaled for class-wide use. This led to the concept of the Class Scoresheet.</p>
-                        <p class="lead mb-4">I began with low-fidelity wireframes, focusing on simplifying score entry across a full class. One key stakeholder request was an "Apply All" feature, allowing teachers to assign the same score to all students for a single question. My initial design approach drew inspiration from a spreadsheet-style layout, similar to Excel, to make bulk scoring intuitive and familiar.</p>
+                        <p class="lead mb-4">I knew a new design was needed. The current scoresheet only let you input a score question-by-question and student-by-student. What if you could enter scores for all students and all questions?</p>
+                        <p class="lead mb-4">The early designs focused on simplifying score entry across a full class. One key stakeholder request was an "Apply All" feature, allowing teachers to assign the same score to all students for a single question. My initial design approach drew inspiration from a spreadsheet-style layout, similar to Excel, to make bulk scoring intuitive and familiar.</p>
+                        <figure class="mt-3 mb-5">
+                            <a class="custom-lightbox-trigger" href="#" data-image="assets/img/portfolio/wireframe1.gif" data-title="Wireframe 1"><img class="img-fluid" src="assets/img/portfolio/wireframe1.gif" alt="Wireframe 1" style="cursor: pointer; margin: 0 auto; display: block" /></a>
+                            <figcaption class="text-muted text-center mt-2" style="font-size: 0.875rem">The spreadsheet-style design where you could input scores for all questions and all students.</figcaption>
+                        </figure>
                         <p class="lead mb-4">The spreadsheet view offered a quick overview of the entire class, making it easy to scan and compare scores. However, with a large number of students or questions, it could became overwhelming and hard to navigate.</p>
-                        <p class="lead mb-4">To address this, I created an alternative design focused on the individual student. This view allowed teachers to enter scores one student at a time</p>
+                        <p class="lead mb-4">To address this, I created an alternative design focused on the individual student. This view allowed teachers to enter scores one student at a time.</p>
+                        <figure class="mt-3 mb-5">
+                            <a class="custom-lightbox-trigger" href="#" data-image="assets/img/portfolio/wireframe2.gif" data-title="Wireframe 2"><img class="img-fluid" src="assets/img/portfolio/wireframe2.gif" alt="Wireframe 2" style="cursor: pointer; margin: 0 auto; display: block" /></a>
+                            <figcaption class="text-muted text-center mt-2" style="font-size: 0.875rem">The student-by-student design where you could input scores for one student at a time.</figcaption>
+                        </figure>
                         <p class="lead mb-5">Both designs had merit, and stakeholders agreed there wasn't a clear winner upfront. We decided to test both the class-level spreadsheet view and the individual student view to better understand which approach teachers preferred in real-world scenarios.</p>
                         <h2 class="mt-5 mb-4">User Testing: Fixing the Score Entry Struggle</h2>
                         <h3 class="mt-4 mb-3">Pilot Test</h3>
                         <p class="lead mb-4">Before starting formal user testing, our research team conducted a pilot session with a K5 teacher. While observing, I noticed a major design issue with the spreadsheet view: the participant struggled to input scores question-by-question within the columns.</p>
-                        <blockquote class="blockquote mb-4"><p class="mb-0">"It would be nice if it [the design] was going down vertically here as well, instead of horizontally, it would just looking up and down on here. It's almost harder for me to go up and down and then track horizontally."</p></blockquote>
+                        <div class="row mb-4">
+                            <div class="col-md-6 d-flex align-items-center">
+                                <blockquote class="blockquote mb-0" style="border-left: none;"><p class="mb-0">"It would be nice if it [the design] was going down vertically here as well, instead of horizontally, it would just looking up and down on here. It's almost harder for me to go up and down and then track horizontally."</p><footer class="blockquote-footer" style="font-size: 1.25rem; font-weight: 300; color: inherit; margin-top: 0.5rem;">K5 teacher during pilot test</footer></blockquote>
+                            </div>
+                            <div class="col-md-6">
+                                <figure class="mt-3 mb-3">
+                                    <a class="custom-lightbox-trigger" href="#" data-image="assets/img/portfolio/pilottest.png" data-title="Pilot Test"><img class="img-fluid" src="assets/img/portfolio/pilottest.png" alt="Pilot Test" style="cursor: pointer" /></a>
+                                    <figcaption class="text-muted text-center mt-2" style="font-size: 0.875rem">Switching "questions" with "students" fit users' mental model.</figcaption>
+                                </figure>
+                            </div>
+                        </div>
                         <p class="lead mb-5">Teachers grading paper assignments typically work student-by-student rather than question-by-question. The original spreadsheet design conflicted with this mental workflow, so the participant preferred the second, individual-student-focused design.</p>
                         <p class="lead mb-5">Based on this insight, I revised the designs to place the questions in a fixed left-side column, with student names displayed across the top.</p>
                         <h3 class="mt-4 mb-3">User Testing</h3>
                         <p class="lead mb-4">Our research team recruited seven K5 instructors who had experience with two of our major K5 products, Reading Mastery and Reading Wonders. All were familiar with the existing online scoresheet.</p>
                         <p class="lead mb-4">We presented both the spreadsheet design (Design A) and the student-by-student design (Design B).</p>
+                        <div class="row mb-4">
+                            <div class="col-md-6">
+                                <figure class="mt-3 mb-3">
+                                    <a class="custom-lightbox-trigger" href="#" data-image="assets/img/portfolio/testA.gif" data-title="Design A"><img class="img-fluid" src="assets/img/portfolio/testA.gif" alt="Design A" style="cursor: pointer; margin: 0 auto; display: block" /></a>
+                                    <figcaption class="text-muted text-center mt-2" style="font-size: 0.875rem">Design A: Spreadsheet design</figcaption>
+                                </figure>
+                            </div>
+                            <div class="col-md-6">
+                                <figure class="mt-3 mb-3">
+                                    <a class="custom-lightbox-trigger" href="#" data-image="assets/img/portfolio/testB.gif" data-title="Design B"><img class="img-fluid" src="assets/img/portfolio/testB.gif" alt="Design B" style="cursor: pointer; margin: 0 auto; display: block" /></a>
+                                    <figcaption class="text-muted text-center mt-2" style="font-size: 0.875rem">Design B: Student-by-student design</figcaption>
+                                </figure>
+                            </div>
+                        </div>
                         <h4 class="mt-4 mb-3">How we made User Testing more "real"</h4>
                         <p class="lead mb-4">To simulate how teachers grade printed assignments, we provided participants with PDFs of three scored tests.</p>
                         <p class="lead mb-5">We asked them to have the PDFs open on a second screen—or printed out—so they could reference them while entering scores for the first three student</p>
@@ -171,7 +220,7 @@
                         </blockquote>
                         <blockquote class="blockquote mb-5">
                             <p class="mb-0">"A definite improvement over what we've had, I think what we've had not only isn't that easy to use, but I think it looks really outdated, which turns people off."</p>
-                            <footer class="blockquote-footer">Reading Wonders (K-5 product) curriculum specialist</footer>
+                            <footer class="blockquote-footer">Reading Wonders (K5 product) curriculum specialist</footer>
                         </blockquote>
                         <p class="lead mb-5">The Class Scoresheet was never officially launched due to shifting priorities and limited resources. Despite the challenges—especially last-minute scope changes and time constraints—I found the problem-solving process for the Class Scoresheet rewarding.</p>
                         <p class="lead mb-5">It was a unique use case, and while the work was cut short, I'm confident the design addressed real user pain points and improved the overall experience.</p>
@@ -259,6 +308,29 @@
                     }
                 });
             })();
+        </script>
+        <!-- Fix dropdown in mobile navbar -->
+        <script>
+            document.addEventListener('DOMContentLoaded', function() {
+                const dropdownToggle = document.getElementById('caseStudiesDropdown');
+                const navbarCollapse = document.getElementById('navbarResponsive');
+                const dropdownContainer = dropdownToggle ? dropdownToggle.closest('.nav-item.dropdown') : null;
+
+                if (dropdownToggle && navbarCollapse && dropdownContainer) {
+                    // Stop all click events from bubbling up to prevent collapse from closing
+                    dropdownContainer.addEventListener('click', function(e) {
+                        e.stopPropagation();
+                    }, true); // Use capture phase
+
+                    // Also stop propagation on the dropdown menu
+                    const dropdownMenu = dropdownToggle.nextElementSibling;
+                    if (dropdownMenu) {
+                        dropdownMenu.addEventListener('click', function(e) {
+                            e.stopPropagation();
+                        }, true);
+                    }
+                }
+            });
         </script>
     </body>
 </html>

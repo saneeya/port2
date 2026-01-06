@@ -28,7 +28,7 @@ html(lang='en')
     body#page-top
 
         // Navigation
-        nav#mainNav.navbar.navbar-expand-lg.fixed-top(style='background-color: rgba(236, 236, 236, 0.9); backdrop-filter: blur(10px);')
+        nav#mainNav.navbar.navbar-expand-lg.navbar-shrink(style='background-color: rgba(236, 236, 236, 0.9); backdrop-filter: blur(10px);')
             .container
                 a.navbar-brand.text-dark(href='#page-top', style='text-transform: none; font-weight: 400;') Saneeya Khan
                 button.navbar-toggler.text-uppercase.bg-dark.text-white.rounded(type='button', data-bs-toggle='collapse', data-bs-target='#navbarResponsive', aria-controls='navbarResponsive', aria-expanded='false', aria-label='Toggle navigation', style='text-transform: uppercase; font-weight: 400;')
@@ -72,12 +72,13 @@ html(lang='en')
                 .row.justify-content-center
                     .col-lg-12(style='max-width: 98%;')
                         // Case Study 1
-                        .mb-5(style='background-color: #FFFFFF; border-radius: 16px; overflow: hidden;')
+                        .mb-5(style='border-radius: 16px; overflow: hidden;')
                             .row.g-0
                                 .col-md-6.order-md-2
-                                    .card-body.d-flex.align-items-center.justify-content-center(style='min-height: 200px; background-color: #FFFFFF;')
-                                        .text-center
-                                            i.fas.fa-bullhorn.fa-3x.text-dark.mb-3
+                                    a(href='campaigncreation.html', style='text-decoration: none; display: block; height: 100%;')
+                                        .card-body.d-flex.align-items-center.justify-content-center(style='min-height: 200px; cursor: pointer;')
+                                            .text-center
+                                                i.fas.fa-bullhorn.fa-3x.text-dark.mb-3
                                 .col-md-6.order-md-1
                                     .card-body
                                         h3.card-title Reimagining How Agencies Create Campaigns
@@ -89,10 +90,11 @@ html(lang='en')
                                         p.mt-3
                                             button.btn.btn-dark(data-bs-toggle='modal', data-bs-target='#caseStudy1') View Case Study
                         // Case Study 2
-                        .mb-5(style='background-color: #FFFFFF; border-radius: 16px; overflow: hidden;')
+                        .mb-5(style='border-radius: 16px; overflow: hidden;')
                             .row.g-0
                                 .col-md-6.order-md-2(style='padding: 1.5rem;')
-                                    img.img-fluid.h-100(src='assets/img/portfolio/Scoresheet_thumb.png', alt='Class Scoresheet interface showing grade entry grid', style='object-fit: cover; border-radius: 12px;')
+                                    a(href='scoresheet.html', style='display: block; height: 100%;')
+                                        img.img-fluid.h-100(src='assets/img/portfolio/Scoresheet_thumb.png', alt='Class Scoresheet interface showing grade entry grid', style='object-fit: cover; border-radius: 12px; cursor: pointer;')
                                 .col-md-6.order-md-1
                                     .card-body
                                         h3.card-title A Smarter Way for Teachers to Record Scores
@@ -104,12 +106,13 @@ html(lang='en')
                                         p.mt-3
                                             a.btn.btn-dark(href='scoresheet.html') View Case Study
                         // Case Study 3
-                        .mb-5(style='background-color: #FFFFFF; border-radius: 16px; overflow: hidden;')
+                        .mb-5(style='border-radius: 16px; overflow: hidden;')
                             .row.g-0
                                 .col-md-6.order-md-2
-                                    .card-body.d-flex.align-items-center.justify-content-center(style='min-height: 200px; background-color: #FFFFFF;')
-                                        .text-center
-                                            i.fas.fa-dollar-sign.fa-3x.text-dark.mb-3
+                                    a(href='pricingtool.html', style='text-decoration: none; display: block; height: 100%;')
+                                        .card-body.d-flex.align-items-center.justify-content-center(style='min-height: 200px; cursor: pointer;')
+                                            .text-center
+                                                i.fas.fa-dollar-sign.fa-3x.text-dark.mb-3
                                 .col-md-6.order-md-1
                                     .card-body
                                         h3.card-title Smart Pricing for Ad Inventory

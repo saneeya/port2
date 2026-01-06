@@ -11177,6 +11177,18 @@ blockquote.blockquote .blockquote-footer::before {
 }
 .portfolio img.img-fluid {
   border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.portfolio img.img-fluid:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+.portfolio a[href] .card-body {
+  transition: opacity 0.3s ease;
+}
+.portfolio a[href] .card-body:hover {
+  opacity: 0.85;
 }
 .portfolio .card .row {
   min-height: 100%;
@@ -11219,6 +11231,11 @@ blockquote.blockquote .blockquote-footer::before {
 .portfolio .mb-5[style*=background-color] {
   border-radius: 16px;
   overflow: hidden;
+}
+.portfolio .mb-5:not(:first-child) {
+  border-top: 1px solid #E0E0E0;
+  padding-top: 2rem;
+  margin-top: 2rem;
 }
 
 .portfolio-modal .btn-close {

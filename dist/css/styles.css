@@ -11016,6 +11016,8 @@ blockquote.blockquote .blockquote-footer::before {
   -webkit-backdrop-filter: blur(10px);
           backdrop-filter: blur(10px);
   overflow: visible !important;
+  z-index: 1030 !important;
+  position: relative;
 }
 #mainNav .container {
   overflow: visible !important;
@@ -11039,11 +11041,15 @@ blockquote.blockquote .blockquote-footer::before {
   overflow: visible !important;
   position: relative;
 }
+#mainNav .navbar-nav li.nav-item.dropdown {
+  z-index: 1050 !important;
+  position: relative;
+}
 #mainNav .navbar-nav li.nav-item.dropdown .dropdown-menu {
   margin-top: 0;
   border-radius: 8px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-  z-index: 1050;
+  z-index: 1050 !important;
   position: absolute;
   min-width: 250px;
   right: 0;

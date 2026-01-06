@@ -34,11 +34,22 @@ window.addEventListener('DOMContentLoaded', event => {
         });
     };
 
-    // Activate Bootstrap scrollspy on the subnav element (for scoresheet page)
+    // Activate Bootstrap scrollspy on the subnav element (for case study pages)
     const subNav = document.body.querySelector('#subNav');
     if (subNav) {
-        const sections = document.querySelectorAll('#paper-tests, #early-designs, #user-testing, #teacher-feedback, #polishing, #lessons-learned');
         const navLinks = subNav.querySelectorAll('.nav-link');
+        
+        // Dynamically get all section IDs from the nav links
+        const sectionIds = [];
+        navLinks.forEach(link => {
+            const href = link.getAttribute('href');
+            if (href && href.startsWith('#')) {
+                sectionIds.push(href.substring(1));
+            }
+        });
+        
+        // Get all sections that match the nav links
+        const sections = sectionIds.length > 0 ? document.querySelectorAll(sectionIds.map(id => '#' + id).join(', ')) : [];
         
         // Calculate offset for navbar + subnav
         const mainNav = document.body.querySelector('#mainNav');

@@ -10,6 +10,8 @@
     background-color: rgba(236, 236, 236, 0.9) !important;
     backdrop-filter: blur(10px);
     overflow: visible !important;
+    z-index: 1030 !important;
+    position: relative;
 
     .container {
         overflow: visible !important;
@@ -38,11 +40,14 @@
             position: relative;
 
             &.dropdown {
+                z-index: 1050 !important;
+                position: relative;
+                
                 .dropdown-menu {
                     margin-top: 0;
                     border-radius: 8px;
                     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-                    z-index: 1050;
+                    z-index: 1050 !important;
                     position: absolute;
                     min-width: 250px;
                     right: 0;

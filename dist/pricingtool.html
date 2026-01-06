@@ -45,29 +45,40 @@
                 </div>
             </div>
         </nav>
+        <!-- Subnav Bar-->
+        <nav class="navbar navbar-expand-lg" id="subNav" style="position: sticky; top: 0; z-index: 1020">
+            <div class="container">
+                <ul class="navbar-nav mx-auto flex-row">
+                    <li class="nav-item"><a class="nav-link text-dark px-3" href="#uniform-pricing">Uniform Pricing</a></li>
+                    <li class="nav-item"><a class="nav-link text-dark px-3" href="#spreadsheet-struggle">Spreadsheet Struggle</a></li>
+                    <li class="nav-item"><a class="nav-link text-dark px-3" href="#meeting-need">Meeting the Need</a></li>
+                    <li class="nav-item"><a class="nav-link text-dark px-3" href="#discovery">Discovery</a></li>
+                    <li class="nav-item"><a class="nav-link text-dark px-3" href="#final-design">Final Design</a></li>
+                    <li class="nav-item"><a class="nav-link text-dark px-3" href="#value">Value</a></li>
+                </ul>
+            </div>
+        </nav>
         <!-- Case Study Header Section-->
-        <section class="page-section text-dark" style="background-color: #FEF6E0; padding-top: calc(6rem + 74px)">
+        <section class="page-section text-dark" style="background-color: white; padding-top: calc(0.5rem + 74px); padding-bottom: 1.5rem">
             <div class="container">
                 <div class="row justify-content-center">
-                    <div class="col-lg-10" style="position: relative;">
+                    <div class="col-lg-10">
                         <h1 class="masthead-heading mb-4 text-dark">Smart Pricing for Ad Inventory</h1>
                         <p class="lead mb-4 text-dark">Prior to this project, ad pricing was entirely manual—employees managed rates in spreadsheets, and the development team had to push every price change.</p>
-                        <p class="lead mb-4 text-dark">I led the creation of the <strong>Pricing Tool</strong> from scratch, enabling the pricing team to manage and update rates themselves. This introduced more pricing variety and allowed for customized or loyalty-based discounts.</p>
-                        <div class="row mb-4">
-                            <div class="col-md-4">
-                                <h4 style="font-size: 1.1rem; font-weight: 600;">Timeline</h4>
-                                <p class="mb-0">5 months</p>
-                            </div>
-                            <div class="col-md-8">
-                                <h4 style="font-size: 1.1rem; font-weight: 600;">Outcomes</h4>
-                                <p class="mb-0">
-                                    The tool cut <strong>CPM adjustment timelines from weeks to minutes,</strong> allowing the pricing team to respond to market opportunities in real time. It removed their reliance on engineering resources, freed up agile capacity for product development, and <strong>introduced flexible pricing options</strong> that better served our growing mix of small businesses, enterprises, and agency clients.
-                                </p>
-                            </div>
-                        </div>
-                        <div class="text-end mb-4">
+                        <p class="lead mb-3 text-dark">I led the creation of the <strong>Pricing Tool</strong> from scratch, enabling the pricing team to manage and update rates themselves. This introduced more pricing variety and allowed for customized or loyalty-based discounts.</p>
+                        <p class="mb-5">
                             <span class="badge bg-dark me-2">Ad Tech</span>
                             <span class="badge bg-dark">Internal Tool</span>
+                        </p>
+                        <div class="row mb-4">
+                            <div class="col-md-3">
+                                <h4 class="mb-2" style="font-size: 1.2rem;">Timeline</h4>
+                                <p class="mb-2">5 months</p>
+                            </div>
+                            <div class="col-md-9">
+                                <h4 class="mb-2" style="font-size: 1.2rem;">Impact</h4>
+                                <p class="mb-2">The tool cut <strong>CPM adjustment timelines from weeks to minutes,</strong> allowing the pricing team to respond to market opportunities in real time. It removed their reliance on engineering resources, freed up agile capacity for product development, and <strong>introduced flexible pricing options</strong> that better served our growing mix of small businesses, enterprises, and agency clients.</p>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -78,7 +89,7 @@
             <div class="container">
                 <div class="row justify-content-center">
                     <div class="col-lg-10">
-                        <h2 class="mb-4">Why Uniform Pricing Holds Us Back</h2>
+                        <h2 class="mb-4" id="uniform-pricing">Why Uniform Pricing Holds Us Back</h2>
                         <p class="lead mb-4">Hulu Ad Manager (now Disney Campaign Manager) launched in March 2020, giving advertisers a way to create and manage their own Hulu campaigns. For the first few years, it used a single rate card or CPM (Cost per 1,000 views), which meant all ad campaigns were charged the same rate—adjusted occasionally based on seasonality and ad inventory availability.</p>
                         <p class="lead mb-4">Because everyone was charged the same rate, we missed out on key business opportunities:</p>
                         <ul class="lead mb-4">
@@ -86,10 +97,10 @@
                             <li>Couldn't offer discounted rates for new or returning advertisers</li>
                             <li>No simple way to adjust pricing for seasonality (such as raise CPMs during holidays, or lower during slow periods)</li>
                         </ul>
-                        <h2 class="mt-5 mb-4">The Spreadsheet Struggle</h2>
+                        <h2 class="mt-5 mb-4" id="spreadsheet-struggle">The Spreadsheet Struggle</h2>
                         <p class="lead mb-4">The internal pricing team had no way to adjust CPMs directly in Hulu Ad Manager. They had to submit engineering requests for every change. With no platform to manage rates, they tracked everything manually in spreadsheets.</p>
                         <p class="lead mb-4">Example of how the pricing team tracked rate cards in spreadsheets. Advertiser names and CPM amount have been blurred out.</p>
-                        <h2 class="mt-5 mb-4">Meeting the Need: Smarter Rate Card Management</h2>
+                        <h2 class="mt-5 mb-4" id="meeting-need">Meeting the Need: Smarter Rate Card Management</h2>
                         <p class="lead mb-4">A backlog item called "Pricing Manager" proposed a new tool allowing the pricing team to create and manage multiple rate cards.</p>
                         <p class="lead mb-4">The goal: reduce engineering workload by eliminating manual CPM updates and help the pricing team automate parts of their workflow.</p>
                         <p class="lead mb-4">We got the green light to start working on this pricing tool in summer 2022 with a target launch of early 2023.</p>
@@ -112,7 +123,7 @@
                             <li>Instead of manually adding advertisers one by one, pricing teams can assign entire groups to a rate card, thereby reducing workload</li>
                             <li>Advertisers can be grouped on a variety of factors such as repeat customers, agency users, new customers, etc.</li>
                         </ul>
-                        <h2 class="mt-5 mb-4">Rapid Discovery & Early Ideas</h2>
+                        <h2 class="mt-5 mb-4" id="discovery">Rapid Discovery & Early Ideas</h2>
                         <p class="lead mb-4">This was a fast-moving, niche project with limited time for discovery. I met with the pricing team to understand their current workflow (where I learned they manually tracked pricing in spreadsheets) and consulted with other designers who worked on internal tools for additional context.</p>
                         <h3 class="mt-4 mb-3">Internal Tool with Start/End Dates</h3>
                         <p class="lead mb-4">A teammate shared designs for a tool where items (in this case: deal packages) were organized by type and by start/end dates.</p>
@@ -128,8 +139,8 @@
                         <h2 class="mt-5 mb-4">Final Advertiser Group Flows</h2>
                         <p class="lead mb-4">Advertisers were split into two views: individual advertisers and advertiser groups. It took me a while to arrive at this solution because I needed a clear way to organize advertisers—some belonged to groups, others did not.</p>
                         <p class="lead mb-4">This approach let users choose the view that best fit their workflow, while still being able to see assigned rate cards in both.</p>
-                        <h2 class="mt-5 mb-4">Final Design Walkthrough</h2>
-                        <h2 class="mt-5 mb-4">Delivering Value Under Constraints</h2>
+                        <h2 class="mt-5 mb-4" id="final-design">Final Design Walkthrough</h2>
+                        <h2 class="mt-5 mb-4" id="value">Delivering Value Under Constraints</h2>
                         <p class="lead mb-4">This was a quick project, so there wasn't much time for UX research, but I did share the designs with the pricing team during regular check ins. If I had more time, I would have done more follow up. Pricing tool released in early 2023 and I haven't done many updates due to the amount of other projects I've had to switch to.</p>
                         <p class="lead mb-4">Building an internal tool from scratch, on a tight timeline, with overseas developers was a challenge, but I'm confident it helped the pricing team reduce a lot of manual work.</p>
                         <h3 class="mt-4 mb-3">Where the Pricing Tool is now</h3>

@@ -45,29 +45,41 @@
                 </div>
             </div>
         </nav>
+        <!-- Subnav Bar-->
+        <nav class="navbar navbar-expand-lg" id="subNav" style="position: sticky; top: 0; z-index: 1020">
+            <div class="container">
+                <ul class="navbar-nav mx-auto flex-row">
+                    <li class="nav-item"><a class="nav-link text-dark px-3" href="#campaign-basics">Campaign Basics</a></li>
+                    <li class="nav-item"><a class="nav-link text-dark px-3" href="#ux-overhaul">UX Overhaul</a></li>
+                    <li class="nav-item"><a class="nav-link text-dark px-3" href="#agency-wants">Agency Wants</a></li>
+                    <li class="nav-item"><a class="nav-link text-dark px-3" href="#single-page">Single Page</a></li>
+                    <li class="nav-item"><a class="nav-link text-dark px-3" href="#iterative-journey">Iterative Journey</a></li>
+                    <li class="nav-item"><a class="nav-link text-dark px-3" href="#testing">Testing</a></li>
+                    <li class="nav-item"><a class="nav-link text-dark px-3" href="#constraints">Constraints</a></li>
+                </ul>
+            </div>
+        </nav>
         <!-- Case Study Header Section-->
-        <section class="page-section text-dark" style="background-color: #FEF6E0; padding-top: calc(6rem + 74px)">
+        <section class="page-section text-dark" style="background-color: white; padding-top: calc(0.5rem + 74px); padding-bottom: 1.5rem">
             <div class="container">
                 <div class="row justify-content-center">
-                    <div class="col-lg-10" style="position: relative;">
+                    <div class="col-lg-10">
                         <h1 class="masthead-heading mb-4 text-dark">Reimagining How Agencies Create Campaigns</h1>
                         <p class="lead mb-4 text-dark">Agency users wanted a faster, more flexible way to create ad campaigns—with features our tool didn't yet support.</p>
-                        <p class="lead mb-4 text-dark">Over two years as the only designer on the project, I reimagined the campaign creation flow with new functionality, and cleaner layouts that streamlined the entire process and boosted revenue.</p>
-                        <div class="row mb-4">
-                            <div class="col-md-4">
-                                <h4 style="font-size: 1.1rem; font-weight: 600;">Timeline</h4>
-                                <p class="mb-0">2+ years (2022-2024)</p>
-                            </div>
-                            <div class="col-md-8">
-                                <h4 style="font-size: 1.1rem; font-weight: 600;">Outcomes</h4>
-                                <p class="mb-0">
-                                    Customers love the new features, and agencies finally have the tools they'd been requesting for years. We <strong>eliminated most of our third-party dependencies and increased revenue from agency users.</strong> I also grew the design team from one to three full-time designers.
-                                </p>
-                            </div>
-                        </div>
-                        <div class="text-end mb-4">
+                        <p class="lead mb-3 text-dark">Over two years as the only designer on the project, I reimagined the campaign creation flow with new functionality, and cleaner layouts that streamlined the entire process and boosted revenue.</p>
+                        <p class="mb-5">
                             <span class="badge bg-dark me-2">Ad Tech</span>
                             <span class="badge bg-dark">B2B</span>
+                        </p>
+                        <div class="row mb-4">
+                            <div class="col-md-3">
+                                <h4 class="mb-2" style="font-size: 1.2rem;">Timeline</h4>
+                                <p class="mb-2">2+ years (2022-2024)</p>
+                            </div>
+                            <div class="col-md-9">
+                                <h4 class="mb-2" style="font-size: 1.2rem;">Impact</h4>
+                                <p class="mb-2">Customers love the new features, and agencies finally have the tools they'd been requesting for years. We <strong>eliminated most of our third-party dependencies and increased revenue from agency users.</strong> I also grew the design team from one to three full-time designers.</p>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -78,7 +90,7 @@
             <div class="container">
                 <div class="row justify-content-center">
                     <div class="col-lg-10">
-                        <h2 class="mb-4">Ad Campaign Basics: Target, Upload, Launch</h2>
+                        <h2 class="mb-4" id="campaign-basics">Ad Campaign Basics: Target, Upload, Launch</h2>
                         <p class="lead mb-4">Disney Campaign Manager (formerly Hulu Ad Manager) launched in March 2020, allowing advertisers to create and manage their own ad campaigns on Hulu. Campaign creation included:</p>
                         <ul class="lead mb-4">
                             <li>Naming the campaign, setting its dates and budget</li>
@@ -86,7 +98,7 @@
                             <li>Uploading a video ad</li>
                             <li>Submitting the campaign for approval</li>
                         </ul>
-                        <h2 class="mt-5 mb-4">Powering Up for Agencies: A UX Overhaul</h2>
+                        <h2 class="mt-5 mb-4" id="ux-overhaul">Powering Up for Agencies: A UX Overhaul</h2>
                         <p class="lead mb-4">When we launched the platform, our main customers were small and medium-sized businesses. But over time, agency users became our main focus.</p>
                         <p class="lead mb-4">The team and I realized we needed to create a new campaign flow because:</p>
                         <ul class="lead mb-4">
@@ -100,7 +112,7 @@
                             <li>Achieving more parity with the options offered to advertisers in the direct (non-self-serve) side of the company</li>
                             <li>Become more inline with competitors</li>
                         </ul>
-                        <h2 class="mt-5 mb-4">What Agencies Really Want</h2>
+                        <h2 class="mt-5 mb-4" id="agency-wants">What Agencies Really Want</h2>
                         <p class="lead mb-4">Agency users have different needs than our usual customers, so we had to add new features to support them.</p>
                         <p class="lead mb-4">Below is a list of those user needs, along with a brief description of each.</p>
                         <h3 class="mt-4 mb-3">Add Line Items</h3>
@@ -121,7 +133,7 @@
                             <li>Tracking pixels or 3rd party tags to count number of views (or impressions)</li>
                         </ul>
                         <p class="lead mb-4">VAST was already available on the direct (non-self-serve) side of the business and was a common request from agency users.</p>
-                        <h2 class="mt-5 mb-4">UX Showdown: Single Page or Step-by-Step?</h2>
+                        <h2 class="mt-5 mb-4" id="single-page">UX Showdown: Single Page or Step-by-Step?</h2>
                         <p class="lead mb-4">A previous designer explored a new single-page campaign design (shown here) and tested how it performed compared to the existing multi-page layout.</p>
                         <p class="lead mb-4">Here were the main results from the sessions:</p>
                         <ul class="lead mb-4">
@@ -133,7 +145,7 @@
                         <h2 class="mt-5 mb-4">Why Single Page Wins</h2>
                         <p class="lead mb-4">Based on past designs and research, I chose the single-page layout. It's easier to navigate with new features and scaleable for future updates.</p>
                         <p class="lead mb-4">Below are competitor examples I reviewed, focusing on user flows and how they handle multiple line items.</p>
-                        <h2 class="mt-5 mb-4">The Iterative Journey</h2>
+                        <h2 class="mt-5 mb-4" id="iterative-journey">The Iterative Journey</h2>
                         <p class="lead mb-4">A major change in the new campaign flow was the implementation of line items. A line item is a single set of targeting, budget, dates, creative assets, etc.</p>
                         <p class="lead mb-4">I started exploration by having a tab for each line item on the top rail.</p>
                         <p class="lead mb-4">The tab layout wasn't scalable for campaigns with multiple line items, so I transitioned to a side panel navigation instead.</p>
@@ -145,7 +157,7 @@
                         <p class="lead mb-4">I explored several VAST layout options (viewable in the carousel below) and ultimately decided to show only the attributes that failed validation, instead of displaying a pass/fail status for each asset.</p>
                         <h2 class="mt-5 mb-4">The Final Design in Action</h2>
                         <p class="lead mb-4">Below is the prototype of the new campaign creation process.</p>
-                        <h2 class="mt-5 mb-4">Putting the Campaign Flow to the Test</h2>
+                        <h2 class="mt-5 mb-4" id="testing">Putting the Campaign Flow to the Test</h2>
                         <p class="lead mb-4">Due to other commitments, user testing began later than planned—but I took the initiative to move it forward. While I couldn't test every feature (like VAST), I focused on the core campaign creation flow.</p>
                         <p class="lead mb-4">Specifically, I tested whether users could:</p>
                         <ul class="lead mb-4">
@@ -195,7 +207,7 @@
                         <p class="lead mb-4">The new Campaign Creation flow launched in October 2024. While the launch faced some technical issues and bugs, I had thoroughly QA'd the experience beforehand—flagging usability problems and correcting UI inconsistencies early on.</p>
                         <p class="lead mb-4">Since then, we've introduced several key features, including support for Disney+, Hulu, or both as ad destinations, and the integration of VAST tags. Ongoing efforts include collecting feedback from advertisers and internal teams, and iterating on designs to address issues uncovered in user testing.</p>
                         <p class="lead mb-4">We're also undergoing a major visual update as part of the rebrand from <em>Hulu Ad Manager</em> to <em>Disney Campaign Manager</em>, which involves a complete overhaul of the platform's style guide.</p>
-                        <h2 class="mt-5 mb-4">Designing Through Constraints: What I Learned</h2>
+                        <h2 class="mt-5 mb-4" id="constraints">Designing Through Constraints: What I Learned</h2>
                         <p class="lead mb-4">Campaign Creation is still evolving, with many new features on the roadmap. As the platform grows, we may eventually need to revisit and redesign the flow to accommodate future updates.</p>
                         <p class="lead mb-4">This project came with its share of challenges—working as the sole designer, without a dedicated research team, and collaborating with overseas developers across time zones, all while juggling other responsibilities. Despite that, it was a rewarding experience to lead the design of a core flow from the ground up and contribute meaningfully to the platform's growth</p>
                         <h3 class="mt-4 mb-3">Things I Learned</h3>

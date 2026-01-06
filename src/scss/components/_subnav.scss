@@ -1,0 +1,46 @@
+//
+// Subnav
+//
+
+#subNav {
+    padding-top: 0.75rem;
+    padding-bottom: 0.75rem;
+    font-family: $font-family-sans-serif;
+    font-weight: 400;
+    background-color: rgba(255, 255, 255, 0.9) !important;
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+
+    .navbar-nav {
+        .nav-item {
+            .nav-link {
+                color: $dark;
+                font-size: 0.9rem;
+                padding: 0.5rem 1rem;
+                transition: opacity 0.3s ease;
+                position: relative;
+
+                &:hover {
+                    color: $dark;
+                    opacity: 0.7;
+                }
+
+                &.active {
+                    color: $dark;
+                    font-weight: 600;
+                    
+                    &::after {
+                        content: '';
+                        position: absolute;
+                        bottom: -0.75rem;
+                        left: 1rem;
+                        right: 1rem;
+                        height: 2px;
+                        background-color: $dark;
+                    }
+                }
+            }
+        }
+    }
+}
+

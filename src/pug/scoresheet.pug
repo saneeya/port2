@@ -17,7 +17,7 @@ html(lang='en')
         script(src='https://use.fontawesome.com/releases/v6.3.0/js/all.js', crossorigin='anonymous')
 
         // Google fonts
-        link(href='https://fonts.googleapis.com/css?family=EB+Garamond:400,500,600,700', rel='stylesheet', type='text/css')
+        link(href='https://fonts.googleapis.com/css2?family=League+Spartan:wght@400;500;600;700&display=swap', rel='stylesheet', type='text/css')
         link(href='https://fonts.googleapis.com/css?family=Noto+Sans:400,700', rel='stylesheet', type='text/css')
 
         // Core theme CSS (includes Bootstrap)
@@ -35,7 +35,33 @@ html(lang='en')
                 #navbarResponsive.collapse.navbar-collapse
                     ul.navbar-nav.ms-auto
                         li.nav-item.mx-0.mx-lg-1
-                            a.nav-link.py-3.px-0.px-lg-3.rounded.text-dark(href='index.html#case-studies') Case Studies
+                            a.nav-link.py-3.px-0.px-lg-3.rounded.text-dark(href='index.html#page-top') About
+                        li.nav-item.mx-0.mx-lg-1.dropdown
+                            a.nav-link.py-3.px-0.px-lg-3.rounded.text-dark.dropdown-toggle(href='#', role='button', data-bs-toggle='dropdown', aria-expanded='false') Case Studies
+                            ul.dropdown-menu.dropdown-menu-end
+                                li
+                                    a.dropdown-item.text-dark(href='campaigncreation.html') Reimagining How Agencies Create Campaigns
+                                li
+                                    a.dropdown-item.text-dark(href='scoresheet.html') A Smarter Way for Teachers to Record Scores
+                                li
+                                    a.dropdown-item.text-dark(href='pricingtool.html') Smart Pricing for Ad Inventory
+
+        // Subnav Bar
+        nav#subNav.navbar.navbar-expand-lg(style='position: sticky; top: 0; z-index: 1030;')
+            .container
+                ul.navbar-nav.mx-auto.flex-row
+                    li.nav-item
+                        a.nav-link.text-dark.px-3(href='#paper-tests') Paper Tests
+                    li.nav-item
+                        a.nav-link.text-dark.px-3(href='#early-designs') Early Designs
+                    li.nav-item
+                        a.nav-link.text-dark.px-3(href='#user-testing') User Testing
+                    li.nav-item
+                        a.nav-link.text-dark.px-3(href='#teacher-feedback') Teacher Feedback
+                    li.nav-item
+                        a.nav-link.text-dark.px-3(href='#polishing') Polishing
+                    li.nav-item
+                        a.nav-link.text-dark.px-3(href='#lessons-learned') Lessons Learned
 
         // Case Study Header Section
         section.page-section.text-dark(style='background-color: #F9F9F9; padding-top: calc(6rem + 74px);')
@@ -62,7 +88,7 @@ html(lang='en')
             .container
                 .row.justify-content-center
                     .col-lg-10
-                        h2.mb-4 Paper Tests, Painful Entry
+                        h2#paper-tests.mb-4 Paper Tests, Painful Entry
                         p.lead.mb-4
                             | At McGraw Hill Education, the platform included a scoresheet feature that automatically graded online quizzes, tests, and homework.
                         figure.mt-3.mb-5
@@ -90,7 +116,7 @@ html(lang='en')
                                 img.img-fluid(src='assets/img/portfolio/papertests.png', alt='Paper tests', style='cursor: pointer; max-width: 50%; margin: 0 auto; display: block;')
                             figcaption.text-muted.text-center.mt-2(style='font-size: 0.875rem;') How could we make it easier to input scores from paper tests?
 
-                        h2.mt-5.mb-4 Early Designs: Simplifying Bulk Scoring
+                        h2#early-designs.mt-5.mb-4 Early Designs: Simplifying Bulk Scoring
                         p.lead.mb-4
                             | I knew a new design was needed—one that retained the core features of the individual scoresheet but scaled for class-wide use. This led to the concept of the Class Scoresheet.
                         p.lead.mb-4
@@ -102,7 +128,7 @@ html(lang='en')
                         p.lead.mb-5
                             | Both designs had merit, and stakeholders agreed there wasn't a clear winner upfront. We decided to test both the class-level spreadsheet view and the individual student view to better understand which approach teachers preferred in real-world scenarios.
 
-                        h2.mt-5.mb-4 User Testing: Fixing the Score Entry Struggle
+                        h2#user-testing.mt-5.mb-4 User Testing: Fixing the Score Entry Struggle
 
                         h3.mt-4.mb-3 Pilot Test
                         p.lead.mb-4
@@ -127,7 +153,7 @@ html(lang='en')
                         p.lead.mb-5
                             | We asked them to have the PDFs open on a second screen—or printed out—so they could reference them while entering scores for the first three student
 
-                        h2.mt-5.mb-4 What did Teachers Think?
+                        h2#teacher-feedback.mt-5.mb-4 What did Teachers Think?
 
                         h3.mt-4.mb-3 Spreadsheet Design (Design A)
                         ul.lead.mb-4
@@ -180,7 +206,7 @@ html(lang='en')
                             footer.blockquote-footer
                                 | 3rd grade teacher
 
-                        h2.mt-5.mb-4 Polishing the Experience
+                        h2#polishing.mt-5.mb-4 Polishing the Experience
                         p.lead.mb-4
                             | Out of 7 participants, 5 preferred Design A and 2 preferred Design B. When asked how the designs could be improved, participants suggested:
                         ul.lead.mb-4
@@ -203,7 +229,7 @@ html(lang='en')
                             li Added support for multiple attempts, showing each time a student retakes an assignment (a late-stage stakeholder request)
                             li Updated the scoresheet layout to clearly display and manage multiple attempts
 
-                        h2.mt-5.mb-4 Design Wins & Lessons Learned
+                        h2#lessons-learned.mt-5.mb-4 Design Wins & Lessons Learned
                         p.lead.mb-4
                             | One of the most surprising takeaways from this project was how excited users were about the prototype. I hadn't fully realized how frustrating the current process was for them, and it was rewarding to see how the new design helped ease that pain.
                         p.lead.mb-4

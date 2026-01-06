@@ -9,6 +9,15 @@
     font-weight: $headings-font-weight;
     background-color: rgba(236, 236, 236, 0.9) !important;
     backdrop-filter: blur(10px);
+    overflow: visible !important;
+
+    .container {
+        overflow: visible !important;
+    }
+
+    .navbar-collapse {
+        overflow: visible !important;
+    }
 
     .navbar-brand {
         color: $dark;
@@ -22,8 +31,25 @@
 
     .navbar-nav {
         margin-top: 1rem;
+        overflow: visible !important;
 
         li.nav-item {
+            overflow: visible !important;
+            position: relative;
+
+            &.dropdown {
+                .dropdown-menu {
+                    margin-top: 0;
+                    border-radius: 8px;
+                    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+                    z-index: 1050;
+                    position: absolute;
+                    min-width: 250px;
+                    right: 0;
+                    left: auto;
+                }
+            }
+
             a.nav-link {
                 color: $dark;
 
@@ -65,6 +91,7 @@
 
         .navbar-nav {
             margin-top: 0;
+            overflow: visible !important;
         }
 
         .navbar-nav>li.nav-item>a.nav-link.active {

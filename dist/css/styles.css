@@ -115,7 +115,7 @@ hr {
 h6, .h6, h5, .h5, h4, .h4, h3, .h3, h2, .h2, h1, .h1 {
   margin-top: 0;
   margin-bottom: 0.5rem;
-  font-family: "Arvo", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-family: "EB Garamond", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   font-weight: 400;
   line-height: 1.2;
 }
@@ -10852,6 +10852,14 @@ body {
   font-size: 1.125rem;
 }
 
+body {
+  line-height: 1.75;
+}
+
+p, .card-text {
+  line-height: 1.75;
+}
+
 .badge.bg-dark {
   background-color: #B6D5C7 !important;
   color: #000;
@@ -11002,13 +11010,16 @@ blockquote.blockquote .blockquote-footer::before {
 #mainNav {
   padding-top: 1rem;
   padding-bottom: 1rem;
-  font-family: "Arvo", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-family: "EB Garamond", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   font-weight: 400;
-  background-color: #FEF6E0 !important;
+  background-color: rgba(236, 236, 236, 0.9) !important;
+  -webkit-backdrop-filter: blur(10px);
+          backdrop-filter: blur(10px);
 }
 #mainNav .navbar-brand {
   color: #212529;
   font-weight: 400;
+  font-size: 1.5rem;
 }
 #mainNav .navbar-brand:hover {
   color: #212529;
@@ -11043,7 +11054,7 @@ blockquote.blockquote .blockquote-footer::before {
     transition: padding-top 0.3s, padding-bottom 0.3s;
   }
   #mainNav .navbar-brand {
-    font-size: 1.75em;
+    font-size: 2.25em;
     transition: font-size 0.3s;
   }
   #mainNav .navbar-nav {
@@ -11064,7 +11075,7 @@ blockquote.blockquote .blockquote-footer::before {
     padding-bottom: 0.5rem;
   }
   #mainNav.navbar-shrink .navbar-brand {
-    font-size: 1.5em;
+    font-size: 1.75em;
   }
 }
 .form-floating input.form-control,
@@ -11164,11 +11175,14 @@ blockquote.blockquote .blockquote-footer::before {
   border-top-right-radius: 16px;
   display: block;
 }
+.portfolio img.img-fluid {
+  border-radius: 12px;
+}
 .portfolio .card .row {
   min-height: 100%;
 }
 .portfolio .card-body {
-  padding: 3rem 2rem;
+  padding: 4rem 3rem;
 }
 .portfolio .card-body:not(.d-flex) {
   display: flex;
@@ -11176,21 +11190,35 @@ blockquote.blockquote .blockquote-footer::before {
   justify-content: space-between;
   min-height: 100%;
 }
-.portfolio .card-body:not(.d-flex) p.mt-3:not(:last-child) {
-  margin-top: 0.5rem !important;
+.portfolio .card-body:not(.d-flex) .card-title {
+  margin-bottom: 1.5rem;
 }
-.portfolio .card-body:not(.d-flex) p:last-child {
-  margin-top: 2rem;
-  margin-bottom: 0;
-  align-self: flex-start;
+.portfolio .card-body:not(.d-flex) .card-text {
+  margin-bottom: 1.5rem;
+}
+.portfolio .card-body:not(.d-flex) .card-text:last-of-type {
+  margin-bottom: 2rem;
+}
+.portfolio .card-body:not(.d-flex) p.mt-3 {
+  margin-top: 2rem !important;
+}
+.portfolio .card-body:not(.d-flex) p.mt-3:not(:last-child) {
+  margin-bottom: 2rem !important;
+}
+.portfolio .card-body:not(.d-flex) p.mt-3:last-child {
+  margin-bottom: 0 !important;
 }
 .portfolio .card {
   border: none;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-  min-height: 300px;
+  box-shadow: none;
+  min-height: auto;
+  border-radius: 0;
+  overflow: visible;
+  background-color: transparent;
+}
+.portfolio .mb-5[style*=background-color] {
   border-radius: 16px;
   overflow: hidden;
-  background-color: #FFFDF3;
 }
 
 .portfolio-modal .btn-close {

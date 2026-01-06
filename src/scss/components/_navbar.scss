@@ -7,11 +7,13 @@
     padding-bottom: 1rem;
     font-family: $headings-font-family;
     font-weight: $headings-font-weight;
-    background-color: #FEF6E0 !important;
+    background-color: rgba(236, 236, 236, 0.9) !important;
+    backdrop-filter: blur(10px);
 
     .navbar-brand {
         color: $dark;
         font-weight: 400;
+        font-size: 1.5rem;
 
         &:hover {
             color: $dark;
@@ -57,7 +59,7 @@
         transition: padding-top 0.3s, padding-bottom 0.3s;
 
         .navbar-brand {
-            font-size: 1.75em;
+            font-size: 2.25em;
             transition: font-size 0.3s;
         }
 
@@ -85,7 +87,7 @@
         padding-bottom: 0.5rem;
 
         .navbar-brand {
-            font-size: 1.5em;
+            font-size: 1.75em;
         }
     }
 }

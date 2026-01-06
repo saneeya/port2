@@ -37,6 +37,11 @@
         border-top-right-radius: 16px;
         display: block;
     }
+    
+    // Round corners for images in case studies
+    img.img-fluid {
+        border-radius: 12px;
+    }
 
     .card {
         .row {
@@ -45,7 +50,7 @@
     }
 
     .card-body {
-        padding: 3rem 2rem;
+        padding: 4rem 3rem;
         
         &:not(.d-flex) {
             display: flex;
@@ -53,25 +58,50 @@
             justify-content: space-between;
             min-height: 100%;
             
-            p.mt-3:not(:last-child) {
-                margin-top: 0.5rem !important;
+            // Increase spacing between heading and copy
+            .card-title {
+                margin-bottom: 1.5rem;
             }
             
-            p:last-child {
-                margin-top: 2rem;
-                margin-bottom: 0;
-                align-self: flex-start;
+            // Add spacing between paragraphs
+            .card-text {
+                margin-bottom: 1.5rem;
+                
+                &:last-of-type {
+                    margin-bottom: 2rem;
+                }
+            }
+            
+            // Consistent spacing for all mt-3 paragraphs (badges and buttons)
+            p.mt-3 {
+                margin-top: 2rem !important;
+            }
+            
+            // Badges paragraph - add bottom margin
+            p.mt-3:not(:last-child) {
+                margin-bottom: 2rem !important;
+            }
+            
+            // Button paragraph (last child) - no bottom margin
+            p.mt-3:last-child {
+                margin-bottom: 0 !important;
             }
         }
     }
 
     .card {
         border: none;
-        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-        min-height: 300px;
+        box-shadow: none;
+        min-height: auto;
+        border-radius: 0;
+        overflow: visible;
+        background-color: transparent;
+    }
+    
+    // Round corners for case study sections
+    .mb-5[style*="background-color"] {
         border-radius: 16px;
         overflow: hidden;
-        background-color: #FFFDF3;
     }
 }
 

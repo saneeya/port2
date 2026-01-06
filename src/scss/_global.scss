@@ -38,6 +38,15 @@ body {
     font-size: 1.125rem; // 18px
 }
 
+// Increase line height for body copy
+body {
+    line-height: 1.75;
+}
+
+p, .card-text {
+    line-height: 1.75;
+}
+
 // Override badge background color and size
 .badge.bg-dark {
     background-color: #B6D5C7 !important;

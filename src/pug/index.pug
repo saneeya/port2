@@ -19,7 +19,7 @@ html(lang='en')
         script(src='https://use.fontawesome.com/releases/v6.3.0/js/all.js', crossorigin='anonymous')
 
         // Google fonts
-        link(href='https://fonts.googleapis.com/css?family=Arvo:400,700', rel='stylesheet', type='text/css')
+        link(href='https://fonts.googleapis.com/css?family=EB+Garamond:400,500,600,700', rel='stylesheet', type='text/css')
         link(href='https://fonts.googleapis.com/css?family=Noto+Sans:400,700', rel='stylesheet', type='text/css')
 
         // Core theme CSS (includes Bootstrap)
@@ -28,9 +28,9 @@ html(lang='en')
     body#page-top
 
         // Navigation
-        nav#mainNav.navbar.navbar-expand-lg.fixed-top.shadow-sm(style='background-color: #FEF6E0;')
+        nav#mainNav.navbar.navbar-expand-lg.fixed-top(style='background-color: rgba(236, 236, 236, 0.9); backdrop-filter: blur(10px);')
             .container
-                a.navbar-brand.text-dark(href='#page-top', style='text-transform: none; font-weight: 400;') Saneeya Khan | Product Design
+                a.navbar-brand.text-dark(href='#page-top', style='text-transform: none; font-weight: 400;') Saneeya Khan
                 button.navbar-toggler.text-uppercase.bg-dark.text-white.rounded(type='button', data-bs-toggle='collapse', data-bs-target='#navbarResponsive', aria-controls='navbarResponsive', aria-expanded='false', aria-label='Toggle navigation', style='text-transform: uppercase; font-weight: 400;')
                     | Menu 
                     i.fas.fa-bars
@@ -40,7 +40,7 @@ html(lang='en')
                             a.nav-link.py-3.px-0.px-lg-3.rounded.text-dark(href='#case-studies') Case Studies
 
         // Welcome Section
-        header.masthead.text-dark(style='background-color: #FFFDF3;')
+        header.masthead.text-dark(style='background-color: #F9F9F9;')
             .container
                 h1.masthead-heading.mb-4.text-dark.text-center Welcome
                 p.lead.mb-4.text-dark
@@ -65,20 +65,20 @@ html(lang='en')
                                     li Continuous product improvement from user feedback and data-driven metrics
 
         // Case Studies Section
-        section#case-studies.page-section.portfolio(style='background-color: #B6D5C7;')
+        section#case-studies.page-section.portfolio(style='background-color: #F9F9F9;')
             .container-fluid(style='padding-left: 4rem; padding-right: 4rem;')
                 h2.text-center.mb-5 Case Studies
                 // Case Studies Stacked Items
                 .row.justify-content-center
                     .col-lg-12(style='max-width: 98%;')
                         // Case Study 1
-                        .card.mb-5
+                        .mb-5(style='background-color: #FFFFFF; border-radius: 16px; overflow: hidden;')
                             .row.g-0
-                                .col-md-6
-                                    .card-body.d-flex.align-items-center.justify-content-center(style='min-height: 200px; background-color: #FFFDF3;')
+                                .col-md-6.order-md-2
+                                    .card-body.d-flex.align-items-center.justify-content-center(style='min-height: 200px; background-color: #FFFFFF;')
                                         .text-center
                                             i.fas.fa-bullhorn.fa-3x.text-dark.mb-3
-                                .col-md-6
+                                .col-md-6.order-md-1
                                     .card-body
                                         h3.card-title Reimagining How Agencies Create Campaigns
                                         p.card-text Agency users wanted a faster, more flexible way to create ad campaigns—with features our tool didn't yet support.
@@ -89,11 +89,11 @@ html(lang='en')
                                         p.mt-3
                                             button.btn.btn-dark(data-bs-toggle='modal', data-bs-target='#caseStudy1') View Case Study
                         // Case Study 2
-                        .card.mb-5
+                        .mb-5(style='background-color: #FFFFFF; border-radius: 16px; overflow: hidden;')
                             .row.g-0
-                                .col-md-6
-                                    img.img-fluid.h-100(src='assets/img/portfolio/Scoresheet_thumb.png', alt='Class Scoresheet interface showing grade entry grid', style='object-fit: cover;')
-                                .col-md-6
+                                .col-md-6.order-md-2(style='padding: 1.5rem;')
+                                    img.img-fluid.h-100(src='assets/img/portfolio/Scoresheet_thumb.png', alt='Class Scoresheet interface showing grade entry grid', style='object-fit: cover; border-radius: 12px;')
+                                .col-md-6.order-md-1
                                     .card-body
                                         h3.card-title A Smarter Way for Teachers to Record Scores
                                         p.card-text Teachers needed a faster way to enter test scores for their whole class instead of updating each student individually.
@@ -104,13 +104,13 @@ html(lang='en')
                                         p.mt-3
                                             a.btn.btn-dark(href='scoresheet.html') View Case Study
                         // Case Study 3
-                        .card.mb-5
+                        .mb-5(style='background-color: #FFFFFF; border-radius: 16px; overflow: hidden;')
                             .row.g-0
-                                .col-md-6
-                                    .card-body.d-flex.align-items-center.justify-content-center(style='min-height: 200px; background-color: #FFFDF3;')
+                                .col-md-6.order-md-2
+                                    .card-body.d-flex.align-items-center.justify-content-center(style='min-height: 200px; background-color: #FFFFFF;')
                                         .text-center
                                             i.fas.fa-dollar-sign.fa-3x.text-dark.mb-3
-                                .col-md-6
+                                .col-md-6.order-md-1
                                     .card-body
                                         h3.card-title Smart Pricing for Ad Inventory
                                         p.card-text Prior to this project, ad pricing was entirely manual—employees managed rates in spreadsheets, and the development team had to push every price change.
@@ -196,11 +196,11 @@ html(lang='en')
                                         | Close Window
 
         // Footer
-        footer.footer.text-center.text-dark(style='background-color: #FFFDF3;')
+        footer.footer.text-center.text-dark(style='background-color: #F9F9F9;')
             .container
 
         // Copyright Section
-        div.copyright.py-4.text-center.text-dark(style='background-color: #FFFDF3;')
+        div.copyright.py-4.text-center.text-dark(style='background-color: #F9F9F9;')
             .container
                 small Copyright &copy; Saneeya Khan 2024
 

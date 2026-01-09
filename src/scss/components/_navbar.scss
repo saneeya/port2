@@ -19,21 +19,40 @@
 
     .navbar-collapse {
         overflow: visible !important;
+        
+        // Mobile: prevent horizontal overflow
+        @media (max-width: 991.98px) {
+            overflow-x: hidden !important;
+        }
     }
 
     .navbar-brand {
-        color: $dark;
         font-weight: 400;
-        font-size: 1.5rem;
+        font-size: 1.75rem;
+        background: linear-gradient(45deg, #5864CB, #0A125F);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        transition: all 0.3s ease;
 
         &:hover {
-            color: $dark;
+            background: linear-gradient(45deg, #5864CB, #0A125F);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
         }
     }
 
     .navbar-nav {
         margin-top: 1rem;
         overflow: visible !important;
+        
+        // Mobile: remove side padding and prevent overflow
+        @media (max-width: 991.98px) {
+            padding-left: 0 !important;
+            padding-right: 0 !important;
+            overflow-x: hidden !important;
+        }
 
         li.nav-item {
             overflow: visible !important;
@@ -42,6 +61,14 @@
             &.dropdown {
                 z-index: 1050 !important;
                 position: relative;
+                
+                // Mobile: remove padding/margin from nav-item
+                @media (max-width: 991.98px) {
+                    margin-left: 0 !important;
+                    margin-right: 0 !important;
+                    padding-left: 0 !important;
+                    padding-right: 0 !important;
+                }
                 
                 .dropdown-menu {
                     margin-top: 0;
@@ -52,6 +79,32 @@
                     min-width: 250px;
                     right: 0;
                     left: auto;
+                    
+                    // Mobile: make it static and inline
+                    @media (max-width: 991.98px) {
+                        position: static !important;
+                        box-shadow: none !important;
+                        border: none !important;
+                        border-radius: 0 !important;
+                        padding-left: 0 !important;
+                        padding-right: 0 !important;
+                        padding-top: 0.5rem !important;
+                        padding-bottom: 0.5rem !important;
+                        width: 100% !important;
+                        min-width: 100% !important;
+                        margin-left: 0 !important;
+                        margin-right: 0 !important;
+                        display: none !important;
+                        
+                        &.show {
+                            display: block !important;
+                        }
+                        
+                        .dropdown-item {
+                            padding-left: 1rem !important;
+                            padding-right: 1rem !important;
+                        }
+                    }
                 }
                 
                 .dropdown-toggle {
@@ -114,7 +167,7 @@
         transition: padding-top 0.3s, padding-bottom 0.3s;
 
         .navbar-brand {
-            font-size: 2.25em;
+            font-size: 2.5em;
             transition: font-size 0.3s;
         }
 
@@ -143,7 +196,7 @@
         padding-bottom: 0.5rem;
 
         .navbar-brand {
-            font-size: 1.75em;
+            font-size: 2em;
         }
     }
 }

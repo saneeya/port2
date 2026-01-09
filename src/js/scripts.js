@@ -174,10 +174,11 @@ window.addEventListener('DOMContentLoaded', event => {
         }, { passive: true });
     };
 
-    // Collapse responsive navbar when toggler is visible
+    // Collapse responsive navbar when nav links are clicked (standard Bootstrap behavior)
+    // Exclude dropdown toggles - they should open dropdowns, not close the navbar
     const navbarToggler = document.body.querySelector('.navbar-toggler');
     const responsiveNavItems = [].slice.call(
-        document.querySelectorAll('#navbarResponsive .nav-link')
+        document.querySelectorAll('#navbarResponsive .nav-link:not(.dropdown-toggle)')
     );
     responsiveNavItems.map(function (responsiveNavItem) {
         responsiveNavItem.addEventListener('click', () => {
@@ -185,6 +186,87 @@ window.addEventListener('DOMContentLoaded', event => {
                 navbarToggler.click();
             }
         });
+    });
+    
+    // Close navbar when dropdown items are clicked (standard Bootstrap behavior)
+    const dropdownItems = [].slice.call(
+        document.querySelectorAll('#navbarResponsive .dropdown-item')
+    );
+    dropdownItems.map(function (dropdownItem) {
+        dropdownItem.addEventListener('click', () => {
+            if (window.getComputedStyle(navbarToggler).display !== 'none') {
+                navbarToggler.click();
+            }
+        });
+    });
+    
+    // Handle dropdown toggle - use collapse in mobile, dropdown in desktop
+    const dropdownToggles = [].slice.call(
+        document.querySelectorAll('#navbarResponsive .dropdown-toggle')
+    );
+    
+    // Disable Bootstrap dropdown in mobile view
+    function checkMobileAndDisableBootstrap() {
+        const isMobile = window.getComputedStyle(navbarToggler).display !== 'none';
+        dropdownToggles.forEach(function (dropdownToggle) {
+            if (isMobile) {
+                // Remove Bootstrap dropdown data attribute in mobile
+                dropdownToggle.removeAttribute('data-bs-toggle');
+            } else {
+                // Restore Bootstrap dropdown data attribute in desktop
+                dropdownToggle.setAttribute('data-bs-toggle', 'dropdown');
+            }
+        });
+    }
+    
+    // Check on load and resize
+    checkMobileAndDisableBootstrap();
+    window.addEventListener('resize', checkMobileAndDisableBootstrap);
+    
+    dropdownToggles.map(function (dropdownToggle) {
+        // Use capture phase to run before Bootstrap's handlers
+        dropdownToggle.addEventListener('click', (e) => {
+            const isMobile = window.getComputedStyle(navbarToggler).display !== 'none';
+            
+            if (isMobile) {
+                // Mobile: prevent Bootstrap dropdown, manually toggle submenu
+                e.preventDefault();
+                e.stopPropagation();
+                e.stopImmediatePropagation();
+                
+                // Find dropdown menu - try next sibling first, then parent's next child
+                let dropdownMenu = dropdownToggle.nextElementSibling;
+                if (!dropdownMenu || !dropdownMenu.classList.contains('dropdown-menu')) {
+                    const parent = dropdownToggle.closest('.dropdown');
+                    if (parent) {
+                        dropdownMenu = parent.querySelector('.dropdown-menu');
+                    }
+                }
+                
+                if (dropdownMenu && dropdownMenu.classList.contains('dropdown-menu')) {
+                    const isExpanded = dropdownToggle.getAttribute('aria-expanded') === 'true';
+                    
+                    // Remove show class from all other dropdowns first
+                    document.querySelectorAll('#navbarResponsive .dropdown-menu.show').forEach(menu => {
+                        if (menu !== dropdownMenu) {
+                            menu.classList.remove('show');
+                        }
+                    });
+                    
+                    if (isExpanded) {
+                        dropdownMenu.classList.remove('show');
+                        dropdownToggle.setAttribute('aria-expanded', 'false');
+                    } else {
+                        dropdownMenu.classList.add('show');
+                        dropdownToggle.setAttribute('aria-expanded', 'true');
+                    }
+                }
+                return false;
+            } else {
+                // Desktop: let Bootstrap handle dropdown normally
+                e.stopPropagation();
+            }
+        }, true); // Use capture phase
     });
 
     // Scroll-triggered reveals

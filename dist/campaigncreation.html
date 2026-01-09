@@ -20,14 +20,14 @@
         <!-- Navigation-->
         <nav class="navbar navbar-expand-lg navbar-shrink" id="mainNav" style="background-color: rgba(236, 236, 236, 0.9); overflow: visible; backdrop-filter: blur(10px);">
             <div class="container" style="overflow: visible;">
-                <a class="navbar-brand text-dark" href="index.html" style="text-transform: none; font-weight: 400">Saneeya Khan</a>
+                <a class="navbar-brand" href="index.html" style="text-transform: none; font-weight: 400">Saneeya Khan</a>
                 <button class="navbar-toggler text-uppercase bg-dark text-white rounded" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation" style="text-transform: uppercase; font-weight: 400">
                     Menu
                     <i class="fas fa-bars"></i>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarResponsive" style="overflow: visible;">
                     <ul class="navbar-nav ms-auto" style="overflow: visible;">
-                        <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded text-dark" href="index.html#page-top">About</a></li>
+                        <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded text-dark" href="about.html">About</a></li>
                         <li class="nav-item dropdown mx-0 mx-lg-1">
                             <a class="nav-link dropdown-toggle py-3 px-0 px-lg-3 rounded text-dark" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Case Studies</a>
                             <ul class="dropdown-menu dropdown-menu-end">
@@ -49,7 +49,7 @@
         <nav class="navbar navbar-expand-lg" id="subNav" style="position: sticky; top: 0; z-index: 1020">
             <div class="container">
                 <ul class="navbar-nav mx-auto flex-row">
-                    <li class="nav-item"><a class="nav-link text-dark px-3" href="#campaign-basics">Campaign Basics</a></li>
+                    <li class="nav-item"><a class="nav-link text-dark px-3" href="#campaign-basics">Ad Campaign Basics</a></li>
                     <li class="nav-item"><a class="nav-link text-dark px-3" href="#ux-overhaul">UX Overhaul</a></li>
                     <li class="nav-item"><a class="nav-link text-dark px-3" href="#agency-wants">Agency Wants</a></li>
                     <li class="nav-item"><a class="nav-link text-dark px-3" href="#single-page">Single Page</a></li>
@@ -236,29 +236,6 @@
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
         <!-- Core theme JS-->
         <script src="js/scripts.js"></script>
-        <!-- Fix dropdown in mobile navbar -->
-        <script>
-            document.addEventListener('DOMContentLoaded', function() {
-                const dropdownToggle = document.getElementById('caseStudiesDropdown');
-                const navbarCollapse = document.getElementById('navbarResponsive');
-                const dropdownContainer = dropdownToggle ? dropdownToggle.closest('.nav-item.dropdown') : null;
-
-                if (dropdownToggle && navbarCollapse && dropdownContainer) {
-                    // Stop all click events from bubbling up to prevent collapse from closing
-                    dropdownContainer.addEventListener('click', function(e) {
-                        e.stopPropagation();
-                    }, true); // Use capture phase
-
-                    // Also stop propagation on the dropdown menu
-                    const dropdownMenu = dropdownToggle.nextElementSibling;
-                    if (dropdownMenu) {
-                        dropdownMenu.addEventListener('click', function(e) {
-                            e.stopPropagation();
-                        }, true);
-                    }
-                }
-            });
-        </script>
     </body>
 </html>
 

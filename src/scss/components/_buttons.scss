@@ -21,22 +21,22 @@
 
 // Override btn-dark styles
 .btn-dark {
-    background-color: #61A48A;
-    border-color: #61A48A;
+    background-color: #5864CB;
+    border-color: #5864CB;
     color: #FFFDF3;
     font-family: $font-family-sans-serif;
     padding: 0.75rem 1.5rem;
     
     &:hover {
-        background-color: darken(#61A48A, 10%);
-        border-color: darken(#61A48A, 10%);
+        background-color: darken(#5864CB, 10%);
+        border-color: darken(#5864CB, 10%);
         color: #FFFDF3;
     }
     
     &:active,
     &:focus {
-        background-color: darken(#61A48A, 15%);
-        border-color: darken(#61A48A, 15%);
+        background-color: darken(#5864CB, 15%);
+        border-color: darken(#5864CB, 15%);
         color: #FFFDF3;
     }
 }

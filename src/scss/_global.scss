@@ -33,9 +33,25 @@ body {
     }
 }
 
+// Apply masthead border styles to case study header sections
+.page-section[style*="background-color: white"] {
+    border-bottom: 3px solid transparent;
+    border-image: linear-gradient(90deg, #5864CB, #E1E1E1) 1;
+}
+
 // Override Bootstrap .lead font size
 .lead {
     font-size: 1.125rem; // 18px
+}
+
+// Override h3 font size
+h3, .h3 {
+    font-size: 1.5rem;
+}
+
+// Override h4 font size
+h4, .h4 {
+    font-size: 1.1rem;
 }
 
 // Increase line height for body copy
@@ -49,7 +65,7 @@ p, .card-text {
 
 // Override badge background color and size
 .badge.bg-dark {
-    background-color: #E1E1E1 !important;
+    background-color: #D4D8FF !important;
     color: #000;
     font-size: 0.875rem;
     padding: 0.5em 0.85em;

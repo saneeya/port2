@@ -3,8 +3,21 @@
 //
 
 .masthead {
-    padding-top: calc(6rem + 74px);
+    padding-top: calc(0rem + 50px);
     padding-bottom: 3rem;
+    border-bottom: 3px solid transparent;
+    border-image: linear-gradient(90deg, #5864CB, #E1E1E1) 1;
+    position: relative;
+    
+    &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 3px;
+        background: linear-gradient(90deg, #E1E1E1, #5864CB);
+    }
 
     .masthead-heading {
         font-size: 2rem;
@@ -41,11 +54,11 @@
 
 @include media-breakpoint-up(lg) {
     .masthead {
-        padding-top: calc(6rem + 104px);
+        padding-top: calc(0rem + 80px);
         padding-bottom: 3rem;
 
         .masthead-heading {
-            font-size: 2.5rem;
+            font-size: 2.7rem;
             line-height: 2.75rem;
             font-weight: 400;
         }

@@ -44,12 +44,15 @@ html(lang='en')
                                 li
                                     a.dropdown-item.text-dark(href='campaigncreation.html') Reimagining How Agencies Create Campaigns
                                 li
-                                    a.dropdown-item.text-dark(href='scoresheet.html') A Smarter Way for Teachers to Record Scores
-                                li
                                     a.dropdown-item.text-dark(href='pricingtool.html') Smart Pricing for Ad Inventory
+                                li
+                                    a.dropdown-item.text-dark(href='scoresheet.html') A Smarter Way for Teachers to Record Scores
+                        li.nav-item.mx-0.mx-lg-1
+                            a.nav-link.py-3.px-0.px-lg-3.rounded.text-dark(href='https://www.linkedin.com/in/saneeya-khan/', target='_blank', rel='noopener noreferrer')
+                                i.fab.fa-linkedin-in
 
         // Welcome Section
-        header.masthead.text-dark(style='background-color: #F9F9F9;')
+        header.masthead.text-dark(style='background-color: white;')
             .container
                 h1.masthead-heading.mb-4.text-dark.text-center Welcome
                 p.lead.mb-4.text-dark
@@ -81,13 +84,11 @@ html(lang='en')
                 .row.justify-content-center
                     .col-lg-12(style='max-width: 98%;')
                         // Case Study 1
-                        .mb-5(style='border-radius: 16px; overflow: hidden;')
+                        .mb-5.scroll-reveal(style='border-radius: 16px; overflow: hidden;')
                             .row.g-0
-                                .col-md-6.order-md-2
-                                    a(href='campaigncreation.html', style='text-decoration: none; display: block; height: 100%;')
-                                        .card-body.d-flex.align-items-center.justify-content-center(style='min-height: 200px; cursor: pointer;')
-                                            .text-center
-                                                i.fas.fa-bullhorn.fa-3x.text-dark.mb-3
+                                .col-md-6.order-md-2(style='display: flex; align-items: center; justify-content: center;')
+                                    a(href='campaigncreation.html', style='display: inline-block; padding: 1.75rem; background-color: #B8CFFF; border-radius: 16px;')
+                                        img.img-fluid(src='assets/img/portfolio/Campaign_thumb.png', alt='Campaign creation interface', style='object-fit: contain; border-radius: 12px; cursor: pointer; max-width: 100%; height: auto; display: block;')
                                 .col-md-6.order-md-1
                                     .card-body
                                         h3.card-title Reimagining How Agencies Create Campaigns
@@ -98,11 +99,27 @@ html(lang='en')
                                             span.badge.bg-dark B2B
                                         p.mt-3
                                             button.btn.btn-dark(data-bs-toggle='modal', data-bs-target='#caseStudy1') View Case Study
-                        // Case Study 2
-                        .mb-5(style='border-radius: 16px; overflow: hidden;')
+                        // Case Study 3
+                        .mb-5.scroll-reveal(style='border-radius: 16px; overflow: hidden;')
                             .row.g-0
                                 .col-md-6.order-md-2(style='display: flex; align-items: center; justify-content: center;')
-                                    a(href='scoresheet.html', style='display: inline-block; padding: 1.75rem; background-color: #B8CFFF; border-radius: 16px;')
+                                    a(href='pricingtool.html', style='display: inline-block; padding: 1.75rem; background-color: #F6DBAC; border-radius: 16px;')
+                                        img.img-fluid(src='assets/img/portfolio/Pricing_Thumb.png', alt='Pricing tool interface', style='object-fit: contain; border-radius: 12px; cursor: pointer; max-width: 100%; height: auto; display: block;')
+                                .col-md-6.order-md-1
+                                    .card-body
+                                        h3.card-title Smart Pricing for Ad Inventory
+                                        p.card-text Prior to this project, ad pricing was entirely manual—employees managed rates in spreadsheets, and the development team had to push every price change.
+                                        p.card-text I led the creation of the Pricing Tool from scratch, enabling the pricing team to manage and update rates themselves. This introduced more pricing variety and allowed for customized or loyalty-based discounts.
+                                        p.mt-3
+                                            span.badge.bg-dark.me-2 Ad Tech
+                                            span.badge.bg-dark Internal Tool
+                                        p.mt-3
+                                            button.btn.btn-dark(data-bs-toggle='modal', data-bs-target='#caseStudy3') View Case Study
+                        // Case Study 2
+                        .mb-5.scroll-reveal(style='border-radius: 16px; overflow: hidden;')
+                            .row.g-0
+                                .col-md-6.order-md-2(style='display: flex; align-items: center; justify-content: center;')
+                                    a(href='scoresheet.html', style='display: inline-block; padding: 1.75rem; background-color: #BAF0D9; border-radius: 16px;')
                                         img.img-fluid(src='assets/img/portfolio/Scoresheet_thumb.png', alt='Class Scoresheet interface showing grade entry grid', style='object-fit: contain; border-radius: 12px; cursor: pointer; max-width: 100%; height: auto; display: block;')
                                 .col-md-6.order-md-1
                                     .card-body
@@ -114,24 +131,6 @@ html(lang='en')
                                             span.badge.bg-dark Ed Tech
                                         p.mt-3
                                             a.btn.btn-dark(href='scoresheet.html') View Case Study
-                        // Case Study 3
-                        .mb-5(style='border-radius: 16px; overflow: hidden;')
-                            .row.g-0
-                                .col-md-6.order-md-2
-                                    a(href='pricingtool.html', style='text-decoration: none; display: block; height: 100%;')
-                                        .card-body.d-flex.align-items-center.justify-content-center(style='min-height: 200px; cursor: pointer;')
-                                            .text-center
-                                                i.fas.fa-dollar-sign.fa-3x.text-dark.mb-3
-                                .col-md-6.order-md-1
-                                    .card-body
-                                        h3.card-title Smart Pricing for Ad Inventory
-                                        p.card-text Prior to this project, ad pricing was entirely manual—employees managed rates in spreadsheets, and the development team had to push every price change.
-                                        p.card-text I led the creation of the Pricing Tool from scratch, enabling the pricing team to manage and update rates themselves. This introduced more pricing variety and allowed for customized or loyalty-based discounts.
-                                        p.mt-3
-                                            span.badge.bg-dark.me-2 Ad Tech
-                                            span.badge.bg-dark Internal Tool
-                                        p.mt-3
-                                            button.btn.btn-dark(data-bs-toggle='modal', data-bs-target='#caseStudy3') View Case Study
 
 
         // Case Study Modals
@@ -208,11 +207,11 @@ html(lang='en')
                                         | Close Window
 
         // Footer
-        footer.footer.text-center.text-dark(style='background-color: #F9F9F9;')
+        footer.footer.text-center.text-dark(style='background-color: #E1E1E1;')
             .container
 
         // Copyright Section
-        div.copyright.py-4.text-center.text-dark(style='background-color: #F9F9F9;')
+        div.copyright.py-4.text-center.text-dark(style='background-color: #E1E1E1;')
             .container
                 small Copyright &copy; Saneeya Khan 2024
 

@@ -10848,8 +10848,22 @@ body {
   }
 }
 
+.page-section[style*="background-color: white"] {
+  border-bottom: 3px solid transparent;
+  -o-border-image: linear-gradient(90deg, #5864CB, #E1E1E1) 1;
+     border-image: linear-gradient(90deg, #5864CB, #E1E1E1) 1;
+}
+
 .lead {
   font-size: 1.125rem;
+}
+
+h3, .h3 {
+  font-size: 1.5rem;
+}
+
+h4, .h4 {
+  font-size: 1.1rem;
 }
 
 body {
@@ -10861,7 +10875,7 @@ p, .card-text {
 }
 
 .badge.bg-dark {
-  background-color: #E1E1E1 !important;
+  background-color: #D4D8FF !important;
   color: #000;
   font-size: 0.875rem;
   padding: 0.5em 0.85em;
@@ -10990,20 +11004,20 @@ blockquote.blockquote .blockquote-footer::before {
 }
 
 .btn-dark {
-  background-color: #61A48A;
-  border-color: #61A48A;
+  background-color: #5864CB;
+  border-color: #5864CB;
   color: #FFFDF3;
   font-family: "Noto Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   padding: 0.75rem 1.5rem;
 }
 .btn-dark:hover {
-  background-color: #4d856f;
-  border-color: #4d856f;
+  background-color: #3946b7;
+  border-color: #3946b7;
   color: #FFFDF3;
 }
 .btn-dark:active, .btn-dark:focus {
-  background-color: #437562;
-  border-color: #437562;
+  background-color: #333fa4;
+  border-color: #333fa4;
   color: #FFFDF3;
 }
 
@@ -11057,6 +11071,7 @@ blockquote.blockquote .blockquote-footer::before {
 }
 #mainNav .navbar-nav li.nav-item a.nav-link {
   color: #212529;
+  font-size: 1.2rem;
 }
 #mainNav .navbar-nav li.nav-item a.nav-link:hover {
   color: #212529;
@@ -11142,6 +11157,16 @@ blockquote.blockquote .blockquote-footer::before {
   background-color: #212529;
 }
 
+.scroll-reveal {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+.scroll-reveal.revealed {
+  opacity: 1;
+  transform: translateY(0);
+}
+
 .form-floating input.form-control,
 .form-floating textarea.form-control {
   font-size: 1.5rem;
@@ -11161,8 +11186,21 @@ blockquote.blockquote .blockquote-footer::before {
 }
 
 .masthead {
-  padding-top: calc(6rem + 74px);
+  padding-top: calc(0rem + 50px);
   padding-bottom: 3rem;
+  border-bottom: 3px solid transparent;
+  -o-border-image: linear-gradient(90deg, #5864CB, #E1E1E1) 1;
+     border-image: linear-gradient(90deg, #5864CB, #E1E1E1) 1;
+  position: relative;
+}
+.masthead::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, #E1E1E1, #5864CB);
 }
 .masthead .masthead-heading {
   font-size: 2rem;
@@ -11192,11 +11230,11 @@ blockquote.blockquote .blockquote-footer::before {
 
 @media (min-width: 992px) {
   .masthead {
-    padding-top: calc(6rem + 104px);
+    padding-top: calc(0rem + 80px);
     padding-bottom: 3rem;
   }
   .masthead .masthead-heading {
-    font-size: 2.5rem;
+    font-size: 2.7rem;
     line-height: 2.75rem;
     font-weight: 400;
   }

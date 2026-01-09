@@ -53,6 +53,17 @@
                     right: 0;
                     left: auto;
                 }
+                
+                .dropdown-toggle {
+                    &::after {
+                        transition: transform 0.3s ease;
+                    }
+                    
+                    &[aria-expanded="true"]::after,
+                    &.show::after {
+                        transform: rotate(180deg);
+                    }
+                }
             }
 
             a.nav-link {
@@ -80,7 +91,19 @@
     .navbar-toggler {
         font-size: 80%;
         padding: 0.8rem;
-        border-color: $dark;
+        border-color: #5864CB;
+        background-color: #5864CB !important;
+        
+        &:hover {
+            background-color: darken(#5864CB, 10%) !important;
+            border-color: darken(#5864CB, 10%) !important;
+        }
+        
+        &:active,
+        &:focus {
+            background-color: darken(#5864CB, 15%) !important;
+            border-color: darken(#5864CB, 15%) !important;
+        }
     }
 }
 

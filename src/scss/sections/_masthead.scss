@@ -3,7 +3,7 @@
 //
 
 .masthead {
-    padding-top: calc(0rem + 50px);
+    padding-top: calc(0rem + 30px);
     padding-bottom: 3rem;
     border-bottom: 3px solid transparent;
     border-image: linear-gradient(90deg, #5864CB, #E1E1E1) 1;
@@ -54,7 +54,7 @@
 
 @include media-breakpoint-up(lg) {
     .masthead {
-        padding-top: calc(0rem + 80px);
+        padding-top: calc(0rem + 50px);
         padding-bottom: 3rem;
 
         .masthead-heading {

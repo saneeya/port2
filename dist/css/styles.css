@@ -11069,6 +11069,12 @@ blockquote.blockquote .blockquote-footer::before {
   right: 0;
   left: auto;
 }
+#mainNav .navbar-nav li.nav-item.dropdown .dropdown-toggle::after {
+  transition: transform 0.3s ease;
+}
+#mainNav .navbar-nav li.nav-item.dropdown .dropdown-toggle[aria-expanded=true]::after, #mainNav .navbar-nav li.nav-item.dropdown .dropdown-toggle.show::after {
+  transform: rotate(180deg);
+}
 #mainNav .navbar-nav li.nav-item a.nav-link {
   color: #212529;
   font-size: 1.2rem;
@@ -11087,7 +11093,16 @@ blockquote.blockquote .blockquote-footer::before {
 #mainNav .navbar-toggler {
   font-size: 80%;
   padding: 0.8rem;
-  border-color: #212529;
+  border-color: #5864CB;
+  background-color: #5864CB !important;
+}
+#mainNav .navbar-toggler:hover {
+  background-color: #3946b7 !important;
+  border-color: #3946b7 !important;
+}
+#mainNav .navbar-toggler:active, #mainNav .navbar-toggler:focus {
+  background-color: #333fa4 !important;
+  border-color: #333fa4 !important;
 }
 
 @media (min-width: 992px) {
@@ -11186,7 +11201,7 @@ blockquote.blockquote .blockquote-footer::before {
 }
 
 .masthead {
-  padding-top: calc(0rem + 50px);
+  padding-top: calc(0rem + 30px);
   padding-bottom: 3rem;
   border-bottom: 3px solid transparent;
   -o-border-image: linear-gradient(90deg, #5864CB, #E1E1E1) 1;
@@ -11230,7 +11245,7 @@ blockquote.blockquote .blockquote-footer::before {
 
 @media (min-width: 992px) {
   .masthead {
-    padding-top: calc(0rem + 80px);
+    padding-top: calc(0rem + 50px);
     padding-bottom: 3rem;
   }
   .masthead .masthead-heading {

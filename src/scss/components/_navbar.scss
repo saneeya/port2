@@ -73,12 +73,14 @@
                 .dropdown-menu {
                     margin-top: 0;
                     border-radius: 8px;
-                    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+                    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+                    border: 1px solid rgba(0, 0, 0, 0.15);
                     z-index: 1050 !important;
                     position: absolute;
                     min-width: 250px;
                     right: 0;
                     left: auto;
+                    padding: 0.75rem 0;
                     
                     // Mobile: make it static and inline
                     @media (max-width: 991.98px) {
@@ -103,6 +105,23 @@
                         .dropdown-item {
                             padding-left: 1rem !important;
                             padding-right: 1rem !important;
+                        }
+                    }
+                    
+                    .dropdown-item {
+                        padding: 0.5rem 1.25rem;
+                        font-size: 1.1rem;
+                        white-space: normal;
+                        word-wrap: break-word;
+                        
+                        &:hover,
+                        &:focus {
+                            background-color: #EDEFFF !important;
+                        }
+                        
+                        &:active,
+                        &.active {
+                            background-color: #DFE3FF !important;
                         }
                     }
                 }

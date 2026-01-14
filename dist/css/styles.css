@@ -11090,12 +11090,14 @@ blockquote.blockquote .blockquote-footer::before {
 #mainNav .navbar-nav li.nav-item.dropdown .dropdown-menu {
   margin-top: 0;
   border-radius: 8px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  border: 1px solid rgba(0, 0, 0, 0.15);
   z-index: 1050 !important;
   position: absolute;
   min-width: 250px;
   right: 0;
   left: auto;
+  padding: 0.75rem 0;
 }
 @media (max-width: 991.98px) {
   #mainNav .navbar-nav li.nav-item.dropdown .dropdown-menu {
@@ -11120,6 +11122,18 @@ blockquote.blockquote .blockquote-footer::before {
     padding-left: 1rem !important;
     padding-right: 1rem !important;
   }
+}
+#mainNav .navbar-nav li.nav-item.dropdown .dropdown-menu .dropdown-item {
+  padding: 0.5rem 1.25rem;
+  font-size: 1.1rem;
+  white-space: normal;
+  word-wrap: break-word;
+}
+#mainNav .navbar-nav li.nav-item.dropdown .dropdown-menu .dropdown-item:hover, #mainNav .navbar-nav li.nav-item.dropdown .dropdown-menu .dropdown-item:focus {
+  background-color: #EDEFFF !important;
+}
+#mainNav .navbar-nav li.nav-item.dropdown .dropdown-menu .dropdown-item:active, #mainNav .navbar-nav li.nav-item.dropdown .dropdown-menu .dropdown-item.active {
+  background-color: #DFE3FF !important;
 }
 #mainNav .navbar-nav li.nav-item.dropdown .dropdown-toggle::after {
   transition: transform 0.3s ease;

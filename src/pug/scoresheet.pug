@@ -110,54 +110,87 @@ html(lang='en')
                         p.lead.mb-4
                             | After collecting the completed assignments, teachers had to manually input scores into the scoresheet to access platform-generated reports. Without doing this, they couldn't view performance data or identify areas for remediation.
                         p.lead.mb-5
-                            | The process was lengthy—teachers had to enter scores for each question, for every student—which made it time-consuming and cumbersome.
+                            | The process was lengthy, teachers had to enter scores for each question, for every student, which made it time-consuming and cumbersome.
                         figure.mt-3.mb-5
                             a.custom-lightbox-trigger(href='#', data-image='assets/img/portfolio/scoresheetgif.gif', data-title='Scoresheet GIF')
                                 img.img-fluid(src='assets/img/portfolio/scoresheetgif.gif', alt='Scoresheet GIF', style='cursor: pointer; margin: 0 auto; display: block;')
                             figcaption.text-muted.text-center.mt-2(style='font-size: 0.875rem;') Inputting offline scores into the platform was time-consuming and cumbersome.
+
+                        h2#early-designs.mt-5.mb-4 Early Designs: Simplifying Bulk Scoring
                         p.lead.mb-4
                             | So how could we make inputting tests scores less of a headache?
                         figure.mt-3.mb-5
                             a.custom-lightbox-trigger(href='#', data-image='assets/img/portfolio/papertests.png', data-title='Paper tests')
                                 img.img-fluid(src='assets/img/portfolio/papertests.png', alt='Paper tests', style='cursor: pointer; max-width: 50%; margin: 0 auto; display: block;')
-                            figcaption.text-muted.text-center.mt-2(style='font-size: 0.875rem;') How could we make it easier to input scores from paper tests?
-
-                        h2#early-designs.mt-5.mb-4 Early Designs: Simplifying Bulk Scoring
+                            figcaption.text-muted.text-center.mt-2(style='font-size: 0.875rem;') Was there an easier way to have teachers input paper test scores to the platform?
                         p.lead.mb-4
-                            | I knew a new design was needed—one that retained the core features of the individual scoresheet but scaled for class-wide use. This led to the concept of the Class Scoresheet.
+                            | One early idea was to have teachers upload a spreadsheet into the system and it would auto-populate the online scoresheets. It sounded like a good idea since most teachers put scores in spreadsheets anyway.
                         p.lead.mb-4
-                            | I began with low-fidelity wireframes, focusing on simplifying score entry across a full class. One key stakeholder request was an "Apply All" feature, allowing teachers to assign the same score to all students for a single question. My initial design approach drew inspiration from a spreadsheet-style layout, similar to Excel, to make bulk scoring intuitive and familiar.
+                            | Stakeholders agreed with this approach, but having the option to upload spreadsheets was out of scope especially for the initial version. Here were the requirements for the project:
+                        ul.lead.mb-4
+                            li Have faster way for teacher to bulk input multiple scores for multiple students
+                            li Have an "Apply All" option where teacher can assign scores for all students on the same question in cases where most (or all students) get the same score
+                            li Allow teacher to give more than 100% of a score (ie for extra credit)
+                        figure.mt-3.mb-5
+                            a.custom-lightbox-trigger(href='#', data-image='assets/img/portfolio/wireframe1.gif', data-title='Wireframe 1')
+                                img.img-fluid(src='assets/img/portfolio/wireframe1.gif', alt='Wireframe 1', style='cursor: pointer; margin: 0 auto; display: block;')
+                            figcaption.text-muted.text-center.mt-2(style='font-size: 0.875rem;') Spreadsheet-inspired option for bulk score entry.
+                        p.lead.mb-4
+                            | I began with low-fidelity wireframes, focusing on simplifying score entry across a full class. My initial design approach drew inspiration from a spreadsheet-style layout, similar to Excel, to make bulk scoring intuitive and familiar.
                         p.lead.mb-4
                             | The spreadsheet view offered a quick overview of the entire class, making it easy to scan and compare scores. However, with a large number of students or questions, it could became overwhelming and hard to navigate.
                         p.lead.mb-4
                             | To address this, I created an alternative design focused on the individual student. This view allowed teachers to enter scores one student at a time
+                        figure.mt-3.mb-5
+                            a.custom-lightbox-trigger(href='#', data-image='assets/img/portfolio/wireframe2.gif', data-title='Wireframe 2')
+                                img.img-fluid(src='assets/img/portfolio/wireframe2.gif', alt='Wireframe 2', style='cursor: pointer; margin: 0 auto; display: block;')
+                            figcaption.text-muted.text-center.mt-2(style='font-size: 0.875rem;') Student-by-student view allows teacher to focus in one student at a time like grading a paper test.
                         p.lead.mb-5
                             | Both designs had merit, and stakeholders agreed there wasn't a clear winner upfront. We decided to test both the class-level spreadsheet view and the individual student view to better understand which approach teachers preferred in real-world scenarios.
 
-                        h2#user-testing.mt-5.mb-4 User Testing: Fixing the Score Entry Struggle
+                        h2#user-testing.mt-5.mb-4 User Testing
 
                         h3.mt-4.mb-3 Pilot Test
                         p.lead.mb-4
-                            | Before starting formal user testing, our research team conducted a pilot session with a K–5 teacher. While observing, I noticed a major design issue with the spreadsheet view: the participant struggled to input scores question-by-question within the columns.
-                        blockquote.blockquote.mb-4
-                            p.mb-0
-                                | "It would be nice if it [the design] was going down vertically here as well, instead of horizontally, it would just looking up and down on here. It's almost harder for me to go up and down and then track horizontally."
+                            | Before starting formal user testing, our research team conducted a pilot session with a K5 teacher. While observing, I noticed a major design issue with the spreadsheet view: the participant struggled to input scores question-by-question within the columns.
+                        .row.mb-5
+                            .col-md-6.mb-4.mb-md-0
+                                blockquote.blockquote.mb-0(style='border-left: none; padding-left: 0; font-size: 1rem;')
+                                    p.mb-0
+                                        | "It would be nice if it [the design] was going down vertically here as well, instead of horizontally, it would just looking up and down on here. It's almost harder for me to go up and down and then track horizontally."
+                                    footer.blockquote-footer.mt-2(style='font-size: 1rem;')
+                                        | Pilot Tester
+                            .col-md-6
+                                figure.mt-0.mb-0
+                                    a.custom-lightbox-trigger(href='#', data-image='assets/img/portfolio/pilottest.png', data-title='Pilot test')
+                                        img.img-fluid(src='assets/img/portfolio/pilottest.png', alt='Pilot test', style='cursor: pointer; margin: 0 auto; display: block;')
+                                    figcaption.text-muted.text-center.mt-2(style='font-size: 0.875rem;') Having the students' names on the left side (instead of the questions) went against the users' mental model.
                         p.lead.mb-5
-                            | Teachers grading paper assignments typically work student-by-student rather than question-by-question. The original spreadsheet design conflicted with this mental workflow, so the participant preferred the second, individual-student-focused design.
-                        p.lead.mb-5
-                            | Based on this insight, I revised the designs to place the questions in a fixed left-side column, with student names displayed across the top.
+                            | Teachers grading paper assignments typically work student-by-student rather than question-by-question. The original spreadsheet design conflicted with this mental workflow, so the participant preferred the second, individual-student-focused design. Based on this insight, I revised the designs to place the questions in a fixed left-side column, with student names displayed across the top.
 
-                        h3.mt-4.mb-3 User Testing
+                        h3.mt-4.mb-3 How we User Tested
                         p.lead.mb-4
-                            | Our research team recruited seven K–5 instructors who had experience with two of our major K–5 products, Reading Mastery and Reading Wonders. All were familiar with the existing online scoresheet.
+                            | Our research team recruited seven K5 instructors who had experience with two of our major K5 products, Reading Mastery and Reading Wonders. All were familiar with the existing online scoresheet.
                         p.lead.mb-4
                             | We presented both the spreadsheet design (Design A) and the student-by-student design (Design B).
+                        figure.mt-3.mb-5
+                            a.custom-lightbox-trigger(href='#', data-image='assets/img/portfolio/testA.gif', data-title='Design A')
+                                img.img-fluid(src='assets/img/portfolio/testA.gif', alt='Design A', style='cursor: pointer; margin: 0 auto; display: block;')
+                            figcaption.text-muted.text-center.mt-2(style='font-size: 0.875rem;') Design A: Spreadsheet Design
+                        figure.mt-3.mb-5
+                            a.custom-lightbox-trigger(href='#', data-image='assets/img/portfolio/testB.gif', data-title='Design B')
+                                img.img-fluid(src='assets/img/portfolio/testB.gif', alt='Design B', style='cursor: pointer; margin: 0 auto; display: block;')
+                            figcaption.text-muted.text-center.mt-2(style='font-size: 0.875rem;') Design B: Student-by-Student design.
 
-                        h4.mt-4.mb-3 How we made User Testing more "real"
-                        p.lead.mb-4
-                            | To simulate how teachers grade printed assignments, we provided participants with PDFs of three scored tests.
-                        p.lead.mb-5
-                            | We asked them to have the PDFs open on a second screen—or printed out—so they could reference them while entering scores for the first three student
+                        .row.mb-5
+                            .mb-4.mb-md-0(style='flex: 0 0 60%; max-width: 60%;')
+                                p.lead.mb-0
+                                    | To simulate how teachers grade printed assignments, we provided participants with PDFs of three scored tests. We asked them to have the PDFs open on a second screen (or printed out) so they could reference them while entering scores for the first three student
+                            div(style='flex: 0 0 40%; max-width: 40%;')
+                                figure.mt-0.mb-0
+                                    a.custom-lightbox-trigger(href='#', data-image='assets/img/portfolio/printer.png', data-title='Printer')
+                                        img.img-fluid(src='assets/img/portfolio/printer.png', alt='Printer', style='cursor: pointer; margin: 0 auto; display: block; max-width: 70%;')
+                                    figcaption.text-muted.text-center.mt-2(style='font-size: 0.875rem;') We had users print out graded tests and have them input scores into the protoypes.
 
                         h2#teacher-feedback.mt-5.mb-4 What did Teachers Think?
 
@@ -251,7 +284,7 @@ html(lang='en')
                             p.mb-0
                                 | "A definite improvement over what we've had, I think what we've had not only isn't that easy to use, but I think it looks really outdated, which turns people off."
                             footer.blockquote-footer
-                                | Reading Wonders (K-5 product) curriculum specialist
+                                | Reading Wonders (K5 product) curriculum specialist
 
                         p.lead.mb-5
                             | The Class Scoresheet was never officially launched due to shifting priorities and limited resources. Despite the challenges—especially last-minute scope changes and time constraints—I found the problem-solving process for the Class Scoresheet rewarding.

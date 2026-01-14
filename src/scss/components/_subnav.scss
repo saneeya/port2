@@ -3,6 +3,9 @@
 //
 
 #subNav {
+    position: sticky !important;
+    top: 0 !important;
+    z-index: 1020 !important;
     padding-top: 0.75rem;
     padding-bottom: 0.75rem;
     font-family: $font-family-sans-serif;

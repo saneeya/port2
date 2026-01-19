@@ -15,6 +15,32 @@
         <link href="https://fonts.googleapis.com/css?family=Noto+Sans:400,700" rel="stylesheet" type="text/css" />
         <!-- Core theme CSS (includes Bootstrap)-->
         <link href="css/styles.css" rel="stylesheet" />
+        <style>
+            html {
+                height: 100%;
+            }
+            body {
+                min-height: 100%;
+                display: flex;
+                flex-direction: column;
+            }
+            body > section, body > header {
+                flex: 1 0 auto;
+            }
+            body > nav {
+                flex-shrink: 0;
+            }
+            footer {
+                flex-shrink: 0;
+            }
+            #subNav {
+                position: sticky !important;
+                top: 0 !important;
+                z-index: 1020 !important;
+                background-color: #ffffff !important;
+                backdrop-filter: blur(10px) !important;
+            }
+        </style>
     </head>
     <body id="page-top">
         <!-- Navigation-->
@@ -44,7 +70,7 @@
             </div>
         </nav>
         <!-- Subnav Bar-->
-        <nav class="navbar navbar-expand-lg" id="subNav" style="position: sticky; top: 0; z-index: 1020">
+        <nav class="navbar navbar-expand-lg" id="subNav">
             <div class="container">
                 <ul class="navbar-nav mx-auto flex-row">
                     <li class="nav-item"><a class="nav-link text-dark px-3" href="#paper-tests">Paper Tests</a></li>
@@ -166,38 +192,54 @@
                             <a class="custom-lightbox-trigger" href="#" data-image="assets/img/portfolio/testB.gif" data-title="Design B"><img class="img-fluid" src="assets/img/portfolio/testB.gif" alt="Design B" style="cursor: pointer; margin: 0 auto; display: block" /></a>
                             <figcaption class="text-muted text-center mt-2" style="font-size: 0.875rem">Design B: Student-by-Student design.</figcaption>
                         </figure>
-                        <div class="row mb-5">
-                            <div class="mb-4 mb-md-0" style="flex: 0 0 60%; max-width: 60%"><p class="lead mb-0">To simulate how teachers grade printed assignments, we provided participants with PDFs of three scored tests. We asked them to have the PDFs open on a second screen (or printed out) so they could reference them while entering scores for the first three student</p></div>
-                            <div style="flex: 0 0 40%; max-width: 40%">
-                                <figure class="mt-0 mb-0">
-                                    <a class="custom-lightbox-trigger" href="#" data-image="assets/img/portfolio/printer.png" data-title="Printer"><img class="img-fluid" src="assets/img/portfolio/printer.png" alt="Printer" style="cursor: pointer; margin: 0 auto; display: block; max-width: 70%" /></a>
-                                    <figcaption class="text-muted text-center mt-2" style="font-size: 0.875rem">We had users print out graded tests and have them input scores into the protoypes.</figcaption>
-                                </figure>
-                            </div>
-                        </div>
+                        <p class="lead mb-4">To simulate how teachers grade printed assignments, we provided participants with PDFs of three scored tests. We asked them to have the PDFs open on a second screen (or printed out) so they could reference them while entering scores for the first three students.</p>
+                        <figure class="mt-3 mb-5">
+                            <a class="custom-lightbox-trigger" href="#" data-image="assets/img/portfolio/printer.png" data-title="Printer"><img class="img-fluid" src="assets/img/portfolio/printer.png" alt="Printer" style="cursor: pointer; margin: 0 auto; display: block; max-width: 35%" /></a>
+                            <figcaption class="text-muted text-center mt-2" style="font-size: 0.875rem">We had users print out graded tests and have them input scores into the protoypes.</figcaption>
+                        </figure>
                         <h2 class="mt-5 mb-4" id="teacher-feedback">What did Teachers Think?</h2>
                         <h3 class="mt-4 mb-3">Spreadsheet Design (Design A)</h3>
                         <ul class="lead mb-4">
-                            <li>Many participants appreciated being able to use keyboard shortcuts like Tab and Enter to quickly input scores. However, a few didn't realize those shortcuts were available, highlighting a need for better affordance or guidance.</li>
-                            <li>While Design A performed well overall, feedback on the "Submit Assignment" button was mixed. Some liked the ability to submit all students at once, but all participants emphasized the need for a way to exclude students who were absent or excused.</li>
-                            <li>One feature that consistently missed the mark was the "Apply" button, which automatically gave a student full credit for all questions. Participants liked the functionality once it was explained, but the button itself was not intuitive, suggesting the need for clearer labeling or onboarding.</li>
+                            <li>Participants appreciated keyboard shortcuts (Tab and Enter) for efficient score entry, though some did not know these existed, indicating a need for improved discoverability or instructional copy.</li>
+                            <li>Design A performed well overall, but the "Submit Assignment" button received mixed feedback. While batch submission was valued, participants unanimously requested the ability to exclude absent or excused students.</li>
+                            <li>The "Apply" button (which auto-fills full credit for all questions) consistently confused users. Once explained, participants appreciated the functionality, but the feature lacked intuitiveness.</li>
                         </ul>
-                        <blockquote class="blockquote mb-4">
-                            <p class="mb-0">"I do like the format of this and makes it easy to put in and I imagine it would be even faster if I wasn't necessarily looking at a scanned document like toggling back and forth. I think that would be easier."</p>
-                            <footer class="blockquote-footer">3rd grade teacher</footer>
-                        </blockquote>
-                        <blockquote class="blockquote mb-4">
-                            <p class="mb-0">"So what I liked about it is that I clicked on it. Put a number, enter. Next one number enter number enter number entry, like it was it was quicker. It was a lot easier."</p>
-                            <footer class="blockquote-footer">Kindergarten teacher</footer>
-                        </blockquote>
-                        <blockquote class="blockquote mb-4">
-                            <p class="mb-0">"The Apply button...I would think would just be to lock the score before you submit it. But I honestly visually. I just as you can see, I totally skipped over that."</p>
-                            <footer class="blockquote-footer">3rd grade teacher</footer>
-                        </blockquote>
-                        <blockquote class="blockquote mb-5">
-                            <p class="mb-0">"Yeah, I like that. I just didn't even see that there where it says give max for but now that you pointed that out to me it makes perfect sense."</p>
-                            <footer class="blockquote-footer">Kindergarten/4th grade tutor</footer>
-                        </blockquote>
+                        <div class="row mb-4 g-4">
+                            <div class="col-md-7">
+                                <blockquote class="blockquote mb-4" style="border-left: none; padding-left: 0; font-size: 1rem">
+                                    <p class="mb-0">"I do like the format of this and makes it easy to put in and I imagine it would be even faster if I wasn't necessarily looking at a scanned document like toggling back and forth. I think that would be easier."</p>
+                                    <footer class="blockquote-footer mt-2" style="font-size: 1rem">3rd grade teacher</footer>
+                                </blockquote>
+                                <blockquote class="blockquote mb-4" style="border-left: none; padding-left: 0; font-size: 1rem">
+                                    <p class="mb-0">"So what I liked about it is that I clicked on it. Put a number, enter. Next one number enter number enter number entry, like it was it was quicker. It was a lot easier."</p>
+                                    <footer class="blockquote-footer mt-2" style="font-size: 1rem">Kindergarten teacher</footer>
+                                </blockquote>
+                            </div>
+                            <div class="col-md-5" style="display: flex; align-items: flex-start;">
+                                <figure class="mb-0">
+                                    <a class="custom-lightbox-trigger" href="#" data-image="assets/img/portfolio/scoresheetUT1.png" data-title="Scoresheet UT1"><img class="img-fluid" src="assets/img/portfolio/scoresheetUT1.png" alt="Scoresheet UT1" style="cursor: pointer; max-width: 100%; height: auto;" /></a>
+                                    <figcaption class="text-muted text-center mt-2" style="font-size: 0.875rem">Testers liked how easy it was to enter scores.</figcaption>
+                                </figure>
+                            </div>
+                        </div>
+                        <div class="row mb-5 g-4">
+                            <div class="col-md-7">
+                                <blockquote class="blockquote mb-4" style="border-left: none; padding-left: 0; font-size: 1rem">
+                                    <p class="mb-0">"The Apply button...I would think would just be to lock the score before you submit it. But I honestly visually. I just as you can see, I totally skipped over that."</p>
+                                    <footer class="blockquote-footer mt-2" style="font-size: 1rem">3rd grade teacher</footer>
+                                </blockquote>
+                                <blockquote class="blockquote mb-4" style="border-left: none; padding-left: 0; font-size: 1rem">
+                                    <p class="mb-0">"Yeah, I like that. I just didn't even see that there where it says give max for but now that you pointed that out to me it makes perfect sense."</p>
+                                    <footer class="blockquote-footer mt-2" style="font-size: 1rem">Kindergarten/4th grade tutor</footer>
+                                </blockquote>
+                            </div>
+                            <div class="col-md-5" style="display: flex; align-items: flex-start;">
+                                <figure class="mb-0">
+                                    <a class="custom-lightbox-trigger" href="#" data-image="assets/img/portfolio/scoresheetUT2.png" data-title="Scoresheet UT2"><img class="img-fluid" src="assets/img/portfolio/scoresheetUT2.png" alt="Scoresheet UT2" style="cursor: pointer; max-width: 100%; height: auto;" /></a>
+                                    <figcaption class="text-muted text-center mt-2" style="font-size: 0.875rem">The Apply to all or "Give Max Score" button made sense once users figured out what it did.</figcaption>
+                                </figure>
+                            </div>
+                        </div>
                         <h3 class="mt-4 mb-3">Student-by-Student Design (Design B)</h3>
                         <p class="lead mb-4">Participants found Design B easy to use for inputting scores, and the "Apply" button was much clearer in this layout.</p>
                         <p class="lead mb-4">However, there were some trade-offs:</p>
@@ -205,13 +247,13 @@
                             <li>Many participants preferred seeing all students at once, which Design B didn't allow.</li>
                             <li>Several noted that since graded assignments are rarely in alphabetical order, they would need to scroll back and forth frequently to match names, which could slow them down.</li>
                         </ul>
-                        <blockquote class="blockquote mb-4">
+                        <blockquote class="blockquote mb-4" style="border-left: none; padding-left: 0; font-size: 1rem">
                             <p class="mb-0">"I honestly almost even like this better from a type A personality perspective, because if I've got Lucas in front of me. Then I'm just looking at his score sheet. And I don't feel like I have all the other names and everything around me. But I mean, I do like both."</p>
-                            <footer class="blockquote-footer">Kindergarten/4th grade tutor</footer>
+                            <footer class="blockquote-footer mt-2" style="font-size: 1rem">Kindergarten/4th grade tutor</footer>
                         </blockquote>
-                        <blockquote class="blockquote mb-5">
+                        <blockquote class="blockquote mb-5" style="border-left: none; padding-left: 0; font-size: 1rem">
                             <p class="mb-0">"It's hard to say. I like the previous one better, that we just submitted...and I think that I liked on that you just start at the top and you just go down to input all the scores."</p>
-                            <footer class="blockquote-footer">3rd grade teacher</footer>
+                            <footer class="blockquote-footer mt-2" style="font-size: 1rem">3rd grade teacher</footer>
                         </blockquote>
                         <h2 class="mt-5 mb-4" id="polishing">Polishing the Experience</h2>
                         <p class="lead mb-4">Out of 7 participants, 5 preferred Design A and 2 preferred Design B. When asked how the designs could be improved, participants suggested:</p>
@@ -238,13 +280,13 @@
                         <h2 class="mt-5 mb-4" id="lessons-learned">Design Wins & Lessons Learned</h2>
                         <p class="lead mb-4">One of the most surprising takeaways from this project was how excited users were about the prototype. I hadn't fully realized how frustrating the current process was for them, and it was rewarding to see how the new design helped ease that pain.</p>
                         <p class="lead mb-4">Here are a few things users said during testing:</p>
-                        <blockquote class="blockquote mb-4">
+                        <blockquote class="blockquote mb-4" style="border-left: none; padding-left: 0; font-size: 1rem">
                             <p class="mb-0">"Um, I just want to say thank you for changing this because last year was, it like I...would I would do this on a weekend because it would take so long."</p>
-                            <footer class="blockquote-footer">Kindergarten teacher</footer>
+                            <footer class="blockquote-footer mt-2" style="font-size: 1rem">Kindergarten teacher</footer>
                         </blockquote>
-                        <blockquote class="blockquote mb-5">
+                        <blockquote class="blockquote mb-5" style="border-left: none; padding-left: 0; font-size: 1rem">
                             <p class="mb-0">"A definite improvement over what we've had, I think what we've had not only isn't that easy to use, but I think it looks really outdated, which turns people off."</p>
-                            <footer class="blockquote-footer">Reading Wonders (K5 product) curriculum specialist</footer>
+                            <footer class="blockquote-footer mt-2" style="font-size: 1rem">Reading Wonders (K5 product) curriculum specialist</footer>
                         </blockquote>
                         <p class="lead mb-5">The Class Scoresheet was never officially launched due to shifting priorities and limited resources. Despite the challenges—especially last-minute scope changes and time constraints—I found the problem-solving process for the Class Scoresheet rewarding.</p>
                         <p class="lead mb-5">It was a unique use case, and while the work was cut short, I'm confident the design addressed real user pain points and improved the overall experience.</p>
@@ -259,11 +301,42 @@
             </div>
         </section>
         <!-- Footer-->
-        <footer class="footer text-center text-dark" style="background-color: #e1e1e1"><div class="container"></div></footer>
-        <!-- Copyright Section-->
-        <div class="copyright py-4 text-center text-dark" style="background-color: #e1e1e1">
-            <div class="container"><small>Copyright &copy; Saneeya Khan 2024</small></div>
-        </div>
+        <footer class="footer text-center text-dark" style="background-color: #e1e1e1; padding: 1.5rem 0;">
+            <style>
+                footer a {
+                    text-decoration: underline;
+                    transition: text-decoration 0.2s;
+                }
+                footer a:hover {
+                    text-decoration: underline;
+                }
+            </style>
+            <div class="container">
+                <div class="row align-items-start">
+                    <div class="col-md-6 text-md-start mb-3 mb-md-0">
+                        <div class="d-flex flex-column align-items-center align-items-md-start">
+                            <div class="d-flex align-items-center gap-4 mb-2">
+                                <span class="text-dark" style="font-size: 1.25rem; font-weight: 500;">Saneeya Khan</span>
+                                <a class="text-dark text-decoration-none" href="https://www.linkedin.com/in/saneeyakhan/" target="_blank" rel="noopener noreferrer">
+                                    <i class="fab fa-linkedin-in" style="font-size: 1.25rem;"></i>
+                                </a>
+                            </div>
+                            <a class="text-dark" href="about.html">About</a>
+                        </div>
+                    </div>
+                    <div class="col-md-6 text-md-start">
+                        <div class="d-flex flex-column align-items-center align-items-md-start">
+                            <p class="text-dark mb-2" style="font-weight: 500;">Case Studies</p>
+                            <nav class="d-flex flex-column align-items-center align-items-md-start gap-2">
+                                <a class="text-dark" href="campaigncreation.html">Reimagining How Agencies Create Campaigns</a>
+                                <a class="text-dark" href="scoresheet.html">A Smarter Way for Teachers to Record Scores</a>
+                                <a class="text-dark" href="pricingtool.html">Smart Pricing for Ad Inventory</a>
+                            </nav>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
         <!-- Bootstrap core JS-->
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
         <!-- Core theme JS-->

@@ -49,10 +49,9 @@
         <nav class="navbar navbar-expand-lg" id="subNav" style="position: sticky; top: 0; z-index: 1020">
             <div class="container">
                 <ul class="navbar-nav mx-auto flex-row">
-                    <li class="nav-item"><a class="nav-link text-dark px-3" href="#campaign-basics">Ad Campaign Basics</a></li>
-                    <li class="nav-item"><a class="nav-link text-dark px-3" href="#ux-overhaul">UX Overhaul</a></li>
-                    <li class="nav-item"><a class="nav-link text-dark px-3" href="#agency-wants">Agency Wants</a></li>
-                    <li class="nav-item"><a class="nav-link text-dark px-3" href="#single-page">Single Page</a></li>
+                    <li class="nav-item"><a class="nav-link text-dark px-3" href="#campaign-basics">Humble Beginnings</a></li>
+                    <li class="nav-item"><a class="nav-link text-dark px-3" href="#ux-overhaul">Growing Pains</a></li>
+                    <li class="nav-item"><a class="nav-link text-dark px-3" href="#single-page">Two-Year Journey</a></li>
                     <li class="nav-item"><a class="nav-link text-dark px-3" href="#iterative-journey">Iterative Journey</a></li>
                     <li class="nav-item"><a class="nav-link text-dark px-3" href="#testing">Testing</a></li>
                     <li class="nav-item"><a class="nav-link text-dark px-3" href="#constraints">Constraints</a></li>
@@ -90,73 +89,94 @@
             <div class="container">
                 <div class="row justify-content-center">
                     <div class="col-lg-10">
-                        <h2 class="mb-4" id="campaign-basics">Ad Campaign Basics: Target, Upload, Launch</h2>
-                        <p class="lead mb-4">Disney Campaign Manager (formerly Hulu Ad Manager) launched in March 2020, allowing advertisers to create and manage their own ad campaigns on Hulu. Campaign creation included:</p>
+                        <h2 class="mb-4" id="campaign-basics">Humble Beginnings</h2>
+                        <div class="row mb-4">
+                            <div style="width: 53%; padding-right: 2rem;">
+                                <p class="lead mb-4">Launched in March 2020 as Hulu Ad Manager, Disney Campaign Manager introduced Hulu's first self-serve advertising platform. The platform enabled advertisers to create and manage their campaigns with full control over targeting parameters (age, location, interests), campaign duration, budget allocation, and video ad uploads.</p>
+                                <p class="lead mb-4">The platform was developed to achieve two key goals:</p>
+                                <ul class="lead mb-4">
+                                    <li>Easier access for SMBs (Small, Medium Businesses): By setting a $500 minimum spend threshold, the platform significantly lowered the barrier to entry for SMBs looking to advertise on Hulu.</li>
+                                    <li>More ad diversity and localization: Enable a broader range of advertisers to deliver more varied and locally relevant content to Hulu's audience.</li>
+                                </ul>
+                            </div>
+                            <div style="width: 47%; display: flex; align-items: flex-start; justify-content: center; flex-direction: column;">
+                                <figure class="mb-0">
+                                    <a class="custom-lightbox-trigger" href="#" data-image="assets/img/portfolio/hulu_livingroom.png" data-title="Hulu living room"><img class="img-fluid" src="assets/img/portfolio/hulu_livingroom.png" alt="Hulu living room" style="cursor: pointer; max-width: 100%; height: auto;" /></a>
+                                    <figcaption class="text-muted text-center mt-2" style="font-size: 0.875rem">The original ad manager was meant to give viewers more variety/localized ads.</figcaption>
+                                </figure>
+                            </div>
+                        </div>
+                        <p class="lead mb-4">The original platform was designed with simplicity in mind, offering a straightforward campaign setup flow (see video below).</p>
+                        <figure class="mt-3 mb-5">
+                            <video class="img-fluid" controls style="cursor: pointer; margin: 0 auto; display: block; max-width: 100%">
+                                <source src="assets/img/portfolio/HAMWalkthrough.mp4" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                            <figcaption class="text-muted text-center mt-2" style="font-size: 0.875rem">The original campaign setup flow in 2022.</figcaption>
+                        </figure>
+                        <h2 class="mt-5 mb-4" id="ux-overhaul">Growing Pains</h2>
+                        <p class="lead mb-4">The platform demonstrated strong performance in its first two years, attracting a healthy influx of SMB customers and delivering solid profit margins. However, while it served SMBs effectively, we identified a critical gap: the platform lacked adequate support for agency users.</p>
+                        <figure class="mt-3 mb-5">
+                            <a class="custom-lightbox-trigger" href="#" data-image="assets/img/portfolio/UserCheckList.png" data-title="User Checklist"><img class="img-fluid" src="assets/img/portfolio/UserCheckList.png" alt="User Checklist" style="cursor: pointer; margin: 0 auto; display: block; max-width: 50%" /></a>
+                            <figcaption class="text-muted text-center mt-2" style="font-size: 0.875rem">We were lacking critical features to entice Agency customers.</figcaption>
+                        </figure>
+                        <p class="lead mb-4">Agencies represent a strategic priority for several key reasons:</p>
                         <ul class="lead mb-4">
-                            <li>Naming the campaign, setting its dates and budget</li>
-                            <li>Targeting viewers based on demographics like age, location, interests, and content preferences</li>
-                            <li>Uploading a video ad</li>
-                            <li>Submitting the campaign for approval</li>
+                            <li>Higher revenue potential: Agencies generate significantly more revenue than SMBs</li>
+                            <li>Evolving business priorities: Company objectives were shifting to better align with agency user needs</li>
+                            <li>Competitive parity: The platform needed to match the capabilities offered through our direct sales channel and competitor platforms</li>
+                            <li>Market dominance: Agencies account for the majority of ad buys in the streaming landscape</li>
                         </ul>
-                        <h2 class="mt-5 mb-4" id="ux-overhaul">Powering Up for Agencies: A UX Overhaul</h2>
-                        <p class="lead mb-4">When we launched the platform, our main customers were small and medium-sized businesses. But over time, agency users became our main focus.</p>
-                        <p class="lead mb-4">The team and I realized we needed to create a new campaign flow because:</p>
+                        <p class="lead mb-4">Agency users are more sophisticated than SMB advertisers and require advanced platform capabilities. They expect access to diverse ad formats, granular targeting options, and enterprise-level features that the original platform (particularly the campaign creation flow) couldn't provide. To capture this market segment, we needed to redesign the whole campaign workflow.</p>
+                        <h2 class="mt-5 mb-4" id="single-page">A Two-Year Journey</h2>
+                        <h3 class="mb-3">Operating Under Pressure</h3>
+                        <p class="lead mb-4">This wasn't a simple design refresh: we were rebuilding the entire platform. Beyond reimagining the campaign flow, I designed new reporting and creative upload experiences from scratch.</p>
+                        <p class="lead mb-4">I navigated several significant constraints:</p>
                         <ul class="lead mb-4">
-                            <li>Agencies are more sophisticated users than SMBs and want more options in the platform such as more ad formats and more targeting options</li>
-                            <li>We were going to rebuild the whole platform to be in-house (currently managed by a 3rd party agency since launch), giving me the opportunity to redo the UX</li>
+                            <li>One-designer army: I was the sole designer supporting the entire platform, juggling multiple workflows, product managers, and engineering teams</li>
+                            <li>Supporting a live product: We couldn't pause for the rebuild; the current platform needed continuous updates and fixes for existing customers</li>
+                            <li>Cultural barriers: With most engineering resources in Ukraine, I managed a 10-hour time difference and cultural communication gaps</li>
+                            <li>No room for error:  As the platform's core functionality, the campaign flow had to work flawlessly</li>
                         </ul>
-                        <h3 class="mt-4 mb-3">Why do we want agency users?</h3>
-                        <ul class="lead mb-4">
-                            <li>Agencies bring in more revenue than SMBs</li>
-                            <li>Business goals changing to better suit the needs of agency users</li>
-                            <li>Achieving more parity with the options offered to advertisers in the direct (non-self-serve) side of the company</li>
-                            <li>Become more inline with competitors</li>
-                        </ul>
-                        <h2 class="mt-5 mb-4" id="agency-wants">What Agencies Really Want</h2>
-                        <p class="lead mb-4">Agency users have different needs than our usual customers, so we had to add new features to support them.</p>
-                        <p class="lead mb-4">Below is a list of those user needs, along with a brief description of each.</p>
-                        <h3 class="mt-4 mb-3">Add Line Items</h3>
-                        <p class="lead mb-4">A line item is a single set of targeting, budget, dates, creative assets, etc.</p>
-                        <p class="lead mb-4">In the current platform: <strong>1 campaign = 1 line item</strong></p>
-                        <p class="lead mb-4">In the new flow: <strong>1 campaign = multiple line items</strong></p>
-                        <p class="lead mb-4">Having many line items is useful for agency users since they usually run multiple sets of targeting/creatives under the same brand.</p>
-                        <h3 class="mt-4 mb-3">More Targeting Options</h3>
-                        <p class="lead mb-4">Agency users want more options for targeting to let them better reach their clients' customer base. Such as:</p>
-                        <ul class="lead mb-4">
-                            <li><strong>Dayparting:</strong> The ability to choose the schedule of days and times when the ad should run and should not run</li>
-                            <li><strong>Frequency:</strong> How often an ad should air</li>
-                        </ul>
-                        <h3 class="mt-4 mb-3">Add VAST Tags</h3>
-                        <p class="lead mb-4">A VAST (video ad serving template) tag is a string of code that is configured in a 3rd party application that includes:</p>
-                        <ul class="lead mb-4">
-                            <li>Video ads with different content and/or different audio/video quality</li>
-                            <li>Tracking pixels or 3rd party tags to count number of views (or impressions)</li>
-                        </ul>
-                        <p class="lead mb-4">VAST was already available on the direct (non-self-serve) side of the business and was a common request from agency users.</p>
-                        <h2 class="mt-5 mb-4" id="single-page">UX Showdown: Single Page or Step-by-Step?</h2>
-                        <p class="lead mb-4">A previous designer explored a new single-page campaign design (shown here) and tested how it performed compared to the existing multi-page layout.</p>
-                        <p class="lead mb-4">Here were the main results from the sessions:</p>
-                        <ul class="lead mb-4">
-                            <li>Half of the users (3 out of 6) preferred the single-page flow.</li>
-                            <li>Many felt the single-page flow lacked clear step-by-step structure.</li>
-                            <li>Users liked the progress bar in the page-by-page flow because it showed where they were in the process.</li>
-                            <li>Users appreciated seeing all the steps at once in the single-page flow's navigation bar.</li>
-                        </ul>
-                        <h2 class="mt-5 mb-4">Why Single Page Wins</h2>
-                        <p class="lead mb-4">Based on past designs and research, I chose the single-page layout. It's easier to navigate with new features and scaleable for future updates.</p>
-                        <p class="lead mb-4">Below are competitor examples I reviewed, focusing on user flows and how they handle multiple line items.</p>
+                        <figure class="mt-3 mb-5">
+                            <a class="custom-lightbox-trigger" href="#" data-image="assets/img/portfolio/solodesigner.png" data-title="Sole designer"><img class="img-fluid" src="assets/img/portfolio/solodesigner.png" alt="Sole designer" style="cursor: pointer; margin: 0 auto; display: block; max-width: 50%" /></a>
+                            <figcaption class="text-muted text-center mt-2" style="font-size: 0.875rem">I was the only designer on the whole platform and worked on several projects simultaneously.</figcaption>
+                        </figure>
+                        <h3 class="mt-4 mb-3">Line Items</h3>
+                        <p class="lead mb-4">Before designing the new flow, I needed to address agencies' most critical requirement: line items. Line items function as sub-campaigns within a parent campaign, each containing its own targeting parameters, flight dates, and creative assets. A single campaign can house multiple line items, allowing advertisers to test different strategies simultaneously: a standard feature across competitor platforms (sometimes called "ad groups" or "ad sets") that agency users expect.</p>
+                        <figure class="mt-3 mb-5">
+                            <a class="custom-lightbox-trigger" href="#" data-image="assets/img/portfolio/lineitems.png" data-title="Line items"><img class="img-fluid" src="assets/img/portfolio/lineitems.png" alt="Line items" style="cursor: pointer; margin: 0 auto; display: block; max-width: 50%" /></a>
+                            <figcaption class="text-muted text-center mt-2" style="font-size: 0.875rem">Line items are like sub-campaigns that live within a campaign.</figcaption>
+                        </figure>
+                        <p class="lead mb-4">Our existing platform didn't support this structure. Users could only launch one campaign with a single set of targeting, one video ad, and one date range.</p>
+                        <p class="lead mb-4">The core challenge became: how do I design an interface that elegantly presents multiple line items, each with its own complex configuration, within a single campaign creation flow?</p>
                         <h2 class="mt-5 mb-4" id="iterative-journey">The Iterative Journey</h2>
                         <p class="lead mb-4">A major change in the new campaign flow was the implementation of line items. A line item is a single set of targeting, budget, dates, creative assets, etc.</p>
                         <p class="lead mb-4">I started exploration by having a tab for each line item on the top rail.</p>
+                        <figure class="mt-3 mb-5">
+                            <a class="custom-lightbox-trigger" href="#" data-image="assets/img/portfolio/oldHAM.gif" data-title="Old HAM Design"><img class="img-fluid" src="assets/img/portfolio/oldHAM.gif" alt="Old HAM Design" style="cursor: pointer; margin: 0 auto; display: block" /></a>
+                        </figure>
                         <p class="lead mb-4">The tab layout wasn't scalable for campaigns with multiple line items, so I transitioned to a side panel navigation instead.</p>
                         <p class="lead mb-4">Scroll through designs below to view my explorations.</p>
                         <p class="lead mb-4">Once the navigation was set, I added new content, including a section for dayparting, pacing, and frequency settings.</p>
                         <p class="lead mb-4">I called this section "Delivery" since all three relate to how often an ad runs.</p>
+                        <figure class="mt-3 mb-5">
+                            <a class="custom-lightbox-trigger" href="#" data-image="assets/img/portfolio/DeliveryGIF.gif" data-title="Delivery Section"><img class="img-fluid" src="assets/img/portfolio/DeliveryGIF.gif" alt="Delivery Section" style="cursor: pointer; margin: 0 auto; display: block" /></a>
+                        </figure>
                         <p class="lead mb-4">In the Ad Upload section, I designed a new flow for VAST, allowing users to input and upload VAST code and preview their creative assets.</p>
                         <p class="lead mb-4">The challenge was figuring out how to display multiple assets in the modal and clearly show whether each asset was accepted, rejected (with error details), or still pending review.</p>
                         <p class="lead mb-4">I explored several VAST layout options (viewable in the carousel below) and ultimately decided to show only the attributes that failed validation, instead of displaying a pass/fail status for each asset.</p>
+                        <figure class="mt-3 mb-5">
+                            <a class="custom-lightbox-trigger" href="#" data-image="assets/img/portfolio/VASTGif.gif" data-title="VAST Layout Options"><img class="img-fluid" src="assets/img/portfolio/VASTGif.gif" alt="VAST Layout Options" style="cursor: pointer; margin: 0 auto; display: block" /></a>
+                        </figure>
                         <h2 class="mt-5 mb-4">The Final Design in Action</h2>
                         <p class="lead mb-4">Below is the prototype of the new campaign creation process.</p>
+                        <figure class="mt-3 mb-5">
+                            <video class="img-fluid" controls style="cursor: pointer; margin: 0 auto; display: block; max-width: 100%">
+                                <source src="assets/img/portfolio/New Campaign Flow Walkthrough.mp4" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                        </figure>
                         <h2 class="mt-5 mb-4" id="testing">Putting the Campaign Flow to the Test</h2>
                         <p class="lead mb-4">Due to other commitments, user testing began later than planned—but I took the initiative to move it forward. While I couldn't test every feature (like VAST), I focused on the core campaign creation flow.</p>
                         <p class="lead mb-4">Specifically, I tested whether users could:</p>
@@ -236,6 +256,71 @@
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
         <!-- Core theme JS-->
         <script src="js/scripts.js"></script>
+        <!-- Custom Lightbox JS-->
+        <script>
+            (function () {
+                // Create lightbox HTML structure
+                var lightboxHTML = '<div id="custom-lightbox" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.85); z-index: 10000; cursor: pointer; overflow: auto;"><div style="position: relative; width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; padding: 20px;"><img id="lightbox-image" src="" alt="" style="max-width: 80vw; max-height: 80vh; object-fit: contain; cursor: default; pointer-events: none;"><button id="lightbox-close" style="position: fixed; top: 20px; right: 20px; z-index: 10001; width: 40px; height: 40px; background-color: white; border: 2px solid rgba(0, 0, 0, 0.2); border-radius: 50%; color: #000; font-size: 32px; line-height: 1; font-weight: 300; cursor: pointer; display: flex; align-items: center; justify-content: center; padding: 0; margin: 0; box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);">×</button></div></div>';
+                document.body.insertAdjacentHTML('beforeend', lightboxHTML);
+
+                var lightbox = document.getElementById('custom-lightbox');
+                var lightboxImage = document.getElementById('lightbox-image');
+                var lightboxClose = document.getElementById('lightbox-close');
+                var lightboxContainer = lightbox.querySelector('div');
+
+                // Function to open lightbox
+                function openLightbox(imageSrc, imageAlt) {
+                    lightboxImage.src = imageSrc;
+                    lightboxImage.alt = imageAlt || '';
+                    lightbox.style.display = 'block';
+                    document.body.style.overflow = 'hidden';
+                }
+
+                // Function to close lightbox
+                function closeLightbox() {
+                    lightbox.style.display = 'none';
+                    document.body.style.overflow = '';
+                }
+
+                // Close button click
+                lightboxClose.onclick = function (e) {
+                    e.stopPropagation();
+                    closeLightbox();
+                };
+
+                // Close when clicking outside image (on overlay)
+                lightbox.onclick = function (e) {
+                    if (e.target === lightbox || e.target === lightboxContainer) {
+                        closeLightbox();
+                    }
+                };
+
+                // Prevent closing when clicking on image
+                lightboxImage.onclick = function (e) {
+                    e.stopPropagation();
+                };
+
+                // Close on ESC key
+                document.addEventListener('keydown', function (e) {
+                    if (e.key === 'Escape' && lightbox.style.display !== 'none') {
+                        closeLightbox();
+                    }
+                });
+
+                // Handle clicks on lightbox triggers
+                document.addEventListener('click', function (e) {
+                    var trigger = e.target.closest('.custom-lightbox-trigger');
+                    if (trigger) {
+                        e.preventDefault();
+                        var imageSrc = trigger.getAttribute('data-image');
+                        var imageTitle = trigger.getAttribute('data-title') || '';
+                        if (imageSrc) {
+                            openLightbox(imageSrc, imageTitle);
+                        }
+                    }
+                });
+            })();
+        </script>
     </body>
 </html>
 

@@ -44,6 +44,18 @@
                 #subNav {
                     display: none !important;
                 }
+                #pricingResearchCarousel .carousel-control-prev,
+                #pricingWireframesCarousel .carousel-control-prev,
+                #rateCardViewCarousel .carousel-control-prev,
+                #advertiserGroupsCarousel .carousel-control-prev {
+                    left: 10px !important;
+                }
+                #pricingResearchCarousel .carousel-control-next,
+                #pricingWireframesCarousel .carousel-control-next,
+                #rateCardViewCarousel .carousel-control-next,
+                #advertiserGroupsCarousel .carousel-control-next {
+                    right: 10px !important;
+                }
             }
         </style>
     </head>
@@ -81,11 +93,10 @@
             <div class="container">
                 <ul class="navbar-nav mx-auto flex-row">
                     <li class="nav-item"><a class="nav-link text-dark px-3" href="#uniform-pricing">Uniform Pricing</a></li>
-                    <li class="nav-item"><a class="nav-link text-dark px-3" href="#spreadsheet-struggle">Spreadsheet Struggle</a></li>
-                    <li class="nav-item"><a class="nav-link text-dark px-3" href="#meeting-need">Meeting the Need</a></li>
-                    <li class="nav-item"><a class="nav-link text-dark px-3" href="#discovery">Discovery</a></li>
+                    <li class="nav-item"><a class="nav-link text-dark px-3" href="#meeting-need">Launch Requirements</a></li>
+                    <li class="nav-item"><a class="nav-link text-dark px-3" href="#discovery">Discovery & Designs</a></li>
                     <li class="nav-item"><a class="nav-link text-dark px-3" href="#final-design">Final Design</a></li>
-                    <li class="nav-item"><a class="nav-link text-dark px-3" href="#value">Value</a></li>
+                    <li class="nav-item"><a class="nav-link text-dark px-3" href="#value">Impact</a></li>
                 </ul>
             </div>
         </nav>
@@ -120,63 +131,235 @@
             <div class="container">
                 <div class="row justify-content-center">
                     <div class="col-lg-10">
+                        <p class="text-muted mb-4" style="font-size: 0.875rem;">*AI images used for illustrative purposes only.</p>
                         <h2 class="mb-4" id="uniform-pricing">Why Uniform Pricing Holds Us Back</h2>
-                        <p class="lead mb-4">Hulu Ad Manager (now Disney Campaign Manager) launched in March 2020, giving advertisers a way to create and manage their own Hulu campaigns. For the first few years, it used a single rate card or CPM (Cost per 1,000 views), which meant all ad campaigns were charged the same rate—adjusted occasionally based on seasonality and ad inventory availability.</p>
-                        <p class="lead mb-4">Because everyone was charged the same rate, we missed out on key business opportunities:</p>
-                        <ul class="lead mb-4">
-                            <li>No way to charge premiums for additional targeting (ie., geo, age, gender)</li>
-                            <li>Couldn't offer discounted rates for new or returning advertisers</li>
-                            <li>No simple way to adjust pricing for seasonality (such as raise CPMs during holidays, or lower during slow periods)</li>
-                        </ul>
-                        <h2 class="mt-5 mb-4" id="spreadsheet-struggle">The Spreadsheet Struggle</h2>
-                        <p class="lead mb-4">The internal pricing team had no way to adjust CPMs directly in Hulu Ad Manager. They had to submit engineering requests for every change. With no platform to manage rates, they tracked everything manually in spreadsheets.</p>
-                        <p class="lead mb-4">Example of how the pricing team tracked rate cards in spreadsheets. Advertiser names and CPM amount have been blurred out.</p>
-                        <h2 class="mt-5 mb-4" id="meeting-need">Meeting the Need: Smarter Rate Card Management</h2>
-                        <p class="lead mb-4">A backlog item called "Pricing Manager" proposed a new tool allowing the pricing team to create and manage multiple rate cards.</p>
-                        <p class="lead mb-4">The goal: reduce engineering workload by eliminating manual CPM updates and help the pricing team automate parts of their workflow.</p>
-                        <p class="lead mb-4">We got the green light to start working on this pricing tool in summer 2022 with a target launch of early 2023.</p>
-                        <h2 class="mt-5 mb-4">MVP Must-Haves</h2>
-                        <p class="lead mb-4">This new tool needed these features for launch:</p>
-                        <ul class="lead mb-4">
-                            <li>Ability to create, updating, and delete rate cards
-                                <ul>
-                                    <li>Each rate card should have option to set start and end dates and premium pricing add-ons</li>
+                        <div class="row mb-4 g-4">
+                            <div class="col-md-8">
+                                <p class="lead mb-4">Hulu Ad Manager (now Disney Campaign Manager) launched in March 2020, enabling advertisers to create and manage their own campaigns. Initially, the platform operated on a single fixed rate card with one CPM (Cost per 1,000 impressions), meaning all campaigns were charged identically, with only occasional manual adjustments for seasonality or inventory change.</p>
+                                <p class="lead mb-4">This single-rate structure created missed revenue opportunities:</p>
+                                <ul class="lead mb-0">
+                                    <li>No premium pricing for advanced targeting (geography, demographics, interests)</li>
+                                    <li>No ability to offer promotional rates for new or returning advertisers</li>
+                                    <li>No flexible pricing adjustments for seasonal demand</li>
                                 </ul>
-                            </li>
-                            <li>Classify rate cards by type (political advertising had a different pricing model)</li>
-                            <li>Setting start and end dates</li>
-                            <li>Prioritizing rate cards (higher priority rate card overrides a lower one)</li>
-                            <li>Managing advertiser groups that can be assigned to specific rate cards</li>
-                        </ul>
-                        <h3 class="mt-4 mb-3">Why do we want "advertiser groups"?</h3>
+                            </div>
+                            <div class="col-md-4" style="display: flex; align-items: flex-start; flex-direction: column;">
+                                <figure class="mb-0" style="max-width: 65%;">
+                                    <a class="custom-lightbox-trigger" href="#" data-image="assets/img/portfolio/inventoryneedle.png" data-title="Inventory Needle"><img class="img-fluid" src="assets/img/portfolio/inventoryneedle.png" alt="Inventory Needle" style="cursor: pointer; max-width: 100%; height: auto;" /></a>
+                                    <figcaption class="text-muted text-center mt-2" style="font-size: 0.875rem; max-width: 100%;">The inventory panel shows the CPM and available inventory for the ad campaign.</figcaption>
+                                </figure>
+                            </div>
+                        </div>
+                        <p class="lead mb-4">The pricing team also lacked platform tools to manage rates effectively. They relied on external spreadsheets to track advertiser-specific CPMs:</p>
+                        <figure class="mt-3 mb-5">
+                            <a class="custom-lightbox-trigger" href="#" data-image="assets/img/portfolio/spreadsheet.png" data-title="Spreadsheet Example"><img class="img-fluid" src="assets/img/portfolio/spreadsheet.png" alt="Spreadsheet Example" style="cursor: pointer; margin: 0 auto; display: block; max-width: 80%" /></a>
+                            <figcaption class="text-muted text-center mt-2" style="font-size: 0.875rem">Example of how the pricing team tracked rate cards in spreadsheets. Advertiser names and CPM amount have been blurred out.</figcaption>
+                        </figure>
+                        <p class="lead mb-4">If they wanted to update the CPM, they had to submit an engineering request which could take weeks to update in the platform.</p>
+                        <figure class="mt-3 mb-5">
+                            <a class="custom-lightbox-trigger" href="#" data-image="assets/img/portfolio/CPMupdates.png" data-title="CPM Updates"><img class="img-fluid" src="assets/img/portfolio/CPMupdates.png" alt="CPM Updates" style="cursor: pointer; margin: 0 auto; display: block; max-width: 70%" /></a>
+                            <figcaption class="text-muted text-center mt-2" style="font-size: 0.875rem">CPM updates required engineering tickets, creating delays for the pricing team.</figcaption>
+                        </figure>
+                        <h2 class="mt-5 mb-4" id="meeting-need">Smarter Rate Card Management</h2>
+                        <p class="lead mb-4">"Pricing Manager" had lived in the backlog for years, a proposed tool to enable the pricing team to create and manage multiple rate cards independently. In late 2022, resources became available to prioritize it. The objective: eliminate manual CPM updates to reduce engineering dependency and automate key pricing workflows.</p>
+                        <p class="lead mb-4">MVP requirements for launch:</p>
                         <ul class="lead mb-4">
-                            <li>Each advertiser group can consist of agencies or individual advertisers</li>
-                            <li>Instead of manually adding advertisers one by one, pricing teams can assign entire groups to a rate card, thereby reducing workload</li>
-                            <li>Advertisers can be grouped on a variety of factors such as repeat customers, agency users, new customers, etc.</li>
+                            <li>Flexible rate cards: Enable start/end dates and premium pricing add-ons for each card</li>
+                            <li>Rate card classification: Support different pricing models (e.g., political advertising)</li>
+                            <li>Prioritization logic: Allow higher-priority cards to override lower-priority ones</li>
+                            <li>Advertiser group management: Create reusable groups (agencies, repeat customers, new advertisers) that can be assigned to rate cards in bulk, eliminating need to add advertisers one-by-one to ratecards</li>
                         </ul>
-                        <h2 class="mt-5 mb-4" id="discovery">Rapid Discovery & Early Ideas</h2>
-                        <p class="lead mb-4">This was a fast-moving, niche project with limited time for discovery. I met with the pricing team to understand their current workflow (where I learned they manually tracked pricing in spreadsheets) and consulted with other designers who worked on internal tools for additional context.</p>
-                        <h3 class="mt-4 mb-3">Internal Tool with Start/End Dates</h3>
-                        <p class="lead mb-4">A teammate shared designs for a tool where items (in this case: deal packages) were organized by type and by start/end dates.</p>
-                        <h3 class="mt-4 mb-3">Internal Tool with Rate Cards</h3>
-                        <p class="lead mb-4">Another teammate shared a legacy rate card tool used for linear advertising, which included several features similar to what we needed in the new pricing tool.</p>
-                        <h3 class="mt-4 mb-3">Wireframes</h3>
-                        <p class="lead mb-4">Using insights from the pricing team and existing tools and design systems, I began drafting initial concepts for the pricing tool.</p>
-                        <p class="lead mb-4">I mocked up a table to manage priority rankings (initially called "rule list"), along with flows for editing rate cards and advertiser groups.</p>
-                        <h2 class="mt-5 mb-4">Refining the Flows</h2>
-                        <p class="lead mb-4">I converted the wireframes into high-fidelity mockups. I decided to use a side panel and then didn't need a separate tab for rate card editing.</p>
-                        <h2 class="mt-5 mb-4">Final Rate Card Flows</h2>
-                        <p class="lead mb-4">I refined the flows to include a sidebar with two tabs—one for rate card details and one for pricing. Due to scope constraints, I had to remove drag-and-drop for priority ranking.</p>
-                        <h2 class="mt-5 mb-4">Final Advertiser Group Flows</h2>
-                        <p class="lead mb-4">Advertisers were split into two views: individual advertisers and advertiser groups. It took me a while to arrive at this solution because I needed a clear way to organize advertisers—some belonged to groups, others did not.</p>
-                        <p class="lead mb-4">This approach let users choose the view that best fit their workflow, while still being able to see assigned rate cards in both.</p>
+                        <h2 class="mt-5 mb-4" id="discovery">Rapid Discovery & Designs</h2>
+                        <p class="lead mb-4">This fast-moving project served a specialized user base with compressed timelines, late 2022 start to early 2024 launch, leaving limited time for extensive discovery.</p>
+                        <p class="lead mb-4">Through pricing team interviews, I mapped their existing workflows and identified critical pain points: manual spreadsheet-based rate tracking and engineering dependency for all CPM updates.</p>
+                        <h3 class="mt-4 mb-3">Niche Tools</h3>
+                        <p class="lead mb-4">Competitive analysis proved impractical for this internal tool as I couldn't access competitors' proprietary pricing platforms. I could look at other internal tools we ad in our ad suite and found:</p>
+                        <ul class="lead mb-4">
+                            <li>A deal package management tool with comparable advertiser workflows</li>
+                            <li>An existing linear TV rate card system (legacy, not streaming-optimized)</li>
+                        </ul>
+                        <p class="lead mb-4">These provided valuable patterns and UX flows even though their functionality differed.</p>
+                        <div id="pricingResearchCarousel" class="carousel slide mb-0" style="padding: 0 60px; max-width: 90%; margin: 0 auto;">
+                            <div class="carousel-inner">
+                                <div class="carousel-item active">
+                                    <a class="custom-lightbox-trigger" href="#" data-image="assets/img/portfolio/pricing_research1.png" data-title="Pricing Research 1">
+                                        <img src="assets/img/portfolio/pricing_research1.png" class="d-block w-100" alt="Pricing Research 1" style="cursor: pointer" />
+                                    </a>
+                                </div>
+                                <div class="carousel-item">
+                                    <a class="custom-lightbox-trigger" href="#" data-image="assets/img/portfolio/pricing_research2.png" data-title="Pricing Research 2">
+                                        <img src="assets/img/portfolio/pricing_research2.png" class="d-block w-100" alt="Pricing Research 2" style="cursor: pointer" />
+                                    </a>
+                                </div>
+                            </div>
+                            <button class="carousel-control-prev" type="button" data-bs-target="#pricingResearchCarousel" data-bs-slide="prev" style="left: -50px; width: 50px; opacity: 1;">
+                                <span class="carousel-control-prev-icon" aria-hidden="true" style="background-color: #333; border-radius: 50%; width: 40px; height: 40px; background-size: 60%;"></span>
+                                <span class="visually-hidden">Previous</span>
+                            </button>
+                            <button class="carousel-control-next" type="button" data-bs-target="#pricingResearchCarousel" data-bs-slide="next" style="right: -50px; width: 50px; opacity: 1;">
+                                <span class="carousel-control-next-icon" aria-hidden="true" style="background-color: #333; border-radius: 50%; width: 40px; height: 40px; background-size: 60%;"></span>
+                                <span class="visually-hidden">Next</span>
+                            </button>
+                        </div>
+                        <div class="carousel-indicators pricing-research-indicators" style="position: static; margin-top: 1rem; margin-bottom: 0; padding: 0;">
+                            <button type="button" data-bs-target="#pricingResearchCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                            <button type="button" data-bs-target="#pricingResearchCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                        </div>
+                        <style>
+                            .pricing-research-indicators button {
+                                background-color: #333 !important;
+                                opacity: 0.3 !important;
+                            }
+                            .pricing-research-indicators button.active {
+                                background-color: #000 !important;
+                                opacity: 1 !important;
+                            }
+                        </style>
+                        <figcaption class="text-muted text-center mt-2 mb-4" style="font-size: 0.875rem">I was able to use the legacy rate card tool and the advertising packages tool as a starting off point to making the new pricing tool.</figcaption>
+                        <h3 class="mt-4 mb-3">Early Concepts</h3>
+                        <p class="lead mb-4">Drawing from pricing team insights and internal tool patterns, I began exploring initial concepts. Early explorations focused on core layout decisions: how users would view rate cards, edit them, and configure advertiser groups.</p>
+                        <div id="pricingWireframesCarousel" class="carousel slide mb-0" style="padding: 0 60px; max-width: 90%; margin: 0 auto;">
+                            <div class="carousel-inner">
+                                <div class="carousel-item active">
+                                    <a class="custom-lightbox-trigger" href="#" data-image="assets/img/portfolio/pricingwire1.png" data-title="Pricing Wireframe 1">
+                                        <img src="assets/img/portfolio/pricingwire1.png" class="d-block w-100" alt="Pricing Wireframe 1" style="cursor: pointer" />
+                                    </a>
+                                </div>
+                                <div class="carousel-item">
+                                    <a class="custom-lightbox-trigger" href="#" data-image="assets/img/portfolio/pricingwire2.png" data-title="Pricing Wireframe 2">
+                                        <img src="assets/img/portfolio/pricingwire2.png" class="d-block w-100" alt="Pricing Wireframe 2" style="cursor: pointer" />
+                                    </a>
+                                </div>
+                                <div class="carousel-item">
+                                    <a class="custom-lightbox-trigger" href="#" data-image="assets/img/portfolio/pricingwire3.png" data-title="Pricing Wireframe 3">
+                                        <img src="assets/img/portfolio/pricingwire3.png" class="d-block w-100" alt="Pricing Wireframe 3" style="cursor: pointer" />
+                                    </a>
+                                </div>
+                            </div>
+                            <button class="carousel-control-prev" type="button" data-bs-target="#pricingWireframesCarousel" data-bs-slide="prev" style="left: -50px; width: 50px; opacity: 1;">
+                                <span class="carousel-control-prev-icon" aria-hidden="true" style="background-color: #333; border-radius: 50%; width: 40px; height: 40px; background-size: 60%;"></span>
+                                <span class="visually-hidden">Previous</span>
+                            </button>
+                            <button class="carousel-control-next" type="button" data-bs-target="#pricingWireframesCarousel" data-bs-slide="next" style="right: -50px; width: 50px; opacity: 1;">
+                                <span class="carousel-control-next-icon" aria-hidden="true" style="background-color: #333; border-radius: 50%; width: 40px; height: 40px; background-size: 60%;"></span>
+                                <span class="visually-hidden">Next</span>
+                            </button>
+                        </div>
+                        <div class="carousel-indicators pricing-wireframes-indicators" style="position: static; margin-top: 1rem; margin-bottom: 0; padding: 0;">
+                            <button type="button" data-bs-target="#pricingWireframesCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                            <button type="button" data-bs-target="#pricingWireframesCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                            <button type="button" data-bs-target="#pricingWireframesCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                        </div>
+                        <style>
+                            .pricing-wireframes-indicators button {
+                                background-color: #333 !important;
+                                opacity: 0.3 !important;
+                            }
+                            .pricing-wireframes-indicators button.active {
+                                background-color: #000 !important;
+                                opacity: 1 !important;
+                            }
+                        </style>
+                        <figcaption class="text-muted text-center mt-2 mb-4" style="font-size: 0.875rem">Early designs focused on layout of rate card editing and setting up advertiser groups.</figcaption>
+                        <h3 class="mt-4 mb-3">Refinement</h3>
+                        <p class="lead mb-4">As with most internal tools, I iterated continuously based on direct user feedback. Given the tight timeline, formal user testing wasn't feasible, but I met regularly with the pricing team to review screens and walk through rough Figma prototypes.</p>
+                        <p class="lead mb-4">The final rate card interface uses a table view with an expandable side panel for detailed information and editing.</p>
+                        <div id="rateCardViewCarousel" class="carousel slide mb-0" style="padding: 0 60px; max-width: 90%; margin: 0 auto;">
+                            <div class="carousel-inner">
+                                <div class="carousel-item active">
+                                    <a class="custom-lightbox-trigger" href="#" data-image="assets/img/portfolio/ratecardview1.png" data-title="Rate Card View 1">
+                                        <img src="assets/img/portfolio/ratecardview1.png" class="d-block w-100" alt="Rate Card View 1" style="cursor: pointer" />
+                                    </a>
+                                </div>
+                                <div class="carousel-item">
+                                    <a class="custom-lightbox-trigger" href="#" data-image="assets/img/portfolio/ratecardview2.png" data-title="Rate Card View 2">
+                                        <img src="assets/img/portfolio/ratecardview2.png" class="d-block w-100" alt="Rate Card View 2" style="cursor: pointer" />
+                                    </a>
+                                </div>
+                                <div class="carousel-item">
+                                    <a class="custom-lightbox-trigger" href="#" data-image="assets/img/portfolio/ratecardview3.png" data-title="Rate Card View 3">
+                                        <img src="assets/img/portfolio/ratecardview3.png" class="d-block w-100" alt="Rate Card View 3" style="cursor: pointer" />
+                                    </a>
+                                </div>
+                            </div>
+                            <button class="carousel-control-prev" type="button" data-bs-target="#rateCardViewCarousel" data-bs-slide="prev" style="left: -50px; width: 50px; opacity: 1;">
+                                <span class="carousel-control-prev-icon" aria-hidden="true" style="background-color: #333; border-radius: 50%; width: 40px; height: 40px; background-size: 60%;"></span>
+                                <span class="visually-hidden">Previous</span>
+                            </button>
+                            <button class="carousel-control-next" type="button" data-bs-target="#rateCardViewCarousel" data-bs-slide="next" style="right: -50px; width: 50px; opacity: 1;">
+                                <span class="carousel-control-next-icon" aria-hidden="true" style="background-color: #333; border-radius: 50%; width: 40px; height: 40px; background-size: 60%;"></span>
+                                <span class="visually-hidden">Next</span>
+                            </button>
+                        </div>
+                        <div class="carousel-indicators rate-card-view-indicators" style="position: static; margin-top: 1rem; margin-bottom: 0; padding: 0;">
+                            <button type="button" data-bs-target="#rateCardViewCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                            <button type="button" data-bs-target="#rateCardViewCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                            <button type="button" data-bs-target="#rateCardViewCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                        </div>
+                        <style>
+                            .rate-card-view-indicators button {
+                                background-color: #333 !important;
+                                opacity: 0.3 !important;
+                            }
+                            .rate-card-view-indicators button.active {
+                                background-color: #000 !important;
+                                opacity: 1 !important;
+                            }
+                        </style>
+                        <figcaption class="text-muted text-center mt-2 mb-4" style="font-size: 0.875rem">Users can select rate card from table and view/edit details and pricing.</figcaption>
+                        <p class="lead mb-4">Advertiser group management mirrors the rate card structure, using the same table-and-side-panel layout.</p>
+                        <div id="advertiserGroupsCarousel" class="carousel slide mb-0" style="padding: 0 60px; max-width: 90%; margin: 0 auto;">
+                            <div class="carousel-inner">
+                                <div class="carousel-item active">
+                                    <a class="custom-lightbox-trigger" href="#" data-image="assets/img/portfolio/groups_1.png" data-title="Advertiser Groups 1">
+                                        <img src="assets/img/portfolio/groups_1.png" class="d-block w-100" alt="Advertiser Groups 1" style="cursor: pointer" />
+                                    </a>
+                                </div>
+                                <div class="carousel-item">
+                                    <a class="custom-lightbox-trigger" href="#" data-image="assets/img/portfolio/groups_2.png" data-title="Advertiser Groups 2">
+                                        <img src="assets/img/portfolio/groups_2.png" class="d-block w-100" alt="Advertiser Groups 2" style="cursor: pointer" />
+                                    </a>
+                                </div>
+                            </div>
+                            <button class="carousel-control-prev" type="button" data-bs-target="#advertiserGroupsCarousel" data-bs-slide="prev" style="left: -50px; width: 50px; opacity: 1;">
+                                <span class="carousel-control-prev-icon" aria-hidden="true" style="background-color: #333; border-radius: 50%; width: 40px; height: 40px; background-size: 60%;"></span>
+                                <span class="visually-hidden">Previous</span>
+                            </button>
+                            <button class="carousel-control-next" type="button" data-bs-target="#advertiserGroupsCarousel" data-bs-slide="next" style="right: -50px; width: 50px; opacity: 1;">
+                                <span class="carousel-control-next-icon" aria-hidden="true" style="background-color: #333; border-radius: 50%; width: 40px; height: 40px; background-size: 60%;"></span>
+                                <span class="visually-hidden">Next</span>
+                            </button>
+                        </div>
+                        <div class="carousel-indicators advertiser-groups-indicators" style="position: static; margin-top: 1rem; margin-bottom: 0; padding: 0;">
+                            <button type="button" data-bs-target="#advertiserGroupsCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                            <button type="button" data-bs-target="#advertiserGroupsCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                        </div>
+                        <style>
+                            .advertiser-groups-indicators button {
+                                background-color: #333 !important;
+                                opacity: 0.3 !important;
+                            }
+                            .advertiser-groups-indicators button.active {
+                                background-color: #000 !important;
+                                opacity: 1 !important;
+                            }
+                        </style>
+                        <figcaption class="text-muted text-center mt-2 mb-4" style="font-size: 0.875rem">View advertiser group members and their assigned rate cards.</figcaption>
                         <h2 class="mt-5 mb-4" id="final-design">Final Design Walkthrough</h2>
-                        <h2 class="mt-5 mb-4" id="value">Delivering Value Under Constraints</h2>
-                        <p class="lead mb-4">This was a quick project, so there wasn't much time for UX research, but I did share the designs with the pricing team during regular check ins. If I had more time, I would have done more follow up. Pricing tool released in early 2023 and I haven't done many updates due to the amount of other projects I've had to switch to.</p>
-                        <p class="lead mb-4">Building an internal tool from scratch, on a tight timeline, with overseas developers was a challenge, but I'm confident it helped the pricing team reduce a lot of manual work.</p>
-                        <h3 class="mt-4 mb-3">Where the Pricing Tool is now</h3>
-                        <p class="lead mb-4">The pricing tool hasn't changed significantly since launch. We've added some new rate card options, like "publisher" (to specify whether the ad airs on Disney+, Hulu, or both).</p>
-                        <p class="lead mb-4">I've made a few UI updates, but most changes have been backend or performance-related.</p>
+                        <figure class="mt-3 mb-5">
+                            <video class="img-fluid" controls style="cursor: pointer; margin: 0 auto; display: block; max-width: 100%">
+                                <source src="assets/img/portfolio/Pricing Tool.mp4" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                        </figure>
+                        <h2 class="mt-5 mb-4" id="value">Impact & Outcomes</h2>
+                        <p class="lead mb-4">The pricing tool launched in early 2023, eliminating engineering dependencies for CPM updates and replacing manual spreadsheet workflows. The pricing team can now manage advertiser rate cards significantly faster, enabling more competitive pricing and tailored deals for advertisers.</p>
+                        <figure class="mt-3 mb-5">
+                            <a class="custom-lightbox-trigger" href="#" data-image="assets/img/portfolio/CPMupdates2.png" data-title="CPM Updates 2"><img class="img-fluid" src="assets/img/portfolio/CPMupdates2.png" alt="CPM Updates 2" style="cursor: pointer; margin: 0 auto; display: block; max-width: 60%" /></a>
+                            <figcaption class="text-muted text-center mt-2" style="font-size: 0.875rem">Pricing teams now have direct control over rate card updates, eliminating engineering dependencies.</figcaption>
+                        </figure>
+                        <p class="lead mb-4">The tool has evolved incrementally post-launch such as having a new feature called publisher-level targeting to specify if the ad airs on Disney+, Hulu or both.</p>
+                        <p class="lead mb-4">Competing priorities have limited my continued involvement with this tool, but despite the tight deadline, I found it rewarding to build something from the ground up that meaningfully improved teammates' daily workflows.</p>
                         <div class="text-center mt-5">
                             <a class="btn btn-dark btn-xl" href="index.html#case-studies">
                                 <i class="fas fa-arrow-left me-2"></i>
@@ -228,6 +411,100 @@
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
         <!-- Core theme JS-->
         <script src="js/scripts.js"></script>
+        <!-- Custom Lightbox JS-->
+        <script>
+            (function () {
+                // Create lightbox HTML structure
+                var lightboxHTML = '<div id="custom-lightbox" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.85); z-index: 10000; cursor: pointer; overflow: auto;"><div style="position: relative; width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; padding: 20px;"><img id="lightbox-image" src="" alt="" style="max-width: 80vw; max-height: 80vh; object-fit: contain; cursor: default; pointer-events: none;"><button id="lightbox-close" style="position: fixed; top: 20px; right: 20px; z-index: 10001; width: 40px; height: 40px; background-color: white; border: 2px solid rgba(0, 0, 0, 0.2); border-radius: 50%; color: #000; font-size: 32px; line-height: 1; font-weight: 300; cursor: pointer; display: flex; align-items: center; justify-content: center; padding: 0; margin: 0; box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);">×</button></div></div>';
+                document.body.insertAdjacentHTML('beforeend', lightboxHTML);
+
+                var lightbox = document.getElementById('custom-lightbox');
+                var lightboxImage = document.getElementById('lightbox-image');
+                var lightboxClose = document.getElementById('lightbox-close');
+                var lightboxContainer = lightbox.querySelector('div');
+
+                // Function to open lightbox
+                function openLightbox(imageSrc, imageAlt) {
+                    lightboxImage.src = imageSrc;
+                    lightboxImage.alt = imageAlt || '';
+                    lightbox.style.display = 'block';
+                    document.body.style.overflow = 'hidden';
+                }
+
+                // Function to close lightbox
+                function closeLightbox() {
+                    lightbox.style.display = 'none';
+                    document.body.style.overflow = '';
+                }
+
+                // Close button click
+                lightboxClose.onclick = function (e) {
+                    e.stopPropagation();
+                    closeLightbox();
+                };
+
+                // Close when clicking outside image (on overlay)
+                lightbox.onclick = function (e) {
+                    if (e.target === lightbox || e.target === lightboxContainer) {
+                        closeLightbox();
+                    }
+                };
+
+                // Prevent closing when clicking on image
+                lightboxImage.onclick = function (e) {
+                    e.stopPropagation();
+                };
+
+                // Close on ESC key
+                document.addEventListener('keydown', function (e) {
+                    if (e.key === 'Escape' && lightbox.style.display !== 'none') {
+                        closeLightbox();
+                    }
+                });
+
+                // Handle clicks on lightbox triggers
+                document.addEventListener('click', function (e) {
+                    var trigger = e.target.closest('.custom-lightbox-trigger');
+                    if (trigger) {
+                        e.preventDefault();
+                        var imageSrc = trigger.getAttribute('data-image');
+                        var imageTitle = trigger.getAttribute('data-title') || '';
+                        if (imageSrc) {
+                            openLightbox(imageSrc, imageTitle);
+                        }
+                    }
+                });
+
+                // Update carousel indicators when slides change
+                var carousels = ['pricingResearchCarousel', 'pricingWireframesCarousel', 'rateCardViewCarousel', 'advertiserGroupsCarousel'];
+                carousels.forEach(function(carouselId) {
+                    var carousel = document.getElementById(carouselId);
+                    if (carousel) {
+                        carousel.addEventListener('slid.bs.carousel', function (e) {
+                            var carouselElement = e.target;
+                            var activeIndex = Array.from(carouselElement.querySelectorAll('.carousel-item')).indexOf(carouselElement.querySelector('.carousel-item.active'));
+                            // Find the indicators container that comes after this carousel
+                            var nextSibling = carouselElement.nextElementSibling;
+                            while (nextSibling && !nextSibling.classList.contains('carousel-indicators')) {
+                                nextSibling = nextSibling.nextElementSibling;
+                            }
+                            if (nextSibling && nextSibling.classList.contains('carousel-indicators')) {
+                                var indicators = nextSibling.querySelectorAll('button');
+                                indicators.forEach(function(indicator, index) {
+                                    if (index === activeIndex) {
+                                        indicator.classList.add('active');
+                                        indicator.setAttribute('aria-current', 'true');
+                                    } else {
+                                        indicator.classList.remove('active');
+                                        indicator.removeAttribute('aria-current');
+                                    }
+                                });
+                            }
+                        });
+                    }
+                });
+            })();
+        </script>
     </body>
 </html>
 

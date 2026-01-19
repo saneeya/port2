@@ -150,12 +150,108 @@
                         </figure>
                         <p class="lead mb-4">Our existing platform didn't support this structure. Users could only launch one campaign with a single set of targeting, one video ad, and one date range.</p>
                         <p class="lead mb-4">The core challenge became: how do I design an interface that elegantly presents multiple line items, each with its own complex configuration, within a single campaign creation flow?</p>
+                        <h3 class="mt-4 mb-3">Iterate, Iterate, Iterate</h3>
+                        <p class="lead mb-4">My competitive analysis revealed that a single-page flow was essential for supporting line items effectively. I had a valuable starting point: a former designer had already explored this direction with mockups and user testing. The research confirmed user preference for the single-page approach, particularly the ability to view all steps at once through a unified navigation.</p>
+                        <figure class="mt-3 mb-5">
+                            <a class="custom-lightbox-trigger" href="#" data-image="assets/img/portfolio/oldHAM.gif" data-title="Old HAM Design"><img class="img-fluid" src="assets/img/portfolio/oldHAM.gif" alt="Old HAM Design" style="cursor: pointer; margin: 0 auto; display: block; max-width: 80%" /></a>
+                            <figcaption class="text-muted text-center mt-2" style="font-size: 0.875rem">An previous design showing what the campaign flow could look like in a single-page layout.</figcaption>
+                        </figure>
+                        <p class="lead mb-4">Initial explorations centered on how to effectively display multiple line items in the navigation interface.</p>
+                        <div id="wireframesCarousel" class="carousel slide mb-0" style="padding: 0 60px; max-width: 90%; margin: 0 auto;">
+                            <div class="carousel-inner">
+                                <div class="carousel-item active">
+                                    <a class="custom-lightbox-trigger" href="#" data-image="assets/img/portfolio/Wireframes0.png" data-title="Wireframes 0">
+                                        <img src="assets/img/portfolio/Wireframes0.png" class="d-block w-100" alt="Wireframes 0" style="cursor: pointer" />
+                                    </a>
+                                </div>
+                                <div class="carousel-item">
+                                    <a class="custom-lightbox-trigger" href="#" data-image="assets/img/portfolio/wireframes1.png" data-title="Wireframes 1">
+                                        <img src="assets/img/portfolio/wireframes1.png" class="d-block w-100" alt="Wireframes 1" style="cursor: pointer" />
+                                    </a>
+                                </div>
+                                <div class="carousel-item">
+                                    <a class="custom-lightbox-trigger" href="#" data-image="assets/img/portfolio/wireframes2.png" data-title="Wireframes 2">
+                                        <img src="assets/img/portfolio/wireframes2.png" class="d-block w-100" alt="Wireframes 2" style="cursor: pointer" />
+                                    </a>
+                                </div>
+                            </div>
+                            <button class="carousel-control-prev" type="button" data-bs-target="#wireframesCarousel" data-bs-slide="prev" style="left: -50px; width: 50px; opacity: 1;">
+                                <span class="carousel-control-prev-icon" aria-hidden="true" style="background-color: #333; border-radius: 50%; width: 40px; height: 40px; background-size: 60%;"></span>
+                                <span class="visually-hidden">Previous</span>
+                            </button>
+                            <button class="carousel-control-next" type="button" data-bs-target="#wireframesCarousel" data-bs-slide="next" style="right: -50px; width: 50px; opacity: 1;">
+                                <span class="carousel-control-next-icon" aria-hidden="true" style="background-color: #333; border-radius: 50%; width: 40px; height: 40px; background-size: 60%;"></span>
+                                <span class="visually-hidden">Next</span>
+                            </button>
+                        </div>
+                        <div class="carousel-indicators wireframes-indicators" style="position: static; margin-top: 1rem; margin-bottom: 0; padding: 0;">
+                            <button type="button" data-bs-target="#wireframesCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                            <button type="button" data-bs-target="#wireframesCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                            <button type="button" data-bs-target="#wireframesCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                        </div>
+                        <style>
+                            .wireframes-indicators button {
+                                background-color: #333 !important;
+                                opacity: 0.3 !important;
+                            }
+                            .wireframes-indicators button.active {
+                                background-color: #000 !important;
+                                opacity: 1 !important;
+                            }
+                        </style>
+                        <figcaption class="text-muted text-center mt-2 mb-4" style="font-size: 0.875rem">Early designs of having line item "tabs" live at the top.</figcaption>
+                        <p class="lead mb-4">While the top tab layout was functional, it lacked scalability for campaigns with many line items. I pivoted to testing side navigation patterns instead.</p>
+                        <div id="wireframesCarousel2" class="carousel slide mb-0" style="padding: 0 60px; max-width: 90%; margin: 0 auto;">
+                            <div class="carousel-inner">
+                                <div class="carousel-item active">
+                                    <a class="custom-lightbox-trigger" href="#" data-image="assets/img/portfolio/wireframe4.png" data-title="Wireframe 4">
+                                        <img src="assets/img/portfolio/wireframe4.png" class="d-block w-100" alt="Wireframe 4" style="cursor: pointer" />
+                                    </a>
+                                </div>
+                                <div class="carousel-item">
+                                    <a class="custom-lightbox-trigger" href="#" data-image="assets/img/portfolio/wireframe5.png" data-title="Wireframe 5">
+                                        <img src="assets/img/portfolio/wireframe5.png" class="d-block w-100" alt="Wireframe 5" style="cursor: pointer" />
+                                    </a>
+                                </div>
+                                <div class="carousel-item">
+                                    <a class="custom-lightbox-trigger" href="#" data-image="assets/img/portfolio/wireframe6.png" data-title="Wireframe 6">
+                                        <img src="assets/img/portfolio/wireframe6.png" class="d-block w-100" alt="Wireframe 6" style="cursor: pointer" />
+                                    </a>
+                                </div>
+                            </div>
+                            <button class="carousel-control-prev" type="button" data-bs-target="#wireframesCarousel2" data-bs-slide="prev" style="left: -50px; width: 50px; opacity: 1;">
+                                <span class="carousel-control-prev-icon" aria-hidden="true" style="background-color: #333; border-radius: 50%; width: 40px; height: 40px; background-size: 60%;"></span>
+                                <span class="visually-hidden">Previous</span>
+                            </button>
+                            <button class="carousel-control-next" type="button" data-bs-target="#wireframesCarousel2" data-bs-slide="next" style="right: -50px; width: 50px; opacity: 1;">
+                                <span class="carousel-control-next-icon" aria-hidden="true" style="background-color: #333; border-radius: 50%; width: 40px; height: 40px; background-size: 60%;"></span>
+                                <span class="visually-hidden">Next</span>
+                            </button>
+                        </div>
+                        <div class="carousel-indicators wireframes-indicators-2" style="position: static; margin-top: 1rem; margin-bottom: 0; padding: 0;">
+                            <button type="button" data-bs-target="#wireframesCarousel2" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                            <button type="button" data-bs-target="#wireframesCarousel2" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                            <button type="button" data-bs-target="#wireframesCarousel2" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                        </div>
+                        <style>
+                            .wireframes-indicators-2 button {
+                                background-color: #333 !important;
+                                opacity: 0.3 !important;
+                            }
+                            .wireframes-indicators-2 button.active {
+                                background-color: #000 !important;
+                                opacity: 1 !important;
+                            }
+                        </style>
+                        <figcaption class="text-muted text-center mt-2 mb-4" style="font-size: 0.875rem">Exploration with line item navigation in the side panels.</figcaption>
+                        <p class="lead mb-4">Through iterative refinement and input from stakeholders, especially those working directly with advertisers, I landed on an accordion-menu approach:</p>
+                        <figure class="mt-3 mb-5">
+                            <a class="custom-lightbox-trigger" href="#" data-image="assets/img/portfolio/lineitemrail_final.png" data-title="Line item rail final"><img class="img-fluid" src="assets/img/portfolio/lineitemrail_final.png" alt="Line item rail final" style="cursor: pointer; margin: 0 auto; display: block; max-width: 90%" /></a>
+                            <figcaption class="text-muted text-center mt-2" style="font-size: 0.875rem">The accordion-menu could show/hide all the line items in the campaign and allowed users to navigate to them as well.</figcaption>
+                        </figure>
                         <h2 class="mt-5 mb-4" id="iterative-journey">The Iterative Journey</h2>
                         <p class="lead mb-4">A major change in the new campaign flow was the implementation of line items. A line item is a single set of targeting, budget, dates, creative assets, etc.</p>
                         <p class="lead mb-4">I started exploration by having a tab for each line item on the top rail.</p>
-                        <figure class="mt-3 mb-5">
-                            <a class="custom-lightbox-trigger" href="#" data-image="assets/img/portfolio/oldHAM.gif" data-title="Old HAM Design"><img class="img-fluid" src="assets/img/portfolio/oldHAM.gif" alt="Old HAM Design" style="cursor: pointer; margin: 0 auto; display: block" /></a>
-                        </figure>
                         <p class="lead mb-4">The tab layout wasn't scalable for campaigns with multiple line items, so I transitioned to a side panel navigation instead.</p>
                         <p class="lead mb-4">Scroll through designs below to view my explorations.</p>
                         <p class="lead mb-4">Once the navigation was set, I added new content, including a section for dayparting, pacing, and frequency settings.</p>
@@ -256,6 +352,59 @@
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
         <!-- Core theme JS-->
         <script src="js/scripts.js"></script>
+        <!-- Carousel Indicator Sync JS-->
+        <script>
+            // Update carousel indicators when slide changes
+            (function() {
+                var wireframesCarousel = document.getElementById('wireframesCarousel');
+                if (wireframesCarousel) {
+                    var indicators = document.querySelector('.wireframes-indicators');
+
+                    if (indicators) {
+                        var indicatorButtons = indicators.querySelectorAll('button');
+
+                        // Listen for slide events
+                        wireframesCarousel.addEventListener('slid.bs.carousel', function (event) {
+                            // Remove active from all indicators
+                            indicatorButtons.forEach(function(btn) {
+                                btn.classList.remove('active');
+                                btn.removeAttribute('aria-current');
+                            });
+                            // Add active to the current slide's indicator
+                            var activeIndex = event.to;
+                            if (indicatorButtons[activeIndex]) {
+                                indicatorButtons[activeIndex].classList.add('active');
+                                indicatorButtons[activeIndex].setAttribute('aria-current', 'true');
+                            }
+                        });
+                    }
+                }
+
+                // Update carousel indicators for second carousel
+                var wireframesCarousel2 = document.getElementById('wireframesCarousel2');
+                if (wireframesCarousel2) {
+                    var indicators2 = document.querySelector('.wireframes-indicators-2');
+
+                    if (indicators2) {
+                        var indicatorButtons2 = indicators2.querySelectorAll('button');
+
+                        wireframesCarousel2.addEventListener('slid.bs.carousel', function (event) {
+                            // Remove active from all indicators
+                            indicatorButtons2.forEach(function(btn) {
+                                btn.classList.remove('active');
+                                btn.removeAttribute('aria-current');
+                            });
+                            // Add active to the current slide's indicator
+                            var activeIndex = event.to;
+                            if (indicatorButtons2[activeIndex]) {
+                                indicatorButtons2[activeIndex].classList.add('active');
+                                indicatorButtons2[activeIndex].setAttribute('aria-current', 'true');
+                            }
+                        });
+                    }
+                }
+            })();
+        </script>
         <!-- Custom Lightbox JS-->
         <script>
             (function () {

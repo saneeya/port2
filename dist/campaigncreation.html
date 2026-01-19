@@ -52,9 +52,9 @@
                     <li class="nav-item"><a class="nav-link text-dark px-3" href="#campaign-basics">Humble Beginnings</a></li>
                     <li class="nav-item"><a class="nav-link text-dark px-3" href="#ux-overhaul">Growing Pains</a></li>
                     <li class="nav-item"><a class="nav-link text-dark px-3" href="#single-page">Two-Year Journey</a></li>
-                    <li class="nav-item"><a class="nav-link text-dark px-3" href="#iterative-journey">Iterative Journey</a></li>
+                    <li class="nav-item"><a class="nav-link text-dark px-3" href="#final-design">Final Prototype</a></li>
                     <li class="nav-item"><a class="nav-link text-dark px-3" href="#testing">Testing</a></li>
-                    <li class="nav-item"><a class="nav-link text-dark px-3" href="#constraints">Constraints</a></li>
+                    <li class="nav-item"><a class="nav-link text-dark px-3" href="#constraints">Impact</a></li>
                 </ul>
             </div>
         </nav>
@@ -115,7 +115,11 @@
                             <figcaption class="text-muted text-center mt-2" style="font-size: 0.875rem">The original campaign setup flow in 2022.</figcaption>
                         </figure>
                         <h2 class="mt-5 mb-4" id="ux-overhaul">Growing Pains</h2>
-                        <p class="lead mb-4">The platform demonstrated strong performance in its first two years, attracting a healthy influx of SMB customers and delivering solid profit margins. However, while it served SMBs effectively, we identified a critical gap: the platform lacked adequate support for agency users.</p>
+                        <p class="lead mb-4">The platform performed well in its first two years, driving SMB acquisition and solid profitability. However, we faced two significant challenges:</p>
+                        <ul class="lead mb-4">
+                            <li>Unsustainable vendor costs: Ongoing reliance on our launch partner agency was cutting into margins as the platform grew</li>
+                            <li>Market gap: The platform excelled for SMBs but failed to meet the sophisticated needs of agency advertisers</li>
+                        </ul>
                         <figure class="mt-3 mb-5">
                             <a class="custom-lightbox-trigger" href="#" data-image="assets/img/portfolio/UserCheckList.png" data-title="User Checklist"><img class="img-fluid" src="assets/img/portfolio/UserCheckList.png" alt="User Checklist" style="cursor: pointer; margin: 0 auto; display: block; max-width: 50%" /></a>
                             <figcaption class="text-muted text-center mt-2" style="font-size: 0.875rem">We were lacking critical features to entice Agency customers.</figcaption>
@@ -127,7 +131,7 @@
                             <li>Competitive parity: The platform needed to match the capabilities offered through our direct sales channel and competitor platforms</li>
                             <li>Market dominance: Agencies account for the majority of ad buys in the streaming landscape</li>
                         </ul>
-                        <p class="lead mb-4">Agency users are more sophisticated than SMB advertisers and require advanced platform capabilities. They expect access to diverse ad formats, granular targeting options, and enterprise-level features that the original platform (particularly the campaign creation flow) couldn't provide. To capture this market segment, we needed to redesign the whole campaign workflow.</p>
+                        <p class="lead mb-4">Agency users are more sophisticated than SMB advertisers and demand advanced platform capabilities, diverse ad formats, granular targeting options, and enterprise-level features that our original platform couldn't deliver. Capturing this market required a complete platform overhaul: migrating to internal teams and ad servers, and fundamentally redesigning the campaign workflow.</p>
                         <h2 class="mt-5 mb-4" id="single-page">A Two-Year Journey</h2>
                         <h3 class="mb-3">Operating Under Pressure</h3>
                         <p class="lead mb-4">This wasn't a simple design refresh: we were rebuilding the entire platform. Beyond reimagining the campaign flow, I designed new reporting and creative upload experiences from scratch.</p>
@@ -135,7 +139,7 @@
                         <ul class="lead mb-4">
                             <li>One-designer army: I was the sole designer supporting the entire platform, juggling multiple workflows, product managers, and engineering teams</li>
                             <li>Supporting a live product: We couldn't pause for the rebuild; the current platform needed continuous updates and fixes for existing customers</li>
-                            <li>Cultural barriers: With most engineering resources in Ukraine, I managed a 10-hour time difference and cultural communication gaps</li>
+                            <li>Overseas Teams: Our main engineering partners were Ukraine-based contractors tasked with migrating the platform to our internal infrastructure. I adapted to collaborating across a 10-hour time difference and cultural barriers</li>
                             <li>No room for error:  As the platform's core functionality, the campaign flow had to work flawlessly</li>
                         </ul>
                         <figure class="mt-3 mb-5">
@@ -249,23 +253,19 @@
                             <a class="custom-lightbox-trigger" href="#" data-image="assets/img/portfolio/lineitemrail_final.png" data-title="Line item rail final"><img class="img-fluid" src="assets/img/portfolio/lineitemrail_final.png" alt="Line item rail final" style="cursor: pointer; margin: 0 auto; display: block; max-width: 90%" /></a>
                             <figcaption class="text-muted text-center mt-2" style="font-size: 0.875rem">The accordion-menu could show/hide all the line items in the campaign and allowed users to navigate to them as well.</figcaption>
                         </figure>
-                        <h2 class="mt-5 mb-4" id="iterative-journey">The Iterative Journey</h2>
-                        <p class="lead mb-4">A major change in the new campaign flow was the implementation of line items. A line item is a single set of targeting, budget, dates, creative assets, etc.</p>
-                        <p class="lead mb-4">I started exploration by having a tab for each line item on the top rail.</p>
-                        <p class="lead mb-4">The tab layout wasn't scalable for campaigns with multiple line items, so I transitioned to a side panel navigation instead.</p>
-                        <p class="lead mb-4">Scroll through designs below to view my explorations.</p>
-                        <p class="lead mb-4">Once the navigation was set, I added new content, including a section for dayparting, pacing, and frequency settings.</p>
-                        <p class="lead mb-4">I called this section "Delivery" since all three relate to how often an ad runs.</p>
+                        <h3 class="mt-4 mb-3">The Extra Add-Ons</h3>
+                        <p class="lead mb-4">With the core navigation issue solved, I could focus on adding the additional features for agency users.</p>
+                        <p class="lead mb-4">I added a "Delivery" section to house ad scheduling and distribution settings: dayparting (when ads run), pacing (how budget is spent), and frequency (how often users see ads).</p>
                         <figure class="mt-3 mb-5">
                             <a class="custom-lightbox-trigger" href="#" data-image="assets/img/portfolio/DeliveryGIF.gif" data-title="Delivery Section"><img class="img-fluid" src="assets/img/portfolio/DeliveryGIF.gif" alt="Delivery Section" style="cursor: pointer; margin: 0 auto; display: block" /></a>
+                            <figcaption class="text-muted text-center mt-2" style="font-size: 0.875rem">The new delivery section has settings for how often and when an ad can run.</figcaption>
                         </figure>
-                        <p class="lead mb-4">In the Ad Upload section, I designed a new flow for VAST, allowing users to input and upload VAST code and preview their creative assets.</p>
-                        <p class="lead mb-4">The challenge was figuring out how to display multiple assets in the modal and clearly show whether each asset was accepted, rejected (with error details), or still pending review.</p>
-                        <p class="lead mb-4">I explored several VAST layout options (viewable in the carousel below) and ultimately decided to show only the attributes that failed validation, instead of displaying a pass/fail status for each asset.</p>
+                        <p class="lead mb-4">I designed a new VAST (Video Ad Serving Template) upload flow within the Ad section. VAST tags allow multiple creative assets within a single ad unit, addressing a recurring agency request.</p>
                         <figure class="mt-3 mb-5">
-                            <a class="custom-lightbox-trigger" href="#" data-image="assets/img/portfolio/VASTGif.gif" data-title="VAST Layout Options"><img class="img-fluid" src="assets/img/portfolio/VASTGif.gif" alt="VAST Layout Options" style="cursor: pointer; margin: 0 auto; display: block" /></a>
+                            <a class="custom-lightbox-trigger" href="#" data-image="assets/img/portfolio/VASTGif.gif" data-title="VAST Upload Flow"><img class="img-fluid" src="assets/img/portfolio/VASTGif.gif" alt="VAST Upload Flow" style="cursor: pointer; margin: 0 auto; display: block" /></a>
+                            <figcaption class="text-muted text-center mt-2" style="font-size: 0.875rem">New VAST upload flow.</figcaption>
                         </figure>
-                        <h2 class="mt-5 mb-4">The Final Design in Action</h2>
+                        <h2 class="mt-5 mb-4" id="final-design">The Final Design in Action</h2>
                         <p class="lead mb-4">Below is the prototype of the new campaign creation process.</p>
                         <figure class="mt-3 mb-5">
                             <video class="img-fluid" controls style="cursor: pointer; margin: 0 auto; display: block; max-width: 100%">
@@ -273,65 +273,113 @@
                                 Your browser does not support the video tag.
                             </video>
                         </figure>
-                        <h2 class="mt-5 mb-4" id="testing">Putting the Campaign Flow to the Test</h2>
-                        <p class="lead mb-4">Due to other commitments, user testing began later than planned—but I took the initiative to move it forward. While I couldn't test every feature (like VAST), I focused on the core campaign creation flow.</p>
-                        <p class="lead mb-4">Specifically, I tested whether users could:</p>
+                        <h2 class="mt-5 mb-4" id="testing">Testing Takeaways: Usability & Design</h2>
+                        <h3 class="mt-4 mb-3">Limited Time & Resources</h3>
+                        <p class="lead mb-4">The platform migration established a non-negotiable Fall 2024 launch date. I completed all required designs by summer, leaving user testing as the final milestone, one I'd need to do strategically given multiple constraints:</p>
                         <ul class="lead mb-4">
-                            <li>Create a campaign</li>
-                            <li>Add a new line item</li>
-                            <li>Select targeting options</li>
-                            <li>Review and submit a line item</li>
+                            <li>I focused testing exclusively on the campaign creation flow, the platform's most significant redesign, due to time limitations</li>
+                            <li>Without research team support, I independently developed the test plan,recruited participants, and secured contractor funding to help facilitate sessions</li>
+                            <li>The locked launch timeline meant findings would inform post-release updated rather than pre-launch changes</li>
                         </ul>
-                        <p class="lead mb-4">With no dedicated research team, I recruited non-user advertisers and conducted moderated usability sessions to gather valuable feedback.</p>
+                        <figure class="mt-3 mb-5">
+                            <a class="custom-lightbox-trigger" href="#" data-image="assets/img/portfolio/resources.png" data-title="Resources"><img class="img-fluid" src="assets/img/portfolio/resources.png" alt="Resources" style="cursor: pointer; margin: 0 auto; display: block; max-width: 50%" /></a>
+                            <figcaption class="text-muted text-center mt-2" style="font-size: 0.875rem">We had hard deadline to lauch, but I still conducted user tests with limited time and resources.</figcaption>
+                        </figure>
                         <h3 class="mt-4 mb-3">Usability Test Overview</h3>
-                        <p class="lead mb-4"><strong>Goals</strong></p>
-                        <ul class="lead mb-4">
-                            <li>Evaluate whether the new campaign creation flow improves the user experience</li>
-                            <li>Assess ease of understanding and overall usability</li>
-                        </ul>
-                        <p class="lead mb-4"><strong>Participants</strong></p>
-                        <ul class="lead mb-4">
-                            <li>10 individuals with experience running online ad campaigns</li>
-                        </ul>
-                        <p class="lead mb-4"><strong>Method</strong></p>
-                        <ul class="lead mb-4">
-                            <li>1-hour moderated usability sessions</li>
-                        </ul>
-                        <p class="lead mb-4">Users provided a range of feedback during the testing sessions—covering both usability across different flows and visual design. Below is a summary of the key insights I gathered.</p>
-                        <h2 class="mt-5 mb-4">Testing Takeaways: Usability & Design</h2>
+                        <div class="row mb-4 g-4">
+                            <div class="col-md-4">
+                                <p class="lead mb-3" style="font-weight: 700;"><strong>Goals</strong></p>
+                                <ul class="lead mb-0">
+                                    <li>Evaluate whether the new campaign creation flow improves the user experience</li>
+                                    <li>Assess ease of understanding and overall usability</li>
+                                </ul>
+                            </div>
+                            <div class="col-md-4">
+                                <p class="lead mb-3" style="font-weight: 700;"><strong>Participants</strong></p>
+                                <ul class="lead mb-0">
+                                    <li>10 individuals with experience running online ad campaigns</li>
+                                </ul>
+                            </div>
+                            <div class="col-md-4">
+                                <p class="lead mb-3" style="font-weight: 700;"><strong>Method</strong></p>
+                                <ul class="lead mb-0">
+                                    <li>1-hour moderated usability sessions</li>
+                                </ul>
+                            </div>
+                        </div>
                         <h3 class="mt-4 mb-3">Overall Line Item Flow</h3>
-                        <p class="lead mb-4">Users appreciated the single-page flow for setting up line item details, but 66% of them struggled to locate the "New Line Item" button when prompted—it wasn't immediately discoverable.</p>
-                        <blockquote class="blockquote mb-4">
-                            <p class="mb-0">"I just found this whole process just very smooth and clear"</p>
-                        </blockquote>
-                        <blockquote class="blockquote mb-4">
-                            <p class="mb-0">"This was really clean, easy, and way better than Meta"</p>
-                        </blockquote>
+                        <div class="row mb-4">
+                            <div class="col-md-7">
+                                <p class="lead mb-4">Users appreciated the single-page flow for setting up line item details, but 66% of them struggled to locate the "New Line Item" button when prompted, it wasn't immediately discoverable.</p>
+                                <blockquote class="blockquote mb-4" style="border-left: none; padding-left: 0; font-size: 1rem">
+                                    <p class="mb-0">"I just found this whole process just very smooth and clear"</p>
+                                </blockquote>
+                                <blockquote class="blockquote mb-4" style="border-left: none; padding-left: 0; font-size: 1rem">
+                                    <p class="mb-0">"This was really clean, easy, and way better than Meta"</p>
+                                </blockquote>
+                            </div>
+                            <div class="col-md-5">
+                                <figure class="mb-0">
+                                    <a class="custom-lightbox-trigger" href="#" data-image="assets/img/portfolio/test_lineitem.png" data-title="Test Line Item"><img class="img-fluid" src="assets/img/portfolio/test_lineitem.png" alt="Test Line Item" style="cursor: pointer; max-width: 100%; height: auto;" /></a>
+                                    <figcaption class="text-muted text-center mt-2" style="font-size: 0.875rem">Most testers could not easily find the "Add New Line Item" button.</figcaption>
+                                </figure>
+                            </div>
+                        </div>
                         <h3 class="mt-4 mb-3">Impression Delivery</h3>
-                        <p class="lead mb-4">There was confusion around how impressions were estimated, particularly within the custom pacing settings. Some users expressed concern about how their campaign budget would impact impression delivery.</p>
-                        <blockquote class="blockquote mb-4">
-                            <p class="mb-0">"If the ad was doing well…am I going to burn through my budget sooner?"</p>
-                        </blockquote>
-                        <blockquote class="blockquote mb-4">
-                            <p class="mb-0">"How are we arriving at the 28,000 impressions for a $1,000 budget?"</p>
-                        </blockquote>
+                        <div class="row mb-4">
+                            <div class="col-md-7">
+                                <p class="lead mb-4">There was confusion around how impressions were estimated, particularly within the custom pacing settings. Some users expressed concern about how their campaign budget would impact impression delivery.</p>
+                                <blockquote class="blockquote mb-4" style="border-left: none; padding-left: 0; font-size: 1rem">
+                                    <p class="mb-0">"If the ad was doing well…am I going to burn through my budget sooner?"</p>
+                                </blockquote>
+                                <blockquote class="blockquote mb-4" style="border-left: none; padding-left: 0; font-size: 1rem">
+                                    <p class="mb-0">"How are we arriving at the 28,000 impressions for a $1,000 budget?"</p>
+                                </blockquote>
+                            </div>
+                            <div class="col-md-5">
+                                <figure class="mb-0">
+                                    <a class="custom-lightbox-trigger" href="#" data-image="assets/img/portfolio/inventoryneedle.png" data-title="Inventory Needle"><img class="img-fluid" src="assets/img/portfolio/inventoryneedle.png" alt="Inventory Needle" style="cursor: pointer; max-width: 50%; height: auto; margin: 0 auto; display: block;" /></a>
+                                    <figcaption class="text-muted text-center mt-2" style="font-size: 0.875rem">Some people found inventory availability and impressions confusing.</figcaption>
+                                </figure>
+                            </div>
+                        </div>
                         <h3 class="mt-4 mb-3">"Line Item"</h3>
-                        <p class="lead mb-4">The term "Line Item" confused some users. Even those familiar with the concept typically encountered it as "flights" or "ad groups" on other platforms.</p>
+                        <div class="row mb-4">
+                            <div class="col-md-7">
+                                <p class="lead mb-4">The term "Line Item" confused some users. Even those familiar with the concept typically encountered it as "flights" or "ad groups" on other platforms.</p>
+                            </div>
+                            <div class="col-md-5">
+                                <figure class="mb-0">
+                                    <a class="custom-lightbox-trigger" href="#" data-image="assets/img/portfolio/lineitem_name.png" data-title="Line Item Name"><img class="img-fluid" src="assets/img/portfolio/lineitem_name.png" alt="Line Item Name" style="cursor: pointer; max-width: 100%; height: auto;" /></a>
+                                    <figcaption class="text-muted text-center mt-2" style="font-size: 0.875rem">Term "Line Item" confused some people.</figcaption>
+                                </figure>
+                            </div>
+                        </div>
                         <h3 class="mt-4 mb-3">Look and Feel</h3>
-                        <p class="lead mb-4">While most of them were able to navigate easily. a couple users commented on the UI feeling "too simple" or "quite plain" and noting it lacked personality.</p>
-                        <h2 class="mt-5 mb-4">The Road Ahead: Enhancements</h2>
-                        <p class="lead mb-4">The new Campaign Creation flow launched in October 2024. While the launch faced some technical issues and bugs, I had thoroughly QA'd the experience beforehand—flagging usability problems and correcting UI inconsistencies early on.</p>
-                        <p class="lead mb-4">Since then, we've introduced several key features, including support for Disney+, Hulu, or both as ad destinations, and the integration of VAST tags. Ongoing efforts include collecting feedback from advertisers and internal teams, and iterating on designs to address issues uncovered in user testing.</p>
-                        <p class="lead mb-4">We're also undergoing a major visual update as part of the rebrand from <em>Hulu Ad Manager</em> to <em>Disney Campaign Manager</em>, which involves a complete overhaul of the platform's style guide.</p>
-                        <h2 class="mt-5 mb-4" id="constraints">Designing Through Constraints: What I Learned</h2>
-                        <p class="lead mb-4">Campaign Creation is still evolving, with many new features on the roadmap. As the platform grows, we may eventually need to revisit and redesign the flow to accommodate future updates.</p>
-                        <p class="lead mb-4">This project came with its share of challenges—working as the sole designer, without a dedicated research team, and collaborating with overseas developers across time zones, all while juggling other responsibilities. Despite that, it was a rewarding experience to lead the design of a core flow from the ground up and contribute meaningfully to the platform's growth</p>
-                        <h3 class="mt-4 mb-3">Things I Learned</h3>
-                        <ul class="lead mb-4">
-                            <li>What other people in the team did, specifically ones I otherwise might not interact with such as sales & customer support</li>
-                            <li>How to onboard and train new designers when I was able to get a contractor to help me closer to the product launch</li>
-                            <li>Working with international developers in different time zones also taught me to present design flows as clearly and simply as possible to reduce back-and-forth communication</li>
-                        </ul>
+                        <div class="row mb-4">
+                            <div class="col-md-7">
+                                <p class="lead mb-4">While most of them were able to navigate easily. a couple users commented on the UI feeling "too simple" or "quite plain" and noting it lacked personality.</p>
+                            </div>
+                            <div class="col-md-5">
+                                <figure class="mb-0">
+                                    <a class="custom-lightbox-trigger" href="#" data-image="assets/img/portfolio/campaigntable.png" data-title="Campaign Table"><img class="img-fluid" src="assets/img/portfolio/campaigntable.png" alt="Campaign Table" style="cursor: pointer; max-width: 100%; height: auto;" /></a>
+                                    <figcaption class="text-muted text-center mt-2" style="font-size: 0.875rem">Some participants found the UI visually boring.</figcaption>
+                                </figure>
+                            </div>
+                        </div>
+                        <h2 class="mt-5 mb-4">Post Launch Updates</h2>
+                        <p class="lead mb-4">The redesigned campaign creation flow launched in October 2024. Despite some technical bugs at launch, my thorough QA process caught usability issues and UI inconsistencies early, and I implemented key user testing insights (like improving the visibility of the "New Line Item" button) shortly after release.</p>
+                        <p class="lead mb-4">Notable new capabilities included cross-platform targeting, allowing advertisers to run campaigns on Disney+, Hulu, or both simultaneously. We've since maintained an ongoing feedback loop with advertisers and internal stakeholders to continuously improve usability. Following the platform's rebrand to Disney Campaign Manager, the interface received a comprehensive visual refresh.</p>
+                        <figure class="mt-3 mb-5">
+                            <a class="custom-lightbox-trigger" href="#" data-image="assets/img/portfolio/DCMUI.png" data-title="DCM UI"><img class="img-fluid" src="assets/img/portfolio/DCMUI.png" alt="DCM UI" style="cursor: pointer; margin: 0 auto; display: block" /></a>
+                            <figcaption class="text-muted text-center mt-2" style="font-size: 0.875rem">The brand refresh of the platform.</figcaption>
+                        </figure>
+                        <h2 class="mt-5 mb-4" id="constraints">Impact</h2>
+                        <p class="lead mb-4">The platform migration and campaign flow redesign delivered significant value to the business. By moving to internal infrastructure, we eliminated third-party dependency, resulting in substantial ongoing cost savings. The new campaign flow provided agencies with long-requested features, driving a notable increase in agency adoption, particularly among advertisers who had previously been hesitant to use the platform.</p>
+                        <h3 class="mt-4 mb-3">Looking Ahead</h3>
+                        <p class="lead mb-4">Campaign creation continues to evolve, with numerous features in development. As the platform scales, the flow may require future redesign to accommodate new capabilities and user needs.</p>
+                        <h3 class="mt-4 mb-3">Reflection</h3>
+                        <p class="lead mb-4">This project presented considerable challenges: serving as the sole designer, conducting research without a dedicated UX team, coordinating with overseas developers across time zones, and balancing multiple concurrent responsibilities. Despite these constraints, leading the design of this core experience from concept to launch (and contributing meaningfully to the platform's growth) was immensely rewarding.</p>
                         <div class="text-center mt-5">
                             <a class="btn btn-dark btn-xl" href="index.html#case-studies">
                                 <i class="fas fa-arrow-left me-2"></i>

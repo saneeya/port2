@@ -40,6 +40,21 @@
                 background-color: #ffffff !important;
                 backdrop-filter: blur(10px) !important;
             }
+            @media (max-width: 991.98px) {
+                #subNav {
+                    display: none !important;
+                }
+            }
+            @media (max-width: 767.98px) {
+                #wireframesCarousel .carousel-control-prev,
+                #wireframesCarousel2 .carousel-control-prev {
+                    left: 10px !important;
+                }
+                #wireframesCarousel .carousel-control-next,
+                #wireframesCarousel2 .carousel-control-next {
+                    right: 10px !important;
+                }
+            }
         </style>
     </head>
     <body id="page-top">
@@ -58,8 +73,8 @@
                             <a class="nav-link dropdown-toggle py-3 px-0 px-lg-3 rounded text-dark" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Case Studies</a>
                             <ul class="dropdown-menu dropdown-menu-end">
                                 <li><a class="dropdown-item text-dark" href="campaigncreation.html">Reimagining How Agencies Create Campaigns</a></li>
-                                <li><a class="dropdown-item text-dark" href="scoresheet.html">A Smarter Way for Teachers to Record Scores</a></li>
                                 <li><a class="dropdown-item text-dark" href="pricingtool.html">Smart Pricing for Ad Inventory</a></li>
+                                <li><a class="dropdown-item text-dark" href="scoresheet.html">A Smarter Way for Teachers to Record Scores</a></li>
                             </ul>
                         </li>
                         <li class="nav-item mx-0 mx-lg-1">
@@ -115,9 +130,10 @@
             <div class="container">
                 <div class="row justify-content-center">
                     <div class="col-lg-10">
+                        <p class="text-muted mb-4" style="font-size: 0.875rem;">*AI images used for illustrative purposes only.</p>
                         <h2 class="mb-4" id="campaign-basics">Humble Beginnings</h2>
-                        <div class="row mb-4">
-                            <div style="width: 53%; padding-right: 2rem;">
+                        <div class="row mb-4 g-4 align-items-start">
+                            <div class="col-12 col-lg-7 order-1 order-lg-1" style="padding-right: 0; padding-right: 2rem;">
                                 <p class="lead mb-4">Launched in March 2020 as Hulu Ad Manager, Disney Campaign Manager introduced Hulu's first self-serve advertising platform. The platform enabled advertisers to create and manage their campaigns with full control over targeting parameters (age, location, interests), campaign duration, budget allocation, and video ad uploads.</p>
                                 <p class="lead mb-4">The platform was developed to achieve two key goals:</p>
                                 <ul class="lead mb-4">
@@ -125,8 +141,8 @@
                                     <li>More ad diversity and localization: Enable a broader range of advertisers to deliver more varied and locally relevant content to Hulu's audience.</li>
                                 </ul>
                             </div>
-                            <div style="width: 47%; display: flex; align-items: flex-start; justify-content: center; flex-direction: column;">
-                                <figure class="mb-0">
+                            <div class="col-12 col-lg-5 order-2 order-lg-2 d-flex align-items-start justify-content-center flex-column">
+                                <figure class="mb-0 w-100">
                                     <a class="custom-lightbox-trigger" href="#" data-image="assets/img/portfolio/hulu_livingroom.png" data-title="Hulu living room"><img class="img-fluid" src="assets/img/portfolio/hulu_livingroom.png" alt="Hulu living room" style="cursor: pointer; max-width: 100%; height: auto;" /></a>
                                     <figcaption class="text-muted text-center mt-2" style="font-size: 0.875rem">The original ad manager was meant to give viewers more variety/localized ads.</figcaption>
                                 </figure>

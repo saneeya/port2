@@ -11149,11 +11149,11 @@ blockquote.blockquote .blockquote-footer::before {
   font-size: 1.2rem;
 }
 #mainNav .navbar-nav li.nav-item a.nav-link:hover {
-  color: #283197 !important;
+  color: #1D2686 !important;
   opacity: 1;
 }
 #mainNav .navbar-nav li.nav-item a.nav-link:active, #mainNav .navbar-nav li.nav-item a.nav-link:focus {
-  color: #283197 !important;
+  color: #1D2686 !important;
 }
 #mainNav .navbar-nav li.nav-item a.nav-link.active {
   color: #212529;
@@ -11194,7 +11194,7 @@ blockquote.blockquote .blockquote-footer::before {
     font-weight: 400;
   }
   #mainNav .navbar-nav > li.nav-item > a.nav-link.active:active, #mainNav .navbar-nav > li.nav-item > a.nav-link.active:focus, #mainNav .navbar-nav > li.nav-item > a.nav-link.active:hover {
-    color: #283197 !important;
+    color: #1D2686 !important;
     background: transparent;
     opacity: 1;
   }
@@ -11455,19 +11455,19 @@ blockquote.blockquote .blockquote-footer::before {
 }
 
 .nav-link:hover {
-  color: #283197 !important;
+  color: #1D2686 !important;
 }
 .navbar-nav .nav-link:hover {
-  color: #283197 !important;
+  color: #1D2686 !important;
 }
 #mainNav .navbar-nav li.nav-item a.nav-link:hover {
-  color: #283197 !important;
+  color: #1D2686 !important;
 }
 #mainNav .navbar-nav > li.nav-item > a.nav-link:hover {
-  color: #283197 !important;
+  color: #1D2686 !important;
 }
 #mainNav .navbar-nav > li.nav-item > a.nav-link.active:hover {
-  color: #283197 !important;
+  color: #1D2686 !important;
 }
 #subNav .navbar-nav .nav-item .nav-link:hover {
   color: #7B7B7B !important;
